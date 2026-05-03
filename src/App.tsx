@@ -7,10 +7,10 @@ const MapViewer = lazy(() => import('./components/MapViewer'));
 const Legal = lazy(() => import('./pages/Legal'));
 
 const LoadingSkeleton = () => (
-  <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--bg-primary)' }}>
+  <div className="min-h-screen flex items-center justify-center" style={{ background: 'hsl(var(--background))' }}>
     <div className="flex flex-col items-center gap-3">
-      <div className="w-8 h-8 border-3 border-amber-500/20 border-t-amber-500 rounded-full animate-spin" />
-      <p className="text-slate-500 text-sm font-fantasy animate-pulse">Chargement...</p>
+      <div className="w-8 h-8 rounded-full animate-spin border-2" style={{ borderColor: 'hsl(var(--border))', borderTopColor: 'hsl(var(--primary))' }} />
+      <p className="text-sm text-muted-foreground animate-pulse">Chargement...</p>
     </div>
   </div>
 );

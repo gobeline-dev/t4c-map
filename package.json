@@ -1,5 +1,5 @@
 {
-  "name": "t4c-wiki-app",
+  "name": "t4c-cartographie",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,18 +13,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@react-three/fiber": "^9.5.0",
-    "@tanstack/react-virtual": "^3.13.19",
-    "@types/three": "^0.182.0",
-    "axios": "^1.13.2",
-    "cheerio": "^1.1.2",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.11.0",
-    "react-zoom-pan-pinch": "^3.7.0",
-    "three": "^0.182.0"
+    "react-zoom-pan-pinch": "^3.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

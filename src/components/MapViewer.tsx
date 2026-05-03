@@ -7,12 +7,12 @@ import type { MapInfo } from '../config/maps';
 
 const CoordsOverlay = memo(({ gx, gy, worldId, isFullscreen }: { gx: number, gy: number, worldId: number, isFullscreen: boolean }) => (
   <div className={`absolute bottom-3 left-3 flex flex-col items-start gap-1.5 pointer-events-none z-20 ${isFullscreen ? 'pl-safe pb-safe' : ''}`}>
-    <div className="bg-slate-900/90 backdrop-blur-md border border-amber-500/20 px-2.5 py-1.5 rounded-lg shadow-xl flex items-center gap-2 border-l-2 border-l-amber-500">
-      <MousePointer2 size={12} className="text-amber-500" />
-      <span className="text-xs font-mono font-black text-white tracking-tighter">{gx}.{gy}.{worldId}</span>
+    <div className="backdrop-blur-md px-3 py-1.5 rounded-md flex items-center gap-2 shadow-md" style={{ background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }}>
+      <MousePointer2 size={12} className="text-primary-strong" />
+      <span className="text-xs font-mono font-medium text-foreground tracking-tight">{gx}.{gy}.{worldId}</span>
     </div>
-    <div className="bg-slate-950/50 backdrop-blur-sm px-2 py-0.5 rounded-full border border-white/10 text-[8px] font-bold text-slate-500 flex items-center gap-1.5">
-      <div className="w-1 h-1 rounded-full bg-amber-500 animate-pulse" />
+    <div className="backdrop-blur-sm px-2 py-0.5 rounded-full text-[9px] text-muted-foreground flex items-center gap-1.5" style={{ background: 'hsl(var(--card) / 0.6)', border: '1px solid hsl(var(--border) / 0.4)' }}>
+      <div className="w-1 h-1 rounded-full animate-pulse" style={{ background: 'hsl(var(--primary))' }} />
       Double-clic copier · Flèches/+/-/0
     </div>
   </div>
@@ -44,18 +44,20 @@ const Minimap = memo(({
 
   return (
     <div
-      className={`hidden md:block absolute z-20 bg-slate-950/80 backdrop-blur-md border border-slate-700/50 rounded-xl overflow-hidden shadow-2xl cursor-pointer hover:border-amber-500/30 transition-colors ${isFullscreen ? 'bottom-8 right-6' : 'bottom-4 right-4'}`}
-      style={{ width: MINIMAP_W, height: minimapH }}
+      className={`hidden md:block absolute z-20 backdrop-blur-md rounded-md overflow-hidden cursor-pointer transition-colors ${isFullscreen ? 'bottom-8 right-6' : 'bottom-4 right-4'}`}
+      style={{ width: MINIMAP_W, height: minimapH, background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }}
       onClick={handleClick}
     >
-      <img src={mapPath} alt="" className="w-full h-full object-cover pointer-events-none opacity-60" draggable={false} />
+      <img src={mapPath} alt="" className="w-full h-full object-cover pointer-events-none opacity-70" draggable={false} />
       <div
-        className="absolute border-2 border-amber-500/80 bg-amber-500/15 rounded-sm pointer-events-none"
+        className="absolute rounded-sm pointer-events-none"
         style={{
           left: Math.max(0, Math.min(rectX, MINIMAP_W)) + 'px',
           top: Math.max(0, Math.min(rectY, minimapH)) + 'px',
           width: Math.max(4, Math.min(rectW, MINIMAP_W - Math.max(0, rectX))) + 'px',
           height: Math.max(4, Math.min(rectH, minimapH - Math.max(0, rectY))) + 'px',
+          border: '2px solid hsl(var(--primary))',
+          background: 'hsl(var(--primary) / 0.15)',
         }}
       />
     </div>
@@ -242,8 +244,8 @@ const MapViewer: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className={`relative flex flex-col space-y-2 md:space-y-4 overflow-hidden bg-[#0a0a0c] transition-all duration-500 ${isFullscreen ? 'fixed !inset-0 !z-[9999] !w-screen !h-[100dvh] !max-w-none !m-0 p-safe touch-none' : 'h-[calc(100vh-80px)] md:h-[calc(100vh-140px)]'}`}
-      style={isFullscreen ? { touchAction: 'none', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 } : {}}
+      className={`relative flex flex-col gap-3 md:gap-4 overflow-hidden transition-all duration-500 ${isFullscreen ? 'fixed !inset-0 !z-[9999] !w-screen !h-[100dvh] !max-w-none !m-0 p-safe touch-none' : 'h-full p-4 md:p-6'}`}
+      style={isFullscreen ? { touchAction: 'none', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'hsl(var(--background))' } : { background: 'hsl(var(--background))' }}
     >
       {orientation === 'portrait' && (
         <div className="fixed inset-0 z-[10000] bg-slate-950 flex flex-col items-center justify-center p-8 text-center sm:hidden p-safe">
@@ -253,25 +255,42 @@ const MapViewer: React.FC = () => {
         </div>
       )}
 
-      <div className={`flex gap-2 md:gap-6 items-center bg-slate-800/30 p-2 md:p-4 rounded-xl md:rounded-2xl border border-slate-700/50 shadow-xl shrink-0 transition-all ${isFullscreen ? 'py-1 md:py-2 px-safe-top' : ''}`}>
-        <div className="flex items-center gap-3 shrink-0">
-          <div className={`${isFullscreen ? 'hidden' : 'hidden lg:flex items-center gap-3'}`}>
-            <h2 className="text-lg font-black text-slate-100 uppercase tracking-tight italic leading-none">Cartographie</h2>
+      <div className={`flex gap-3 md:gap-4 items-center surface-card px-3 md:px-4 py-2 md:py-2.5 shrink-0 ${isFullscreen ? '!rounded-none !border-0 !border-b px-safe-top' : ''}`}>
+        <div className="flex items-center gap-2 shrink-0">
+          <div className={`${isFullscreen ? 'hidden' : 'hidden lg:flex items-center gap-2'}`}>
+            <h2 className="text-sm font-semibold tracking-tight text-foreground">Cartographie</h2>
+            <span className="w-1 h-1 rounded-full" style={{ background: 'hsl(var(--primary))' }} />
           </div>
         </div>
 
         <div className="flex-1 min-w-0">
-          <div className="hidden lg:flex flex-wrap gap-2">
+          <div className="hidden lg:flex flex-wrap gap-1.5">
             {MAPS.map(map => (
-              <button key={map.id} onClick={() => { setSelectedMap(map); setIsLoading(true); }} className={`px-2 md:px-3 py-1 md:py-1.5 rounded-lg text-[7px] md:text-[10px] font-black uppercase tracking-wider transition-all border ${selectedMap.id === map.id ? 'bg-amber-500 border-amber-400 text-slate-950 shadow-lg scale-105' : 'bg-slate-900 border-slate-800 text-slate-500 hover:text-slate-200'}`}>
+              <button
+                key={map.id}
+                onClick={() => { setSelectedMap(map); setIsLoading(true); }}
+                className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors ${
+                  selectedMap.id === map.id
+                    ? 'text-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+                style={selectedMap.id === map.id ? { background: 'hsl(var(--primary) / 0.15)', border: '1px solid hsl(var(--primary) / 0.4)' } : { background: 'hsl(var(--muted) / 0.4)', border: '1px solid hsl(var(--border) / 0.5)' }}
+              >
                 {map.name.split(' / ')[0]}
               </button>
             ))}
           </div>
           <div className="lg:hidden">
-            <ScrollContainer className="flex gap-1 px-1">
+            <ScrollContainer className="flex gap-1">
               {MAPS.map(map => (
-                <button key={map.id} onClick={() => { setSelectedMap(map); setIsLoading(true); }} className={`shrink-0 px-2 py-1 rounded-lg text-[8px] font-black uppercase tracking-wider transition-all border ${selectedMap.id === map.id ? 'bg-amber-500 border-amber-400 text-slate-950 shadow-lg scale-105' : 'bg-slate-900 border-slate-800 text-slate-500 hover:text-slate-200'}`}>
+                <button
+                  key={map.id}
+                  onClick={() => { setSelectedMap(map); setIsLoading(true); }}
+                  className={`shrink-0 px-2.5 py-1 rounded-md text-[10px] font-medium transition-colors ${
+                    selectedMap.id === map.id ? 'text-foreground' : 'text-muted-foreground'
+                  }`}
+                  style={selectedMap.id === map.id ? { background: 'hsl(var(--primary) / 0.15)', border: '1px solid hsl(var(--primary) / 0.4)' } : { background: 'hsl(var(--muted) / 0.4)', border: '1px solid hsl(var(--border) / 0.5)' }}
+                >
                   {map.name.split(' / ')[0]}
                 </button>
               ))}
@@ -281,22 +300,28 @@ const MapViewer: React.FC = () => {
 
         <div className="flex items-center gap-2 shrink-0">
           {(orientation === 'landscape' || !window.matchMedia('(max-width: 768px)').matches) && (
-            <button onClick={toggleFullscreen} className="p-2 md:p-3 bg-slate-900 border border-slate-800 rounded-lg md:rounded-xl text-slate-400 hover:text-amber-500 transition-all shadow-xl">
-              {isFullscreen ? <Minimize size={18} /> : <Fullscreen size={18} />}
+            <button
+              onClick={toggleFullscreen}
+              className="inline-flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground transition-colors"
+              style={{ background: 'hsl(var(--muted) / 0.4)', border: '1px solid hsl(var(--border) / 0.5)' }}
+              title={isFullscreen ? 'Quitter le plein écran' : 'Plein écran'}
+            >
+              {isFullscreen ? <Minimize size={16} /> : <Fullscreen size={16} />}
             </button>
           )}
         </div>
       </div>
 
       <div className="flex flex-1 gap-2 md:gap-4 min-h-0 relative">
-        <div ref={mapViewportRef} className="relative flex-1 bg-slate-950 rounded-xl md:rounded-2xl border border-slate-800 overflow-hidden select-none group shadow-inner">
+        <div ref={mapViewportRef} className="relative flex-1 rounded-xl border overflow-hidden select-none group" style={{ background: 'hsl(var(--card))', borderColor: 'hsl(var(--border) / 0.6)' }}>
           {isLoading && (
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-slate-950/80 backdrop-blur-sm">
-              <Loader2 size={24} className="md:w-12 md:h-12 text-amber-500 animate-spin mb-2 md:mb-4" /><p className="text-slate-400 font-black uppercase tracking-widest animate-pulse text-[8px] md:text-xs">Chargement...</p>
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center backdrop-blur-sm" style={{ background: 'hsl(var(--background) / 0.7)' }}>
+              <Loader2 size={28} className="text-primary-strong animate-spin mb-3" />
+              <p className="text-muted-foreground text-xs font-medium animate-pulse">Chargement...</p>
             </div>
           )}
           {copyFlash && (
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 px-4 py-2 bg-emerald-500/90 backdrop-blur-md border border-emerald-300 rounded-xl text-slate-950 text-xs font-black uppercase tracking-wider shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 px-3 py-1.5 backdrop-blur-md rounded-md text-xs font-medium shadow-lg animate-in fade-in slide-in-from-top-2 duration-200" style={{ background: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>
               Copié : {copyFlash}
             </div>
           )}
@@ -318,10 +343,10 @@ const MapViewer: React.FC = () => {
             ref={transformWrapperRef}>
             {(instance) => (
               <>
-                <div className={`absolute top-2 right-2 md:top-4 md:right-4 z-20 flex flex-col gap-1 md:gap-2 ${isFullscreen ? 'pr-safe pt-safe' : ''}`}>
-                  <button onClick={() => instance.zoomIn()} className="p-2 md:p-3 bg-slate-900/90 backdrop-blur-md border border-slate-700 rounded-lg md:rounded-xl text-slate-300 hover:text-amber-500 transition-all shadow-2xl"><ZoomIn size={16} className="md:w-5 md:h-5" /></button>
-                  <button onClick={() => instance.zoomOut()} className="p-2 md:p-3 bg-slate-900/90 backdrop-blur-md border border-slate-700 rounded-lg md:rounded-xl text-slate-300 hover:text-amber-500 transition-all shadow-2xl"><ZoomOut size={16} className="md:w-5 md:h-5" /></button>
-                  <button onClick={() => fitToView(instance)} className="p-2 md:p-3 bg-slate-900/90 backdrop-blur-md border border-slate-700 rounded-lg md:rounded-xl text-slate-300 hover:text-amber-500 transition-all shadow-2xl" title="Recadrer"><Maximize size={16} className="md:w-5 md:h-5" /></button>
+                <div className={`absolute top-3 right-3 md:top-4 md:right-4 z-20 flex flex-col gap-1.5 ${isFullscreen ? 'pr-safe pt-safe' : ''}`}>
+                  <button onClick={() => instance.zoomIn()} className="inline-flex items-center justify-center w-9 h-9 backdrop-blur-md rounded-md text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }} title="Zoom +"><ZoomIn size={16} /></button>
+                  <button onClick={() => instance.zoomOut()} className="inline-flex items-center justify-center w-9 h-9 backdrop-blur-md rounded-md text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }} title="Zoom −"><ZoomOut size={16} /></button>
+                  <button onClick={() => fitToView(instance)} className="inline-flex items-center justify-center w-9 h-9 backdrop-blur-md rounded-md text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }} title="Recadrer"><Maximize size={16} /></button>
                 </div>
 
                 <TransformComponent wrapperStyle={{ width: "100%", height: "100%" }}>
