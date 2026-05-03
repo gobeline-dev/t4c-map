@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════
+   THEME CSS VARIABLES — inspired by Nefast (shadcn/ui)
+   ═══════════════════════════════════════════ */
+
+:root {
+  --background: 222 14% 7%;
+  --foreground: 210 20% 96%;
+  --card: 222 14% 9%;
+  --card-foreground: 210 20% 96%;
+  --muted: 222 14% 14%;
+  --muted-foreground: 215 14% 60%;
+  --border: 222 14% 17%;
+  --input: 222 14% 17%;
+  --primary: 188 78% 28%;
+  --primary-foreground: 210 20% 98%;
+  --accent: 188 78% 36%;
+  --ring: 188 78% 36%;
+
+  --bg-primary: hsl(var(--background));
+  --bg-surface: hsl(var(--card) / 0.6);
+  --bg-surface-solid: hsl(var(--card));
+  --bg-panel: hsl(var(--card) / 0.4);
+  --text-heading: hsl(var(--foreground));
+  --text-body: hsl(var(--foreground));
+  --text-muted: hsl(var(--muted-foreground));
+  --text-faint: hsl(var(--muted-foreground) / 0.7);
+  --border-subtle: hsl(var(--border) / 0.6);
+  --border-strong: hsl(var(--border));
+  --scrollbar-thumb: hsl(var(--primary));
+  --scrollbar-track: hsl(var(--card));
+  --shadow-glow: hsl(var(--primary) / 0.15);
+  --canvas-filter: none;
+}
+
+[data-theme="parchment"] {
+  --background: 36 14% 9%;
+  --foreground: 36 30% 88%;
+  --card: 36 14% 12%;
+  --card-foreground: 36 30% 88%;
+  --muted: 36 14% 18%;
+  --muted-foreground: 36 18% 60%;
+  --border: 36 14% 22%;
+  --input: 36 14% 22%;
+  --primary: 36 60% 42%;
+  --primary-foreground: 36 30% 96%;
+  --accent: 36 60% 50%;
+  --ring: 36 60% 50%;
+
+  --canvas-filter: sepia(0.25) brightness(0.95);
+}
+
+@layer base {
+  body {
+    @apply text-slate-100 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text-heading);
+    letter-spacing: -0.02em;
+  }
+
+  h1 { @apply text-4xl md:text-6xl font-semibold leading-tight; }
+  h2 { @apply text-2xl md:text-4xl font-semibold leading-tight; }
+  h3 { @apply text-lg md:text-xl font-semibold; }
+  h4 { @apply text-base font-semibold; }
+
+  /* ═══ CUSTOM SCROLLBAR ═══ */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-track); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.6);
+    border-radius: 9999px;
+    border: 2px solid var(--scrollbar-track);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary)); }
+  * { scrollbar-width: thin; scrollbar-color: hsl(var(--primary) / 0.6) var(--scrollbar-track); }
+}
+
+@layer components {
+  /* ═══ Surfaces ═══ */
+  .surface-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border) / 0.6);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+    transition: border-color .3s, box-shadow .3s;
+  }
+  .surface-card:hover {
+    border-color: hsl(var(--border));
+    box-shadow: 0 4px 12px -4px rgba(0,0,0,0.4);
+  }
+
+  .glass-card {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    border-radius: 0.75rem;
+  }
+
+  .glass-panel {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* ═══ Buttons ═══ */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 h-10 px-6 rounded-md text-sm font-medium transition-all shadow-sm;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+  .btn-primary:hover { background: hsl(var(--primary) / 0.9); box-shadow: 0 4px 14px -4px hsl(var(--primary) / 0.4); }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 h-10 px-6 rounded-md text-sm font-medium transition-all;
+    background: hsl(var(--card) / 0.5);
+    border: 1px solid hsl(var(--border) / 0.8);
+    color: hsl(var(--foreground));
+    backdrop-filter: blur(8px);
+  }
+  .btn-secondary:hover { background: hsl(var(--card)); }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 h-9 px-3 rounded-md text-sm font-medium transition-colors;
+    color: hsl(var(--muted-foreground));
+  }
+  .btn-ghost:hover { color: hsl(var(--foreground)); background: hsl(var(--muted) / 0.5); }
+
+  /* ═══ Pill / Badge ═══ */
+  .status-pill {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium;
+    background: hsl(var(--card) / 0.8);
+    border: 1px solid hsl(var(--border) / 0.6);
+    backdrop-filter: blur(8px);
+  }
+
+  /* ═══ Section heading divider ═══ */
+  .section-title {
+    @apply text-lg font-semibold pb-2 mb-3 border-b;
+    border-color: hsl(var(--border) / 0.6);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  /* iOS Safe Area */
+  .p-safe {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  .pt-safe { padding-top: env(safe-area-inset-top); }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+  .pl-safe { padding-left: env(safe-area-inset-left); }
+  .pr-safe { padding-right: env(safe-area-inset-right); }
+  .px-safe-top {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .bg-background { background-color: hsl(var(--background)); }
+  .bg-card { background-color: hsl(var(--card)); }
+  .bg-muted { background-color: hsl(var(--muted)); }
+  .bg-primary-soft { background-color: hsl(var(--primary) / 0.1); }
+  .text-foreground { color: hsl(var(--foreground)); }
+  .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+  .text-primary { color: hsl(var(--primary)); }
+  .text-primary-strong { color: hsl(var(--accent)); }
+  .border-border { border-color: hsl(var(--border)); }
+  .border-border-soft { border-color: hsl(var(--border) / 0.5); }
+}
+
+/* ═══ Animations ═══ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.animate-shimmer { animation: shimmer 3s infinite linear; }
+
+body {
+  color: var(--text-body);
+  background: transparent;
+}
+
+#root {
+  background: transparent;
+}
