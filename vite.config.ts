@@ -4,7 +4,7 @@ import { compression } from 'vite-plugin-compression2'
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: '/',
+    base: '/t4c-map/',
     plugins: [
         react(),
         compression({ algorithms: ['gzip'] }),

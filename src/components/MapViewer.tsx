@@ -5,37 +5,53 @@ import ScrollContainer from '../components/shared/ScrollContainer';
 import { MAPS } from '../config/maps';
 import type { MapInfo } from '../config/maps';
 
-const CoordsOverlay = memo(({ gx, gy, worldId, isFullscreen }: { gx: number, gy: number, worldId: number, isFullscreen: boolean }) => (
-  <div className={`absolute bottom-3 left-3 flex flex-col items-start gap-1.5 pointer-events-none z-20 ${isFullscreen ? 'pl-safe pb-safe' : ''}`}>
-    <div className="backdrop-blur-md px-3 py-1.5 rounded-md flex items-center gap-2 shadow-md" style={{ background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }}>
-      <MousePointer2 size={12} className="text-primary-strong" />
-      <span className="text-xs font-mono font-medium text-foreground tracking-tight">{gx}.{gy}.{worldId}</span>
+interface Coords { x: number; y: number; gx: number; gy: number; }
+interface TransformLike { scale: number; positionX: number; positionY: number; }
+
+const CoordsOverlay = memo(({ subscribe, worldId, isFullscreen }: {
+  subscribe: (cb: (c: Coords) => void) => () => void;
+  worldId: number;
+  isFullscreen: boolean;
+}) => {
+  const [coords, setCoords] = useState<Coords>({ x: 0, y: 0, gx: 0, gy: 0 });
+  useEffect(() => subscribe(setCoords), [subscribe]);
+
+  return (
+    <div className={`absolute bottom-3 left-3 flex flex-col items-start gap-1.5 pointer-events-none z-20 ${isFullscreen ? 'pl-safe pb-safe' : ''}`}>
+      <div className="px-3 py-1.5 rounded-md flex items-center gap-2 shadow-md" style={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border) / 0.6)' }}>
+        <MousePointer2 size={12} className="text-primary-strong" />
+        <span className="text-xs font-mono font-medium text-foreground tracking-tight">{coords.gx}.{coords.gy}.{worldId}</span>
+      </div>
+      <div className="px-2 py-0.5 rounded-full text-[9px] text-muted-foreground flex items-center gap-1.5" style={{ background: 'hsl(var(--card) / 0.6)', border: '1px solid hsl(var(--border) / 0.4)' }}>
+        <div className="w-1 h-1 rounded-full animate-pulse" style={{ background: 'hsl(var(--primary))' }} />
+        Double-clic copier · Flèches/+/-/0
+      </div>
     </div>
-    <div className="backdrop-blur-sm px-2 py-0.5 rounded-full text-[9px] text-muted-foreground flex items-center gap-1.5" style={{ background: 'hsl(var(--card) / 0.6)', border: '1px solid hsl(var(--border) / 0.4)' }}>
-      <div className="w-1 h-1 rounded-full animate-pulse" style={{ background: 'hsl(var(--primary))' }} />
-      Double-clic copier · Flèches/+/-/0
-    </div>
-  </div>
-));
+  );
+});
 
 const MINIMAP_W = 160;
 
 const Minimap = memo(({
-  mapPath, scale, positionX, positionY, viewportW, viewportH, imageW, imageH, onNavigate, isFullscreen,
+  mapPath, subscribe, viewportW, viewportH, imageW, imageH, onNavigate, isFullscreen,
 }: {
-  mapPath: string; scale: number; positionX: number; positionY: number;
+  mapPath: string;
+  subscribe: (cb: (s: TransformLike) => void) => () => void;
   viewportW: number; viewportH: number; imageW: number; imageH: number;
   onNavigate: (imgX: number, imgY: number) => void; isFullscreen: boolean;
 }) => {
+  const [t, setT] = useState<TransformLike>({ scale: 1, positionX: 0, positionY: 0 });
+  useEffect(() => subscribe(setT), [subscribe]);
+
   if (imageW === 0 || imageH === 0) return null;
 
   const minimapScale = MINIMAP_W / imageW;
   const minimapH = Math.min(imageH * minimapScale, 120);
 
-  const rectX = (-positionX / scale) * minimapScale;
-  const rectY = (-positionY / scale) * minimapScale;
-  const rectW = (viewportW / scale) * minimapScale;
-  const rectH = (viewportH / scale) * minimapScale;
+  const rectX = (-t.positionX / t.scale) * minimapScale;
+  const rectY = (-t.positionY / t.scale) * minimapScale;
+  const rectW = (viewportW / t.scale) * minimapScale;
+  const rectH = (viewportH / t.scale) * minimapScale;
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -44,11 +60,11 @@ const Minimap = memo(({
 
   return (
     <div
-      className={`hidden md:block absolute z-20 backdrop-blur-md rounded-md overflow-hidden cursor-pointer transition-colors ${isFullscreen ? 'bottom-8 right-6' : 'bottom-4 right-4'}`}
-      style={{ width: MINIMAP_W, height: minimapH, background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }}
+      className={`hidden md:block absolute z-20 rounded-md overflow-hidden cursor-pointer transition-colors ${isFullscreen ? 'bottom-8 right-6' : 'bottom-4 right-4'}`}
+      style={{ width: MINIMAP_W, height: minimapH, background: 'hsl(var(--card))', border: '1px solid hsl(var(--border) / 0.6)' }}
       onClick={handleClick}
     >
-      <img src={mapPath} alt="" className="w-full h-full object-cover pointer-events-none opacity-70" draggable={false} />
+      <img src={mapPath} alt="" className="w-full h-full object-cover pointer-events-none opacity-70" draggable={false} decoding="async" />
       <div
         className="absolute rounded-sm pointer-events-none"
         style={{
@@ -70,18 +86,34 @@ const MapViewer: React.FC = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [orientation, setOrientation] = useState<'portrait' | 'landscape'>(window.innerHeight > window.innerWidth ? 'portrait' : 'landscape');
   const [copyFlash, setCopyFlash] = useState<string | null>(null);
+  const [coverScale, setCoverScale] = useState(0.5);
+  const [imgDims, setImgDims] = useState({ w: 0, h: 0 });
+  const [viewportDims, setViewportDims] = useState({ w: 0, h: 0 });
 
   const imgRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const mapViewportRef = useRef<HTMLDivElement>(null);
   const transformWrapperRef = useRef<any>(null);
-  const [coords, setCoords] = useState({ x: 0, y: 0, gx: 0, gy: 0 });
-  const transformStateRef = useRef({ scale: 0.1, positionX: 0, positionY: 0 });
-  const [transformState, setTransformState] = useState({ scale: 0.1, positionX: 0, positionY: 0 });
-  const rafId = useRef(0);
-  const [coverScale, setCoverScale] = useState(0.5);
+  const transformStateRef = useRef<TransformLike>({ scale: 1, positionX: 0, positionY: 0 });
+  const coordsRef = useRef<Coords>({ x: 0, y: 0, gx: 0, gy: 0 });
 
-  const updateCoverScale = useCallback(() => {
+  // Pub/sub registries — avoid re-rendering MapViewer on mouse/transform updates
+  const coordsListenersRef = useRef<Set<(c: Coords) => void>>(new Set());
+  const transformListenersRef = useRef<Set<(s: TransformLike) => void>>(new Set());
+
+  const subscribeCoords = useCallback((cb: (c: Coords) => void) => {
+    coordsListenersRef.current.add(cb);
+    cb(coordsRef.current);
+    return () => { coordsListenersRef.current.delete(cb); };
+  }, []);
+
+  const subscribeTransform = useCallback((cb: (s: TransformLike) => void) => {
+    transformListenersRef.current.add(cb);
+    cb(transformStateRef.current);
+    return () => { transformListenersRef.current.delete(cb); };
+  }, []);
+
+  const updateDims = useCallback(() => {
     if (imgRef.current && mapViewportRef.current) {
       const vw = mapViewportRef.current.offsetWidth;
       const vh = mapViewportRef.current.offsetHeight;
@@ -89,6 +121,8 @@ const MapViewer: React.FC = () => {
       const ih = imgRef.current.naturalHeight;
       if (iw > 0 && ih > 0) {
         setCoverScale(Math.max(vw / iw, vh / ih));
+        setImgDims(prev => prev.w === iw && prev.h === ih ? prev : { w: iw, h: ih });
+        setViewportDims(prev => prev.w === vw && prev.h === vh ? prev : { w: vw, h: vh });
       }
     }
   }, []);
@@ -96,10 +130,10 @@ const MapViewer: React.FC = () => {
   useEffect(() => {
     const el = mapViewportRef.current;
     if (!el) return;
-    const ro = new ResizeObserver(() => updateCoverScale());
+    const ro = new ResizeObserver(() => updateDims());
     ro.observe(el);
     return () => ro.disconnect();
-  }, [updateCoverScale]);
+  }, [updateDims]);
 
   const fitToView = (instance: any) => {
     if (imgRef.current && mapViewportRef.current) {
@@ -108,23 +142,21 @@ const MapViewer: React.FC = () => {
       const scale = Math.max(vw / imgRef.current.naturalWidth, vh / imgRef.current.naturalHeight);
       const x = (vw - imgRef.current.naturalWidth * scale) / 2;
       const y = (vh - imgRef.current.naturalHeight * scale) / 2;
-      instance.setTransform(x, y, scale, 400, "easeOut");
+      instance.setTransform(x, y, scale, 400, 'easeOut');
     }
   };
 
   useEffect(() => {
     window.dispatchEvent(new CustomEvent('t4c-fullscreen-change', { detail: isFullscreen }));
     if (isFullscreen) {
-        document.body.style.overflow = 'hidden';
-        window.scrollTo(0, 0);
+      document.body.style.overflow = 'hidden';
+      window.scrollTo(0, 0);
     } else {
-        document.body.style.overflow = '';
+      document.body.style.overflow = '';
     }
 
     const timer = setTimeout(() => {
-      if (transformWrapperRef.current) {
-        fitToView(transformWrapperRef.current);
-      }
+      if (transformWrapperRef.current) fitToView(transformWrapperRef.current);
     }, 500);
 
     return () => {
@@ -138,27 +170,20 @@ const MapViewer: React.FC = () => {
       const isPortrait = window.matchMedia('(orientation: portrait)').matches;
       setOrientation(isPortrait ? 'portrait' : 'landscape');
     };
-
     checkOrientation();
-
     const mql = window.matchMedia('(orientation: portrait)');
-    const handleOrientationChange = (e: MediaQueryListEvent) => {
-      setOrientation(e.matches ? 'portrait' : 'landscape');
-    };
-
+    const handleOrientationChange = (e: MediaQueryListEvent) => setOrientation(e.matches ? 'portrait' : 'landscape');
     mql.addEventListener('change', handleOrientationChange);
     window.addEventListener('resize', checkOrientation);
-
     const handleLegacyOrientationChange = () => {
-       setTimeout(checkOrientation, 100);
-       setTimeout(checkOrientation, 500);
+      setTimeout(checkOrientation, 100);
+      setTimeout(checkOrientation, 500);
     };
     window.addEventListener('orientationchange', handleLegacyOrientationChange);
-
     return () => {
-        mql.removeEventListener('change', handleOrientationChange);
-        window.removeEventListener('resize', checkOrientation);
-        window.removeEventListener('orientationchange', handleLegacyOrientationChange);
+      mql.removeEventListener('change', handleOrientationChange);
+      window.removeEventListener('resize', checkOrientation);
+      window.removeEventListener('orientationchange', handleLegacyOrientationChange);
     };
   }, []);
 
@@ -216,35 +241,53 @@ const MapViewer: React.FC = () => {
     transformWrapperRef.current.setTransform(x, y, scale, 300, 'easeOut');
   }, []);
 
-  const toggleFullscreen = () => {
-    setIsFullscreen(!isFullscreen);
-  };
+  const toggleFullscreen = () => setIsFullscreen(v => !v);
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (imgRef.current) {
-      const rect = imgRef.current.getBoundingClientRect();
-      const scaleX = imgRef.current.naturalWidth / rect.width;
-      const scaleY = imgRef.current.naturalHeight / rect.height;
-      const localX = (e.clientX - rect.left) * scaleX;
-      const localY = (e.clientY - rect.top) * scaleY;
-      if (localX >= 0 && localY >= 0 && localX <= imgRef.current.naturalWidth && localY <= imgRef.current.naturalHeight) {
-        setCoords({ x: Math.floor(localX), y: Math.floor(localY), gx: Math.floor(localX / 2), gy: Math.floor(localY) });
-      }
-    }
-  };
+  // Mouse move: rAF-throttled, never triggers MapViewer re-render
+  const moveRafRef = useRef(0);
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    const img = imgRef.current;
+    if (!img) return;
+    const rect = img.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return;
+    const scaleX = img.naturalWidth / rect.width;
+    const scaleY = img.naturalHeight / rect.height;
+    const localX = (e.clientX - rect.left) * scaleX;
+    const localY = (e.clientY - rect.top) * scaleY;
+    if (localX < 0 || localY < 0 || localX > img.naturalWidth || localY > img.naturalHeight) return;
+    const next: Coords = { x: Math.floor(localX), y: Math.floor(localY), gx: Math.floor(localX / 2), gy: Math.floor(localY) };
+    coordsRef.current = next;
+    if (moveRafRef.current) return;
+    moveRafRef.current = requestAnimationFrame(() => {
+      moveRafRef.current = 0;
+      coordsListenersRef.current.forEach(cb => cb(coordsRef.current));
+    });
+  }, []);
 
-  const handleMapClick = () => {
-    const coordString = `${coords.gx}.${coords.gy}.${selectedMap.worldId}`;
+  const handleMapClick = useCallback(() => {
+    const c = coordsRef.current;
+    const coordString = `${c.gx}.${c.gy}.${selectedMap.worldId}`;
     navigator.clipboard.writeText(coordString).then(() => {
       setCopyFlash(coordString);
       setTimeout(() => setCopyFlash(null), 1500);
     });
-  };
+  }, [selectedMap.worldId]);
+
+  // rAF-throttled transform updates → notify listeners only
+  const transformRafRef = useRef(0);
+  const handleTransformed = useCallback((_ref: any, state: TransformLike) => {
+    transformStateRef.current = state;
+    if (transformRafRef.current) return;
+    transformRafRef.current = requestAnimationFrame(() => {
+      transformRafRef.current = 0;
+      transformListenersRef.current.forEach(cb => cb(transformStateRef.current));
+    });
+  }, []);
 
   return (
     <div
       ref={containerRef}
-      className={`relative flex flex-col gap-3 md:gap-4 overflow-hidden transition-all duration-500 ${isFullscreen ? 'fixed !inset-0 !z-[9999] !w-screen !h-[100dvh] !max-w-none !m-0 p-safe touch-none' : 'h-full p-4 md:p-6'}`}
+      className={`relative flex flex-col gap-3 md:gap-4 overflow-hidden ${isFullscreen ? 'fixed !inset-0 !z-[9999] !w-screen !h-[100dvh] !max-w-none !m-0 p-safe touch-none' : 'h-full p-4 md:p-6'}`}
       style={isFullscreen ? { touchAction: 'none', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'hsl(var(--background))' } : { background: 'hsl(var(--background))' }}
     >
       {orientation === 'portrait' && (
@@ -270,9 +313,7 @@ const MapViewer: React.FC = () => {
                 key={map.id}
                 onClick={() => { setSelectedMap(map); setIsLoading(true); }}
                 className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors ${
-                  selectedMap.id === map.id
-                    ? 'text-foreground'
-                    : 'text-muted-foreground hover:text-foreground'
+                  selectedMap.id === map.id ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
                 }`}
                 style={selectedMap.id === map.id ? { background: 'hsl(var(--primary) / 0.15)', border: '1px solid hsl(var(--primary) / 0.4)' } : { background: 'hsl(var(--muted) / 0.4)', border: '1px solid hsl(var(--border) / 0.5)' }}
               >
@@ -321,7 +362,7 @@ const MapViewer: React.FC = () => {
             </div>
           )}
           {copyFlash && (
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 px-3 py-1.5 backdrop-blur-md rounded-md text-xs font-medium shadow-lg animate-in fade-in slide-in-from-top-2 duration-200" style={{ background: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 px-3 py-1.5 rounded-md text-xs font-medium shadow-lg animate-in fade-in slide-in-from-top-2 duration-200" style={{ background: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>
               Copié : {copyFlash}
             </div>
           )}
@@ -335,34 +376,30 @@ const MapViewer: React.FC = () => {
             centerZoomedOut={false}
             wheel={{ step: 0.08 }}
             velocityAnimation={{ sensitivity: 1, animationTime: 300, animationType: 'easeOut' }}
-            onTransformed={(_ref, state) => {
-              transformStateRef.current = state;
-              cancelAnimationFrame(rafId.current);
-              rafId.current = requestAnimationFrame(() => setTransformState({ ...state }));
-            }}
+            onTransformed={handleTransformed}
             ref={transformWrapperRef}>
             {(instance) => (
               <>
                 <div className={`absolute top-3 right-3 md:top-4 md:right-4 z-20 flex flex-col gap-1.5 ${isFullscreen ? 'pr-safe pt-safe' : ''}`}>
-                  <button onClick={() => instance.zoomIn()} className="inline-flex items-center justify-center w-9 h-9 backdrop-blur-md rounded-md text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }} title="Zoom +"><ZoomIn size={16} /></button>
-                  <button onClick={() => instance.zoomOut()} className="inline-flex items-center justify-center w-9 h-9 backdrop-blur-md rounded-md text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }} title="Zoom −"><ZoomOut size={16} /></button>
-                  <button onClick={() => fitToView(instance)} className="inline-flex items-center justify-center w-9 h-9 backdrop-blur-md rounded-md text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'hsl(var(--card) / 0.85)', border: '1px solid hsl(var(--border) / 0.6)' }} title="Recadrer"><Maximize size={16} /></button>
+                  <button onClick={() => instance.zoomIn()} className="inline-flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border) / 0.6)' }} title="Zoom +"><ZoomIn size={16} /></button>
+                  <button onClick={() => instance.zoomOut()} className="inline-flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border) / 0.6)' }} title="Zoom −"><ZoomOut size={16} /></button>
+                  <button onClick={() => fitToView(instance)} className="inline-flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border) / 0.6)' }} title="Recadrer"><Maximize size={16} /></button>
                 </div>
 
-                <TransformComponent wrapperStyle={{ width: "100%", height: "100%" }}>
-                  <div onMouseMove={handleMouseMove} onDoubleClick={handleMapClick} className="relative cursor-crosshair">
+                <TransformComponent wrapperStyle={{ width: '100%', height: '100%' }}>
+                  <div onMouseMove={handleMouseMove} onDoubleClick={handleMapClick} className="relative cursor-crosshair" style={{ willChange: 'transform' }}>
                     <img
                       ref={imgRef}
                       src={selectedMap.path}
                       alt={selectedMap.name}
                       className="max-w-none"
+                      decoding="async"
+                      loading="eager"
                       onLoad={() => {
                         setIsLoading(false);
-                        updateCoverScale();
+                        updateDims();
                         setTimeout(() => {
-                          if (transformWrapperRef.current) {
-                            fitToView(transformWrapperRef.current);
-                          }
+                          if (transformWrapperRef.current) fitToView(transformWrapperRef.current);
                         }, 100);
                       }}
                       draggable={false}
@@ -375,18 +412,16 @@ const MapViewer: React.FC = () => {
           {!isLoading && (
             <Minimap
               mapPath={selectedMap.path}
-              scale={transformState.scale}
-              positionX={transformState.positionX}
-              positionY={transformState.positionY}
-              viewportW={mapViewportRef.current?.offsetWidth ?? 0}
-              viewportH={mapViewportRef.current?.offsetHeight ?? 0}
-              imageW={imgRef.current?.naturalWidth ?? 0}
-              imageH={imgRef.current?.naturalHeight ?? 0}
+              subscribe={subscribeTransform}
+              viewportW={viewportDims.w}
+              viewportH={viewportDims.h}
+              imageW={imgDims.w}
+              imageH={imgDims.h}
               onNavigate={handleMinimapNavigate}
               isFullscreen={isFullscreen}
             />
           )}
-          <CoordsOverlay gx={coords.gx} gy={coords.gy} worldId={selectedMap.worldId} isFullscreen={isFullscreen} />
+          <CoordsOverlay subscribe={subscribeCoords} worldId={selectedMap.worldId} isFullscreen={isFullscreen} />
         </div>
       </div>
     </div>
