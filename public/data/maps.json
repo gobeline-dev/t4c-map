@@ -1,0 +1,107 @@
+[
+  {
+    "id": "arakas",
+    "name": "Arakas",
+    "images": [
+      {
+        "src": "/images/maps/Arakasnexus1.png"
+      }
+    ]
+  },
+  {
+    "id": "ravens-dust",
+    "name": "Raven's Dust",
+    "images": [
+      {
+        "src": "/images/maps/rd.png"
+      }
+    ]
+  },
+  {
+    "id": "stoneheim",
+    "name": "Stoneheim",
+    "images": [
+      {
+        "src": "/images/maps/sh.png"
+      },
+      {
+        "src": "/images/maps/zoneLiche.png",
+        "legend": "Zone liche"
+      }
+    ]
+  },
+  {
+    "id": "zone-90",
+    "name": "Zone 90+",
+    "images": [
+      {
+        "src": "/images/maps/zone90.png",
+        "legend": "1 mini boss drake |\n2 portail d'accès aux zones d'xp |\n3 Gogg darkpride / collectionneur |\n4 salle aux trésors |\n5 entrée"
+      }
+    ]
+  },
+  {
+    "id": "zodaria",
+    "name": "Zodaria",
+    "images": [
+      {
+        "src": "/images/maps/Zodiaques.png",
+        "legend": "Zone 150+"
+      },
+      {
+        "src": "/images/maps/zod-ville.png",
+        "legend": "1 portail chateau du grand pope |\n2 grand erudit / gunther / copernic |\n3 Thorvald |\n4 pnj reskin ailes |\n5 Alchimiste |\n6 Roi midas |\n7 Mickey goldmill |\n8 pnj reroll |\n9 Marin / necromancien / vendeuse |\n10 chasseur de dragon |\n11 pnjs vendeur armure"
+      },
+      {
+        "src": "/images/maps/Antre-Kaelthar.png",
+        "legend": "Antre de Kaelthar"
+      }
+    ]
+  },
+  {
+    "id": "ilogato",
+    "name": "Ilogato",
+    "images": [
+      {
+        "src": "/images/maps/Ilogato.png",
+        "legend": "Zone 180+"
+      }
+    ]
+  },
+  {
+    "id": "zone-200",
+    "name": "Zone 200+",
+    "images": [
+      {
+        "src": "/images/maps/venus.png",
+        "legend": "Venus"
+      },
+      {
+        "src": "/images/maps/mercure.png",
+        "legend": "Mercure"
+      },
+      {
+        "src": "/images/maps/uranus.png",
+        "legend": "Uranus"
+      },
+      {
+        "src": "/images/maps/jupiter.png",
+        "legend": "Jupiter"
+      },
+      {
+        "src": "/images/maps/mars.png",
+        "legend": "Mars"
+      }
+    ]
+  },
+  {
+    "id": "ile-de-glace",
+    "name": "Île de Glace",
+    "images": [
+      {
+        "src": "/images/maps/Ile-Glace.png",
+        "legend": "Zone 250 - 300"
+      }
+    ]
+  }
+]

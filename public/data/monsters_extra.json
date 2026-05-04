@@ -1,0 +1,2149 @@
+[
+  {
+    "id": 22623,
+    "name": "Zombie acide",
+    "hp": 1497,
+    "xp": 14615.14,
+    "drops": [
+      "Potion de guérison des blessures graves 3.00%",
+      "Épée longue de qualité 1.00%",
+      "Potion de fureur 2.00%",
+      "Potion d'esprit clair 2.00%",
+      "Opale brute 2.00%",
+      "Rubis brut 0.40%",
+      "Grenat brut 0.10%",
+      "Opale finement taillée 1.00%",
+      "Rubis finement taillé 0.20%",
+      "Grenat finement taillé 0.05%"
+    ]
+  },
+  {
+    "id": 22531,
+    "name": "Cadavre animé",
+    "hp": 235,
+    "xp": 905.55,
+    "drops": [
+      "Anneau de confiance 1.00%",
+      "Os de squelette 0.30%"
+    ]
+  },
+  {
+    "id": 22542,
+    "name": "Antilope",
+    "hp": 353,
+    "xp": 0,
+    "drops": [
+      "Peau d'antilope 20.00%"
+    ]
+  },
+  {
+    "id": 22628,
+    "name": "Arachnide nemesis",
+    "hp": 1497,
+    "xp": 14615.14,
+    "drops": [
+      "Croc de tarentule 3.00%",
+      "Amethyste brute 2.00%",
+      "Saphir Brut 0.40%",
+      "Aigue-marine brute 0.10%",
+      "Yeux de tarentule 3.00%"
+    ]
+  },
+  {
+    "id": 22547,
+    "name": "Araf'Kul",
+    "hp": 926,
+    "xp": 4861.12,
+    "drops": [
+      "Feuille d'arbre rose 10.00%",
+      "Os humain 7.00%",
+      "Sachet de poudre jaune 18.00%",
+      "Potion de guérison légère 10.00%"
+    ]
+  },
+  {
+    "id": 22529,
+    "name": "Assassin",
+    "hp": 235,
+    "xp": 906.0799999999999,
+    "drops": [
+      "Potion de guérison légère 5.00%",
+      "Anneau d'or 0.05%"
+    ]
+  },
+  {
+    "id": 22511,
+    "name": "Atrocité",
+    "hp": 84,
+    "xp": 161,
+    "drops": [
+      "Potion de guérison légère 3.00%",
+      "Potion de guérison légère 5.00%",
+      "Clé de fer 0.50%"
+    ]
+  },
+  {
+    "id": 22570,
+    "name": "Horreur enrubannée",
+    "hp": 966,
+    "xp": 7722.78,
+    "drops": [
+      "Potion de fureur 5.00%",
+      "Bandelettes de momie 3.00%",
+      "Tesson brillant 2.00%"
+    ]
+  },
+  {
+    "id": 22500,
+    "name": "Chauve-souris",
+    "hp": 27,
+    "xp": 48,
+    "drops": [
+      "Torche 5.00%",
+      "Potion de guérison légère 2.00%"
+    ]
+  },
+  {
+    "id": 22714,
+    "name": "Barde de Guerre",
+    "hp": 396,
+    "xp": 1924.46,
+    "drops": [
+      "Épée longue rouillée 1.00%",
+      "Armure de cuir 1.00%",
+      "Bottes de cuir 1.00%",
+      "Jambières de cuir 1.00%"
+    ]
+  },
+  {
+    "id": 22710,
+    "name": "Prêtre de Guerre",
+    "hp": 235,
+    "xp": 1000.7800000000001,
+    "drops": [
+      "Masse de force 5.00%",
+      "Anneau du soigneur 0.75%",
+      "Potion de faible protection contre le Mal 2.00%",
+      "Armure de cuir 1.00%",
+      "Potion de guérison du poison 2.00%"
+    ]
+  },
+  {
+    "id": 22610,
+    "name": "Bend Hayjes le pourri",
+    "hp": 1620,
+    "xp": 11229.460000000001,
+    "drops": [
+      "Bandelettes de momie 5.00%",
+      "Élixir de mana 5.00%"
+    ]
+  },
+  {
+    "id": 22660,
+    "name": "Rat berserk",
+    "hp": 1571,
+    "xp": 15671.95,
+    "drops": [
+      "Potion de dextérité 5.00%",
+      "Agate brute 2.00%",
+      "Diamant brut 0.40%",
+      "Pierre de lune brute 0.10%"
+    ]
+  },
+  {
+    "id": 22609,
+    "name": "Blaarg Pedista",
+    "hp": 1584,
+    "xp": 11189.7,
+    "drops": [
+      "Hachette rouillée 1.00%",
+      "Pied humain 5.00%",
+      "Bouclier orc 5.00%"
+    ]
+  },
+  {
+    "id": 22579,
+    "name": "Garde de l'ombre",
+    "hp": 418,
+    "xp": 2100.27,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de guérison 2.00%",
+      "Anneau de l'ours 1.00%",
+      "Pierre jaune 0.50%",
+      "Calice d'or 0.30%",
+      "Épée courte en acier trempé  0.50%"
+    ]
+  },
+  {
+    "id": 22718,
+    "name": "Chien de sang",
+    "hp": 1090,
+    "xp": 9448.96,
+    "drops": [
+      "Clef de fer noircie 5.00%",
+      "Agate brute 2.00%",
+      "Diamant brut 0.40%",
+      "Pierre de lune brute 0.10%"
+    ]
+  },
+  {
+    "id": 22621,
+    "name": "Démon d'ossements",
+    "hp": 1571,
+    "xp": 15671.95,
+    "drops": [
+      "Élixir de mana 1.00%",
+      "Lame de mithril enchantée 1.00%",
+      "Armure d'écailles 0.50%",
+      "Bottes d'écailles 1.00%",
+      "Gantelets d'écailles 1.00%",
+      "Casque d'écailles 1.00%",
+      "Jambières d'écailles 0.50%",
+      "Protecteur fait d'écailles 1.00%",
+      "Malachite brute 2.00%",
+      "Morceau de calcaire brut 0.10%",
+      "Emeraude brute 0.40%"
+    ]
+  },
+  {
+    "id": 22538,
+    "name": "Desséché",
+    "hp": 626,
+    "xp": 2721.98,
+    "drops": [
+      "Potion de mana 2.00%",
+      "Élixir de mana 5.00%",
+      "Potion de guérison légère 2.00%",
+      "Potion de fureur 10.00%",
+      "Amulette d'esquive 1.00%"
+    ]
+  },
+  {
+    "id": 22513,
+    "name": "Brigand",
+    "hp": 116,
+    "xp": 337.81,
+    "drops": [
+      "Gants de cuir 1.00%",
+      "Jambières de cuir 1.00%",
+      "Casque de cuir 1.00%",
+      "Potion de guérison légère 15.00%",
+      "Clé de fer 1.00%"
+    ]
+  },
+  {
+    "id": 22573,
+    "name": "Le déchu",
+    "hp": 876,
+    "xp": 6609.4800000000005,
+    "drops": [
+      "Tesson brillant 2.00%"
+    ]
+  },
+  {
+    "id": 22501,
+    "name": "Rat brun",
+    "hp": 27,
+    "xp": 48,
+    "drops": [
+      "Torche 2.00%"
+    ]
+  },
+  {
+    "id": 22667,
+    "name": "B'thonian",
+    "hp": 4373,
+    "xp": 65142.593,
+    "drops": [
+      "Clef d'argent brillant 15.00%"
+    ]
+  },
+  {
+    "id": 22668,
+    "name": "B'thurkhan",
+    "hp": 4677,
+    "xp": 70996.73999999999,
+    "drops": [
+      "Clef solide en or 15.00%"
+    ]
+  },
+  {
+    "id": 22604,
+    "name": "Bugar Sakkor",
+    "hp": 1066,
+    "xp": 6043.48,
+    "drops": [
+      "Cape rouge 3.00%",
+      "Bracelet de puissance 2.00%",
+      "Cimeterre en acier trempé 0.10%"
+    ]
+  },
+  {
+    "id": 22593,
+    "name": "Bulldoza",
+    "hp": 1812,
+    "xp": 13993.320000000002,
+    "drops": [
+      "Potion de fureur 1.00%",
+      "Potion de guérison légère 2.00%",
+      "Os de squelette 1.00%"
+    ]
+  },
+  {
+    "id": 22635,
+    "name": "Charognard rampant",
+    "hp": 1801,
+    "xp": 19102.2,
+    "drops": [
+      "Prisme de mana 1.00%",
+      "Grenat brut 0.10%",
+      "Rubis brut 0.40%",
+      "Opale brute 2.00%"
+    ]
+  },
+  {
+    "id": 22666,
+    "name": "Arpenteur caverneux",
+    "hp": 1219,
+    "xp": 10843.27,
+    "drops": [
+      "Saphir Brut 0.40%",
+      "Aigue-marine brute 0.10%",
+      "Amethyste brute 2.00%",
+      "Pierre de mana 3.00%",
+      "Potion de guérison des blessures graves 3.00%",
+      "Potion de guérison 3.00%",
+      "Fiole d'eau cristalline 1.00%"
+    ]
+  },
+  {
+    "id": 22662,
+    "name": "Rejeton du chaos",
+    "hp": 1321,
+    "xp": 12186.650000000001,
+    "drops": [
+      "Clef du chaos 4.00%",
+      "Potion de guérison des blessures graves 3.00%",
+      "Armure d'écailles 0.50%",
+      "Fléau de qualité 1.00%",
+      "Opale brute 2.00%",
+      "Rubis brut 0.40%",
+      "Grenat brut 0.10%",
+      "Bracelet de Turquoise 0.50%"
+    ]
+  },
+  {
+    "id": 22625,
+    "name": "Sentinelle de la colonie",
+    "hp": 1058,
+    "xp": 8999.59,
+    "drops": [
+      "Cire de guêpe 0.50%",
+      "Aigue-marine brute 0.10%",
+      "Saphir Brut 0.40%",
+      "Amethyste brute 2.00%",
+      "Aigue-marine finement taillée 0.05%",
+      "Saphir finement taillé 0.20%",
+      "Amethyste finement taillée 1.00%"
+    ]
+  },
+  {
+    "id": 22589,
+    "name": "Comte Hémogobelin",
+    "hp": 1162,
+    "xp": 6921.58,
+    "drops": [
+      "Cape rouge 8.00%",
+      "Potion de mana 3.00%",
+      "Pierre de mana 5.00%",
+      "Potion de guérison légère 4.00%",
+      "Fiole de sang de gobelin 5.00%",
+      "Lame de gobelin 3.00%",
+      "Os de squelette 0.75%"
+    ]
+  },
+  {
+    "id": 22722,
+    "name": "Infirmière psychotique",
+    "hp": 313,
+    "xp": 0,
+    "drops": [
+      "Autorisation J1 5.00%",
+      "Autorisation B1 20.00%"
+    ]
+  },
+  {
+    "id": 22658,
+    "name": "Boue rampante",
+    "hp": 1426,
+    "xp": 13624.510000000002,
+    "drops": [
+      "Agate brute 2.00%",
+      "Diamant brut 0.40%",
+      "Pierre de lune brute 0.10%"
+    ]
+  },
+  {
+    "id": 22654,
+    "name": "Gardien de la crypte",
+    "hp": 1684,
+    "xp": 17332.239999999998,
+    "drops": [
+      "Élixir de mana 1.00%",
+      "Potion de guérison critique 3.00%",
+      "Épée longue de mithril 0.25%",
+      "Malachite brute 2.00%",
+      "Morceau de calcaire brut 0.10%",
+      "Emeraude brute 0.40%",
+      "Hallebarde runique 0.50%"
+    ]
+  },
+  {
+    "id": 22522,
+    "name": "Créature bannie",
+    "hp": 199,
+    "xp": 707.03,
+    "drops": [
+      "Collier de diamants 0.30%",
+      "Ceinture de cuir 4.00%",
+      "Anneau de fer 5.00%"
+    ]
+  },
+  {
+    "id": 22583,
+    "name": "Hache des ténèbres",
+    "hp": 2180,
+    "xp": 18897.92,
+    "drops": [
+      "Potion de guérison 5.00%",
+      "Potion de fureur 5.00%",
+      "Cape rouge 5.00%",
+      "Bottes d'anneaux 0.50%",
+      "Gantelets d'anneaux 0.50%",
+      "Casque d'anneaux 0.50%",
+      "Jambières d'anneaux 0.20%",
+      "Cotte d'anneaux 0.10%"
+    ]
+  },
+  {
+    "id": 22729,
+    "name": "Gardien sombre",
+    "hp": 1153,
+    "xp": 10292.35,
+    "drops": [
+      "Lame Vorpale de Drachen 0.30%",
+      "Potion de guérison des blessures graves 2.00%",
+      "Élixir de mana 2.00%",
+      "Parchemin de résistance au feu 1.00%",
+      "Parchemin de résistance au froid 1.00%",
+      "Parchemin de protection 1.00%"
+    ]
+  },
+  {
+    "id": 22521,
+    "name": "Araignée noire",
+    "hp": 181,
+    "xp": 629.4499999999999,
+    "drops": [
+      "Fiole de venin d'araignée 4.00%"
+    ]
+  },
+  {
+    "id": 22637,
+    "name": "Seigneur ténébreux de la Guerre",
+    "hp": 2086,
+    "xp": 23567.632,
+    "drops": [
+      "Clef tordue 3.00%",
+      "Prisme de mana 1.00%",
+      "Hachette de qualité  0.50%",
+      "Grenat brut 0.10%",
+      "Rubis brut 0.40%",
+      "Opale brute 2.00%",
+      "Pierre immortelle 7.00%"
+    ]
+  },
+  {
+    "id": 22582,
+    "name": "Mortdart",
+    "hp": 2642,
+    "xp": 24373.300000000003,
+    "drops": [
+      "Potion de fureur 5.00%",
+      "Bottes de plaques 0.10%",
+      "Os de squelette 1.00%",
+      "Sachet d'hamamélis 1.00%"
+    ]
+  },
+  {
+    "id": 22572,
+    "name": "Fataliste",
+    "hp": 847,
+    "xp": 6274.74,
+    "drops": [
+      "Tesson brillant 2.00%",
+      "Potion de fureur 5.00%",
+      "Cape rouge 1.00%",
+      "Défenderesse 1.00%",
+      "Clef de pierre 1.00%",
+      "Os de squelette 0.10%",
+      "Jambières d'écailles 0.02%",
+      "Gantelets d'écailles 0.02%"
+    ]
+  },
+  {
+    "id": 22584,
+    "name": "Bouffon morbide",
+    "hp": 1642,
+    "xp": 11874.73,
+    "drops": [
+      "Potion de guérison 5.00%",
+      "Glaive poli 1.00%",
+      "Bouclier rond 3.00%",
+      "Crâne du bouffon morbide 100.00%",
+      "Couronne du bouffon morbide 1.00%",
+      "Os de squelette 1.00%",
+      "Sachet d'hamamélis 1.00%",
+      "Luth magique 50.00%"
+    ]
+  },
+  {
+    "id": 22556,
+    "name": "Abeille tueuse",
+    "hp": 657,
+    "xp": 4179.360000000001,
+    "drops": [
+      "Cire de guêpe 20.00%"
+    ]
+  },
+  {
+    "id": 22656,
+    "name": "Faucheur",
+    "hp": 1879,
+    "xp": 20323.59,
+    "drops": [
+      "Clef d'os poli 5.00%",
+      "Lame d'adamantite 0.25%",
+      "Livre du collectionneur 0.50%",
+      "Amethyste brute 2.00%",
+      "Saphir Brut 0.40%",
+      "Aigue-marine brute 0.10%",
+      "Corde de mensonge 1.00%",
+      "Fiole d'eau cristalline 1.00%",
+      "Fiole d'eau cristalline 0.50%"
+    ]
+  },
+  {
+    "id": 22507,
+    "name": "Zombie putride",
+    "hp": 55,
+    "xp": 101,
+    "drops": [
+      "Torche 3.00%",
+      "Potion de guérison légère 5.00%"
+    ]
+  },
+  {
+    "id": 22554,
+    "name": "Profundus",
+    "hp": 631,
+    "xp": 3936.76,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de fureur 5.00%"
+    ]
+  },
+  {
+    "id": 22575,
+    "name": "Arbre démoniaque",
+    "hp": 396,
+    "xp": 1924.46,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de guérison 3.00%",
+      "Pierre rouge 0.50%",
+      "Feuille d'arbre démoniaque 5.00%",
+      "Pile de bois d'un arbre démoniaque 5.00%"
+    ]
+  },
+  {
+    "id": 22725,
+    "name": "Dérangé",
+    "hp": 0,
+    "xp": 0,
+    "drops": [
+      "Autorisation C5 5.00%",
+      "Autorisation J3 50.00%"
+    ]
+  },
+  {
+    "id": 22595,
+    "name": "Prisonnier désespéré",
+    "hp": 440,
+    "xp": 2274.24,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Épée courte rouillée 5.00%"
+    ]
+  },
+  {
+    "id": 22562,
+    "name": "Garde de l'Apocalypse",
+    "hp": 581,
+    "xp": 3460.79,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de mana 3.00%",
+      "Potion de fureur 1.00%",
+      "Os de squelette 0.10%",
+      "Sachet de gingembre sauvage 2.00%",
+      "Os de squelette 0.80%"
+    ]
+  },
+  {
+    "id": 22726,
+    "name": "Rat vampire",
+    "hp": 631,
+    "xp": 3153.23,
+    "drops": [
+      "Anneau du forestier 0.40%",
+      "Sceptre de pouvoir de Drachen 0.50%",
+      "Goutte de pluie 2.00%",
+      "Parchemin d'Instinct mineur 1.00%",
+      "Potion de guérison légère 2.00%"
+    ]
+  },
+  {
+    "id": 22728,
+    "name": "Araignée voleuse de vie",
+    "hp": 1153,
+    "xp": 10391.529999999999,
+    "drops": [
+      "Robe de Drachen 0.50%",
+      "Arc des arachnides 2.00%",
+      "Manteau de pluie 2.00%",
+      "Élixir de mana 2.00%",
+      "Élixir de mana 2.00%",
+      "Parchemin d'orientation II 1.00%"
+    ]
+  },
+  {
+    "id": 22549,
+    "name": "Pillard des dunes",
+    "hp": 440,
+    "xp": 2263.24,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Fiole d'eau cristalline 1.00%",
+      "Anneau de l'ours 1.00%",
+      "Épée du chaos 1.00%"
+    ]
+  },
+  {
+    "id": 22605,
+    "name": "Quardos le borgne",
+    "hp": 1162,
+    "xp": 6939.42,
+    "drops": [
+      "Marteau de Rhodar 6.00%",
+      "Fiole d'eau cristalline 0.80%"
+    ]
+  },
+  {
+    "id": 22711,
+    "name": "Combattant de la foi",
+    "hp": 244,
+    "xp": 1086.9,
+    "drops": [
+      "Epée de Lumière 1.00%",
+      "Potion de guérison légère 2.00%",
+      "Armure de cuir clouté 1.00%",
+      "Jambières de cuir clouté 1.00%",
+      "Potion de fureur 2.00%"
+    ]
+  },
+  {
+    "id": 22760,
+    "name": "Guerrier déchu",
+    "hp": 374,
+    "xp": 1770.7554,
+    "drops": [
+      "Coeur corrompu 10.00%"
+    ]
+  },
+  {
+    "id": 22638,
+    "name": "Loup Fenris",
+    "hp": 2301,
+    "xp": 28231.18,
+    "drops": [
+      "Agate brute 2.00%",
+      "Diamant brut 0.40%",
+      "Pierre de lune brute 0.10%",
+      "Agate finement taillée 1.00%",
+      "Diamant finement taillé 0.20%",
+      "Pierre de lune finement taillée 0.05%",
+      "Bracelet de la Manticore 2.00%"
+    ]
+  },
+  {
+    "id": 22642,
+    "name": "Pourfendeur des Preux",
+    "hp": 2527,
+    "xp": 31912.04,
+    "drops": [
+      "Clef du Banni 5.00%",
+      "Élixir de mana 1.00%",
+      "Hachette de qualité enchantée 0.25%",
+      "Morceau de calcaire brut 0.10%",
+      "Malachite brute 2.00%",
+      "Emeraude brute 0.40%"
+    ]
+  },
+  {
+    "id": 22576,
+    "name": "Anthropophage",
+    "hp": 558,
+    "xp": 3214.79,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de guérison 3.00%",
+      "Potion de mana 2.00%",
+      "Bandelettes de momie 2.00%"
+    ]
+  },
+  {
+    "id": 22544,
+    "name": "Protecteur de la forêt",
+    "hp": 3259,
+    "xp": 0,
+    "drops": [
+      "Potion de guérison légère 15.00%"
+    ]
+  },
+  {
+    "id": 22640,
+    "name": "Minion de la fange",
+    "hp": 2390,
+    "xp": 29630.050000000003,
+    "drops": [
+      "Élixir de mana 1.00%",
+      "Opale brute 2.00%",
+      "Rubis brut 0.40%",
+      "Grenat brut 0.10%"
+    ]
+  },
+  {
+    "id": 22657,
+    "name": "Boue fétide",
+    "hp": 1321,
+    "xp": 12186.650000000001,
+    "drops": [
+      "Aigue-marine brute 0.10%",
+      "Saphir Brut 0.40%",
+      "Amethyste brute 2.00%"
+    ]
+  },
+  {
+    "id": 22602,
+    "name": "Fugar le puant",
+    "hp": 706,
+    "xp": 3260.48,
+    "drops": [
+      "Armure de cuir clouté 2.00%",
+      "Gants de cuir clouté 3.00%",
+      "Jambières de cuir clouté 3.00%",
+      "Casque de cuir clouté 3.00%",
+      "Bottes de cuir clouté 3.00%",
+      "Lame de gobelin 2.00%",
+      "Potion de guérison légère 2.00%",
+      "Potion de guérison légère 2.00%",
+      "Torche 5.00%"
+    ]
+  },
+  {
+    "id": 22639,
+    "name": "Porte-gangrène",
+    "hp": 2301,
+    "xp": 28231.18,
+    "drops": [
+      "Agate brute 2.00%",
+      "Diamant brut 0.40%",
+      "Pierre de lune brute 0.10%",
+      "Costume des morts 0.50%"
+    ]
+  },
+  {
+    "id": 22508,
+    "name": "Araignée géante",
+    "hp": 69,
+    "xp": 180.26,
+    "drops": [
+      "Torche 5.00%",
+      "Potion de guérison légère 5.00%"
+    ]
+  },
+  {
+    "id": 22525,
+    "name": "Guêpe géante",
+    "hp": 199,
+    "xp": 710.49,
+    "drops": [
+      "Cire de guêpe 1.00%"
+    ]
+  },
+  {
+    "id": 22512,
+    "name": "Gobelin",
+    "hp": 84,
+    "xp": 231.89,
+    "drops": [
+      "Armure gobeline en cuir 0.50%",
+      "Anneau de fer 1.00%",
+      "Potion de guérison légère 6.00%",
+      "Potion de guérison 2.00%"
+    ]
+  },
+  {
+    "id": 22539,
+    "name": "Chef gobelin",
+    "hp": 313,
+    "xp": 1360.99,
+    "drops": [
+      "Plume 1.00%",
+      "Fiole de sang de gobelin 0.50%",
+      "Clé de fer 0.90%",
+      "Cotte d'anneaux 0.05%",
+      "Jambières d'anneaux 0.05%",
+      "Casque d'anneaux 0.05%"
+    ]
+  },
+  {
+    "id": 22516,
+    "name": "Éclaireur gobelin",
+    "hp": 132,
+    "xp": 407.92,
+    "drops": [
+      "Armure gobeline en cuir 0.40%",
+      "Ceinture de cuir 1.00%",
+      "Potion de guérison légère 5.00%",
+      "Anneau de lumière 1.00%",
+      "Potion de guérison 1.00%"
+    ]
+  },
+  {
+    "id": 22532,
+    "name": "Lieutenant gobelin",
+    "hp": 254,
+    "xp": 1012.86,
+    "drops": [
+      "Cotte d'anneaux 0.80%",
+      "Potion de mana 2.00%",
+      "Ceinture de cuir 1.00%",
+      "Potion de guérison légère 5.00%",
+      "Fiole de sang de gobelin 0.50%"
+    ]
+  },
+  {
+    "id": 22540,
+    "name": "Chef de guerre gobelin",
+    "hp": 334,
+    "xp": 1485.51,
+    "drops": [
+      "Plume 1.00%",
+      "Anneau d'or 0.10%",
+      "Bracelet de puissance 0.05%",
+      "Clé de fer 0.70%",
+      "Cotte d'anneaux 0.05%",
+      "Jambières d'anneaux 0.05%",
+      "Casque d'anneaux 0.05%",
+      "Fiole de sang de gobelin 0.50%"
+    ]
+  },
+  {
+    "id": 22541,
+    "name": "Général gobelin",
+    "hp": 353,
+    "xp": 1630.24,
+    "drops": [
+      "Épée de fureur 2.00%",
+      "Fiole de sang de gobelin 0.50%",
+      "Cotte d'anneaux 0.05%",
+      "Jambières d'anneaux 0.05%",
+      "Casque d'anneaux 0.05%"
+    ]
+  },
+  {
+    "id": 22524,
+    "name": "Guerrier gobelin",
+    "hp": 199,
+    "xp": 707.03,
+    "drops": [
+      "Lame de gobelin 0.40%",
+      "Potion de guérison légère 2.00%",
+      "Clé de fer 0.50%"
+    ]
+  },
+  {
+    "id": 22545,
+    "name": "Gorben le fou",
+    "hp": 1676,
+    "xp": 8775.460000000001,
+    "drops": [
+      "Anneau d'or 0.05%",
+      "Potion de guérison légère 10.00%",
+      "Cotte d'anneaux 0.05%",
+      "Jambières d'anneaux 0.05%",
+      "Casque d'anneaux 0.05%"
+    ]
+  },
+  {
+    "id": 22596,
+    "name": "Graax",
+    "hp": 398,
+    "xp": 1414.06,
+    "drops": [
+      "Épée longue rouillée 5.00%",
+      "Potion de guérison légère 6.00%",
+      "Élixir de mana 5.00%",
+      "Anneau de lumière 4.00%",
+      "Ceinture de cuir 4.00%"
+    ]
+  },
+  {
+    "id": 22632,
+    "name": "Loup géant",
+    "hp": 1684,
+    "xp": 17332.239999999998,
+    "drops": [
+      "Morceau de calcaire brut 0.10%",
+      "Malachite brute 2.00%",
+      "Morceau de calcaire finement taillé 0.05%",
+      "Emeraude finement taillée 0.20%",
+      "Malachite finement taillée 1.00%",
+      "Emeraude brute 0.40%"
+    ]
+  },
+  {
+    "id": 22651,
+    "name": "Gremlin",
+    "hp": 1391,
+    "xp": 13162.73,
+    "drops": [
+      "Élixir de mana 1.00%",
+      "Opale brute 2.00%",
+      "Rubis brut 0.40%",
+      "Grenat brut 0.10%",
+      "Arc à poulies en noyer blanc 0.50%"
+    ]
+  },
+  {
+    "id": 22546,
+    "name": "Griroesh",
+    "hp": 710,
+    "xp": 4727.4,
+    "drops": [
+      "Anneau de confiance 1.00%",
+      "Anneau des ténèbres 1.00%",
+      "Anneau de fer 1.00%",
+      "Crâne de démon 1.00%",
+      "Bracelet de puissance 0.10%",
+      "Clef des ténèbres 2.00%",
+      "Potion de guérison 5.00%"
+    ]
+  },
+  {
+    "id": 22613,
+    "name": "Grott",
+    "hp": 1694,
+    "xp": 12525.86,
+    "drops": [
+      "Manteau du chaman 7.00%",
+      "Anneau de sorcellerie en jade 5.00%",
+      "Élixir de mana 4.00%",
+      "Pierre de mana 3.00%",
+      "Potion de guérison des blessures graves 4.00%",
+      "Fiole d'eau cristalline 3.00%"
+    ]
+  },
+  {
+    "id": 22607,
+    "name": "Grudish Auricula",
+    "hp": 1420,
+    "xp": 9454.8,
+    "drops": [
+      "Potion de fureur 4.00%",
+      "Potion de guérison des blessures graves 3.00%",
+      "Hachette polie 1.00%"
+    ]
+  },
+  {
+    "id": 22597,
+    "name": "Guurk",
+    "hp": 398,
+    "xp": 1379.42,
+    "drops": [
+      "Potion de mana 5.00%",
+      "Élixir de mana 5.00%",
+      "Ceinture de cuir 4.00%"
+    ]
+  },
+  {
+    "id": 22591,
+    "name": "Cassetête",
+    "hp": 1694,
+    "xp": 12549.48,
+    "drops": [
+      "Élixir de mana 5.00%",
+      "Potion de mana 2.00%",
+      "Potion de fureur 1.00%",
+      "Épée courte en acier trempé  0.10%",
+      "Bracelet de saphir 1.00%"
+    ]
+  },
+  {
+    "id": 22624,
+    "name": "Défenseur de ruche",
+    "hp": 1321,
+    "xp": 12186.650000000001,
+    "drops": [
+      "Cire de guêpe 0.50%",
+      "Amethyste brute 2.00%",
+      "Saphir Brut 0.40%",
+      "Aigue-marine brute 0.10%"
+    ]
+  },
+  {
+    "id": 22592,
+    "name": "Sabotcasseur",
+    "hp": 1752,
+    "xp": 13218.960000000001,
+    "drops": [
+      "Pierre de mana 2.00%",
+      "Potion de guérison légère 2.00%",
+      "Potion de guérison 5.00%",
+      "Bracelet de saphir 1.00%",
+      "Anneau du clan des minotaures 0.50%"
+    ]
+  },
+  {
+    "id": 22647,
+    "name": "Terreur hurlante",
+    "hp": 1219,
+    "xp": 10843.27,
+    "drops": [
+      "Pierre de lune brute 0.10%",
+      "Diamant brut 0.40%",
+      "Agate brute 2.00%",
+      "Clef de fer noircie 0.50%"
+    ]
+  },
+  {
+    "id": 22612,
+    "name": "Hurbag Digitus",
+    "hp": 1808,
+    "xp": 13970.400000000001,
+    "drops": [
+      "Bouclier orc 5.00%",
+      "Hachette rouillée 2.00%",
+      "Élixir de mana 4.00%",
+      "Potion de guérison des blessures graves 5.00%"
+    ]
+  },
+  {
+    "id": 22727,
+    "name": "Cobra royal de Jade",
+    "hp": 581,
+    "xp": 3476.86,
+    "drops": [
+      "Heaume de Drachen 0.50%",
+      "Sinistre épée de guerre 2.00%",
+      "Parchemin d'orientation I 1.00%"
+    ]
+  },
+  {
+    "id": 22594,
+    "name": "Gardien de prison baraqué",
+    "hp": 581,
+    "xp": 3460.79,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Épée longue rouillée 5.00%"
+    ]
+  },
+  {
+    "id": 22537,
+    "name": "Kraanian à mille-pattes",
+    "hp": 313,
+    "xp": 1360.99,
+    "drops": [
+      "Oeuf d'un Kraanian 2.00%"
+    ]
+  },
+  {
+    "id": 22775,
+    "name": "Kraanian piétineur",
+    "hp": 1762,
+    "xp": 18502,
+    "drops": [
+      "Tesson de cristal jaune 10.00%"
+    ]
+  },
+  {
+    "id": 22650,
+    "name": "Leprechaun",
+    "hp": 1321,
+    "xp": 12186.650000000001,
+    "drops": [
+      "Prisme de mana 1.00%",
+      "Élixir de mana 1.00%",
+      "Malachite brute 2.00%",
+      "Morceau de calcaire brut 0.10%",
+      "Emeraude brute 0.40%",
+      "Arc à poulies en noyer blanc 0.50%",
+      "Fiole d'eau cristalline 1.00%"
+    ]
+  },
+  {
+    "id": 22608,
+    "name": "Liedric Guergue",
+    "hp": 1534,
+    "xp": 10559.8,
+    "drops": [
+      "Calice d'or 10.00%",
+      "Potion de guérison critique 5.00%",
+      "Sachet de graines à chapelet 3.00%",
+      "Hachette polie 2.00%"
+    ]
+  },
+  {
+    "id": 22721,
+    "name": "Barjot",
+    "hp": 293,
+    "xp": 0,
+    "drops": [
+      "Autorisation D4 15.00%",
+      "Autorisation H2 20.00%"
+    ]
+  },
+  {
+    "id": 22720,
+    "name": "Patient fou",
+    "hp": 254,
+    "xp": 0,
+    "drops": [
+      "Autorisation A3 10.00%",
+      "Autorisation E5 20.00%"
+    ]
+  },
+  {
+    "id": 22723,
+    "name": "Fou",
+    "hp": 0,
+    "xp": 0,
+    "drops": [
+      "Autorisation C2 15.00%",
+      "Autorisation F1 30.00%"
+    ]
+  },
+  {
+    "id": 22559,
+    "name": "Chef minotaure",
+    "hp": 710,
+    "xp": 4727.4,
+    "drops": [
+      "Potion de fureur 0.80%",
+      "Potion de guérison légère 2.00%",
+      "Potion de mana 2.00%",
+      "Épée longue en acier trempé 1.00%",
+      "Sachet de graines à chapelet 1.00%",
+      "Anneau du clan des minotaures 0.50%",
+      "Fiole de liquide bleuté 1.00%",
+      "Potion de mana 2.00%",
+      "Bouclier de bois 1.00%"
+    ]
+  },
+  {
+    "id": 22564,
+    "name": "Chaman minotaure",
+    "hp": 792,
+    "xp": 5594.85,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Pierre de mana 3.00%",
+      "Bracelet de saphir 1.00%",
+      "Poisson mort 1.00%",
+      "Sachet de graines à chapelet 3.00%",
+      "Sachet de gingembre sauvage 2.00%",
+      "Sachet de douces-amères 1.00%",
+      "Robe de protection ornée de runes 0.20%"
+    ]
+  },
+  {
+    "id": 22552,
+    "name": "Guerrier minotaure",
+    "hp": 581,
+    "xp": 3460.79,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de guérison 2.00%",
+      "Potion de fureur 1.00%",
+      "Anneau de l'ours 1.00%",
+      "Pierre bleue 0.80%",
+      "Fiole d'eau cristalline 0.10%",
+      "Poisson mort 0.80%",
+      "Fiole de liquide bleuté 2.00%"
+    ]
+  },
+  {
+    "id": 22664,
+    "name": "Morlokk",
+    "hp": 1462,
+    "xp": 14124.150000000001,
+    "drops": [
+      "Opale brute 2.00%",
+      "Grenat brut 0.10%",
+      "Rubis brut 0.40%",
+      "Pierre de mana 1.00%",
+      "Lame de mithril 1.00%",
+      "Potion d'esprit clair 2.00%",
+      "Fiole d'eau cristalline 1.00%"
+    ]
+  },
+  {
+    "id": 22661,
+    "name": "Diablotin",
+    "hp": 2301,
+    "xp": 28231.18,
+    "drops": [
+      "Clef d'os poli 5.00%",
+      "Grenat brut 0.10%",
+      "Rubis brut 0.40%",
+      "Opale brute 2.00%",
+      "Opale finement taillée 1.00%",
+      "Rubis finement taillé 0.20%",
+      "Grenat finement taillé 0.05%",
+      "Arc à poulies en chêne 0.50%"
+    ]
+  },
+  {
+    "id": 22600,
+    "name": "Mrish Jalnec",
+    "hp": 626,
+    "xp": 2721.98,
+    "drops": [
+      "Armure de cuir clouté 2.00%",
+      "Jambières de cuir clouté 3.00%",
+      "Bottes de cuir clouté 3.00%",
+      "Gantelets d'anneaux 4.00%",
+      "Bottes d'anneaux 4.00%",
+      "Lame de gobelin 3.00%",
+      "Anneau de l'ours 4.00%",
+      "Bouclier rond 5.00%",
+      "Potion de guérison 3.00%",
+      "Cape rouge 4.00%"
+    ]
+  },
+  {
+    "id": 22510,
+    "name": "Momie",
+    "hp": 69,
+    "xp": 179.95,
+    "drops": [
+      "Torche 5.00%",
+      "Potion de guérison légère 5.00%"
+    ]
+  },
+  {
+    "id": 22730,
+    "name": "Mystique",
+    "hp": 3011,
+    "xp": 17844.39,
+    "drops": [
+      "Parchemin d'évasion 0.80%",
+      "Ecu de Drachen 0.40%",
+      "Manteau du crâne 2.00%",
+      "Pierre de mana 1.00%",
+      "Parchemin de detection de la dissimulation 1.00%",
+      "Parchemin de la détection de l'invisible 1.00%",
+      "Parchemin de la force de la terre 1.00%",
+      "Parchemin d'orientation II 3.00%"
+    ]
+  },
+  {
+    "id": 22629,
+    "name": "Arachnide nécrite",
+    "hp": 1684,
+    "xp": 17332.239999999998,
+    "drops": [
+      "Venin d'araignée 3.00%",
+      "Amethyste brute 2.00%",
+      "Saphir Brut 0.40%",
+      "Aigue-marine brute 0.10%"
+    ]
+  },
+  {
+    "id": 22645,
+    "name": "Nemesis",
+    "hp": 2301,
+    "xp": 28231.18,
+    "drops": [
+      "Pierre de lune brute 0.10%",
+      "Diamant brut 0.40%",
+      "Agate brute 2.00%"
+    ]
+  },
+  {
+    "id": 22717,
+    "name": "Chasse-nuit",
+    "hp": 1153,
+    "xp": 10380,
+    "drops": [
+      "Clef de fer noircie 5.00%",
+      "Amethyste brute 2.00%",
+      "Aigue-marine brute 0.10%",
+      "Saphir Brut 0.40%",
+      "Torche 5.00%",
+      "Potion de guérison légère 5.00%",
+      "Potion de guérison de la rage 5.00%",
+      "Potion de fureur 1.00%",
+      "Fiole d'eau cristalline 1.00%"
+    ]
+  },
+  {
+    "id": 22558,
+    "name": "Disciple de l'ombre",
+    "hp": 710,
+    "xp": 4727.4,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de mana 2.00%",
+      "Épée courte polie 1.00%",
+      "Sachet de graines à chapelet 1.00%",
+      "Calice d'or 0.80%"
+    ]
+  },
+  {
+    "id": 22619,
+    "name": "Arpenteur de la nuit",
+    "hp": 847,
+    "xp": 6274.74,
+    "drops": [
+      "Anneau du roublard 3.00%",
+      "Potion de guérison des blessures graves 3.00%",
+      "Armure de cuir elfique 0.10%",
+      "Ceinture de cuir elfique 0.10%",
+      "Bottes de cuir elfique 0.10%",
+      "Gants de cuir elfique 0.10%",
+      "Casque de cuir elfique 0.10%",
+      "Jambières de cuir elfique 0.10%",
+      "Dague de sacrifice sanglante 2.00%",
+      "Crâne de malfrat 4.00%",
+      "Malachite brute 2.00%",
+      "Morceau de calcaire brut 0.10%",
+      "Arc recourbé en noyer blanc 0.50%",
+      "Corde de mensonge 0.30%",
+      "Emeraude brute 0.40%",
+      "Fiole d'eau cristalline 1.00%"
+    ]
+  },
+  {
+    "id": 22643,
+    "name": "Assassin obsidien",
+    "hp": 2761,
+    "xp": 35830.43,
+    "drops": [
+      "Clef de l'Ame en peine 3.00%",
+      "Pierre de mana 1.00%",
+      "Cotte de mailles en mithril 0.50%",
+      "Bottes de mailles en mithril 1.00%",
+      "Gantelets de mailles en mithril 1.00%",
+      "Ceinturon de mailles en mithril 1.00%",
+      "Heaume de mailles en mithril 1.00%",
+      "Jambières de mailles en mithril 1.00%",
+      "Livre du collectionneur 0.50%",
+      "Grenat brut 0.10%",
+      "Rubis brut 0.40%",
+      "Opale brute 2.00%",
+      "Bracelet d'Hypogriffe doré 2.00%"
+    ]
+  },
+  {
+    "id": 22557,
+    "name": "Guerrier-mage orc",
+    "hp": 684,
+    "xp": 4216,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Élixir de mana 4.00%",
+      "Épée longue polie 2.00%",
+      "Sachet de douces-amères 1.00%",
+      "Sachet d'hamamélis 0.80%",
+      "Potion d'héroïsme 1.00%"
+    ]
+  },
+  {
+    "id": 22555,
+    "name": "Orc berserker",
+    "hp": 631,
+    "xp": 3936.76,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Bouclier orc 0.50%",
+      "Fiole d'eau cristalline 0.01%",
+      "Potion de fureur 1.00%",
+      "Casque d'anneaux 0.30%",
+      "Cotte d'anneaux 0.20%",
+      "Bottes d'anneaux 0.35%",
+      "Jambières d'anneaux 0.30%",
+      "Potion d'héroïsme 1.00%"
+    ]
+  },
+  {
+    "id": 22548,
+    "name": "Orc déserteur",
+    "hp": 374,
+    "xp": 1772.2200000000003,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de guérison 3.00%",
+      "Bouclier orc 0.50%",
+      "Anneau de l'ours 1.00%",
+      "Potion de mana 2.00%",
+      "Fiole d'eau cristalline 0.01%"
+    ]
+  },
+  {
+    "id": 22565,
+    "name": "Gardien orc",
+    "hp": 847,
+    "xp": 6274.74,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de mana 2.00%",
+      "Bracelet de saphir 1.00%",
+      "Bouclier orc 0.70%",
+      "Potion de fureur 2.00%",
+      "Clef de pierre 1.00%",
+      "Cimeterre en acier trempé 0.05%",
+      "Sachet de douces-amères 1.00%"
+    ]
+  },
+  {
+    "id": 22518,
+    "name": "Éclaireur orc",
+    "hp": 148,
+    "xp": 453,
+    "drops": [
+      "Armure de cuir clouté 0.40%",
+      "Jambières de cuir clouté 0.30%",
+      "Casque de cuir clouté 1.00%"
+    ]
+  },
+  {
+    "id": 22533,
+    "name": "Chaman orc",
+    "hp": 254,
+    "xp": 1012.86,
+    "drops": [
+      "Plume 1.00%",
+      "Anneau de fer 0.50%",
+      "Potion de guérison légère 1.00%",
+      "Potion de mana 1.00%",
+      "Robe des bois 0.10%"
+    ]
+  },
+  {
+    "id": 22523,
+    "name": "Guerrier orc",
+    "hp": 199,
+    "xp": 707.03,
+    "drops": [
+      "Plume 1.00%",
+      "Armure de cuir 0.30%",
+      "Casque de cuir clouté 0.90%",
+      "Dague perceuse d'armure 0.08%",
+      "Clé de fer 1.00%",
+      "Potion de guérison 1.00%"
+    ]
+  },
+  {
+    "id": 22630,
+    "name": "Loup de la meute",
+    "hp": 847,
+    "xp": 6274.74,
+    "drops": [
+      "Amethyste brute 2.00%",
+      "Saphir Brut 0.40%",
+      "Aigue-marine brute 0.10%",
+      "Aigue-marine finement taillée 0.05%",
+      "Saphir finement taillé 0.20%",
+      "Amethyste finement taillée 1.00%"
+    ]
+  },
+  {
+    "id": 22713,
+    "name": "Paladin",
+    "hp": 353,
+    "xp": 1630.24,
+    "drops": [
+      "Epée de Lumière 1.00%",
+      "Potion de guérison 2.00%",
+      "Potion de protection partielle contre le Mal 2.00%",
+      "Épée courte polie 1.00%"
+    ]
+  },
+  {
+    "id": 22620,
+    "name": "Chapardeur",
+    "hp": 996,
+    "xp": 8126.68,
+    "drops": [
+      "Potion de guérison des blessures graves 1.00%",
+      "Crâne de malfrat 5.00%",
+      "Dague de sacrifice sanglante 2.00%",
+      "Cantiques perdu d'Artherk p.1 1.00%",
+      "Cantiques perdu d'Artherk p.2 1.00%",
+      "Cantiques perdu d'Artherk p.3 1.00%",
+      "Cantiques perdu d'Artherk p.4 1.00%",
+      "Cantiques perdu d'Artherk p.5 1.00%",
+      "Pierre de lune brute 0.10%",
+      "Diamant brut 0.40%",
+      "Agate brute 2.00%",
+      "Arc recourbé en noyer blanc 0.50%",
+      "Fiole d'eau cristalline 0.25%",
+      "Fiole d'eau cristalline 1.00%"
+    ]
+  },
+  {
+    "id": 22716,
+    "name": "Moine étrange",
+    "hp": 215,
+    "xp": 806.3399999999999,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Ceinture blanche de moine 2.00%",
+      "Rang-kwan 3.00%",
+      "Robe blanche brillante 1.00%"
+    ]
+  },
+  {
+    "id": 22676,
+    "name": "Guêpe titanesque commandant",
+    "hp": 463,
+    "xp": 2430.56,
+    "drops": [
+      "Nectar de guêpe titanesque 0.70%"
+    ]
+  },
+  {
+    "id": 22677,
+    "name": "Guêpe titanesque dévastatrice",
+    "hp": 396,
+    "xp": 1924.46,
+    "drops": [
+      "Yeux dévastateurs 3.00%",
+      "Nectar de guêpe titanesque 0.60%"
+    ]
+  },
+  {
+    "id": 22673,
+    "name": "Guêpe titanesque nourrice",
+    "hp": 200,
+    "xp": 986.53,
+    "drops": [
+      "Yeux de Nourrice 5.00%",
+      "Nectar de guêpe titanesque 0.30%"
+    ]
+  },
+  {
+    "id": 22672,
+    "name": "Guêpe titanesque éclaireur",
+    "hp": 217,
+    "xp": 800.8799999999999,
+    "drops": [
+      "Nectar de guêpe titanesque 0.30%"
+    ]
+  },
+  {
+    "id": 22675,
+    "name": "Guêpe titanesque soldate",
+    "hp": 313,
+    "xp": 1360.99,
+    "drops": [
+      "Nectar de guêpe titanesque 0.50%"
+    ]
+  },
+  {
+    "id": 22674,
+    "name": "Guêpe titanesque guerrière",
+    "hp": 254,
+    "xp": 1010.32,
+    "drops": [
+      "Nectar de guêpe titanesque 0.40%"
+    ]
+  },
+  {
+    "id": 22641,
+    "name": "Bête putride",
+    "hp": 2435,
+    "xp": 30388.97,
+    "drops": [
+      "Pierre de mana 1.00%",
+      "Malachite brute 2.00%",
+      "Morceau de calcaire brut 0.10%",
+      "Emeraude brute 0.40%"
+    ]
+  },
+  {
+    "id": 22606,
+    "name": "Quelet Hon l'assoiffé",
+    "hp": 1420,
+    "xp": 9458.8,
+    "drops": [
+      "Os de squelette 2.00%",
+      "Élixir de mana 2.00%"
+    ]
+  },
+  {
+    "id": 22535,
+    "name": "Pillard",
+    "hp": 274,
+    "xp": 1130.21,
+    "drops": [
+      "Cotte d'anneaux 0.60%",
+      "Bottes de cuir 1.00%",
+      "Clé de fer 8.00%",
+      "Potion de guérison 2.00%"
+    ]
+  },
+  {
+    "id": 22587,
+    "name": "Ratsputin le rat-garou",
+    "hp": 847,
+    "xp": 12577.52,
+    "drops": [
+      "Potion de mana 4.00%",
+      "Poisson mort 0.50%"
+    ]
+  },
+  {
+    "id": 22724,
+    "name": "Lunatique délirant",
+    "hp": 0,
+    "xp": 0,
+    "drops": [
+      "Autorisation G4 40.00%",
+      "Autorisation I4 20.00%"
+    ]
+  },
+  {
+    "id": 22648,
+    "name": "Momie royale",
+    "hp": 1153,
+    "xp": 10391.529999999999,
+    "drops": [
+      "Élixir de mana 1.00%",
+      "Grenat brut 0.10%",
+      "Rubis brut 0.40%",
+      "Opale brute 2.00%",
+      "Costume des morts 0.50%",
+      "Clef de fer noircie 0.50%"
+    ]
+  },
+  {
+    "id": 22578,
+    "name": "Mage rôdeur",
+    "hp": 418,
+    "xp": 2100.27,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Élixir de mana 3.00%",
+      "Anneau de l'ours 1.00%",
+      "Pierre verte 0.50%",
+      "Sachet de douces-amères 0.05%",
+      "Sachet d'hamamélis 0.10%",
+      "Calice d'or 0.05%"
+    ]
+  },
+  {
+    "id": 22603,
+    "name": "Roshnak Tul",
+    "hp": 842,
+    "xp": 4052.16,
+    "drops": [
+      "Sachet de poudre jaune 7.00%",
+      "Cotte d'anneaux 0.70%",
+      "Gantelets d'anneaux 1.00%",
+      "Casque d'anneaux 1.00%",
+      "Jambières d'anneaux 1.00%",
+      "Collier orc rudimentaire 0.20%",
+      "Bottes d'anneaux 1.00%",
+      "Élixir de mana 3.00%",
+      "Potion de guérison 2.00%"
+    ]
+  },
+  {
+    "id": 22599,
+    "name": "Ruk le mineur",
+    "hp": 508,
+    "xp": 2025.72,
+    "drops": [
+      "Anneau d'or 5.00%",
+      "Armure gobeline en cuir 5.00%",
+      "Lame de gobelin 5.00%"
+    ]
+  },
+  {
+    "id": 22598,
+    "name": "Razek le balafré",
+    "hp": 434,
+    "xp": 1601.7599999999998,
+    "drops": [
+      "Potion de guérison 5.00%",
+      "Épée longue polie 4.00%",
+      "Armure de cuir clouté 4.00%",
+      "Bottes de cuir clouté 3.00%",
+      "Gants de cuir clouté 3.00%",
+      "Jambières de cuir clouté 3.00%"
+    ]
+  },
+  {
+    "id": 22644,
+    "name": "Démon des Ombres",
+    "hp": 3259,
+    "xp": 44488.57,
+    "drops": [
+      "Prisme de mana 1.00%",
+      "Amethyste brute 2.00%",
+      "Saphir Brut 0.40%",
+      "Aigue-marine brute 0.10%"
+    ]
+  },
+  {
+    "id": 22655,
+    "name": "Ennemi des Ombres",
+    "hp": 1497,
+    "xp": 14615.14,
+    "drops": [
+      "Clef d'os poli 3.00%",
+      "Pierre de mana 1.00%",
+      "Bottes de mailles en mithril 1.00%",
+      "Cotte de mailles en mithril 0.50%",
+      "Gantelets de mailles en mithril 1.00%",
+      "Ceinturon de mailles en mithril 1.00%",
+      "Heaume de mailles en mithril 1.00%",
+      "Jambières de mailles en mithril 1.00%",
+      "Lame d'adamantite 0.10%",
+      "Pierre de lune brute 0.10%",
+      "Diamant brut 0.40%",
+      "Agate brute 2.00%",
+      "Agate finement taillée 1.00%",
+      "Diamant finement taillé 0.20%",
+      "Pierre de lune finement taillée 0.05%"
+    ]
+  },
+  {
+    "id": 22580,
+    "name": "Horreur hurlante",
+    "hp": 967,
+    "xp": 7728.11,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Potion de mana 2.00%",
+      "Potion de guérison 2.00%",
+      "Bracelet de saphir 1.00%",
+      "Potion de fureur 5.00%",
+      "Bandelettes de momie 2.00%"
+    ]
+  },
+  {
+    "id": 22636,
+    "name": "Squelette centaure",
+    "hp": 1879,
+    "xp": 20323.59,
+    "drops": [
+      "Malachite brute 2.00%",
+      "Morceau de calcaire brut 0.10%",
+      "Emeraude brute 0.40%"
+    ]
+  },
+  {
+    "id": 22509,
+    "name": "Squelette",
+    "hp": 69,
+    "xp": 128,
+    "drops": [
+      "Gants de cuir 3.00%",
+      "Anneau de confiance 1.00%",
+      "Potion de guérison 2.00%",
+      "Potion de guérison légère 3.00%",
+      "Os de squelette 0.07%"
+    ]
+  },
+  {
+    "id": 22526,
+    "name": "Gardien squelette",
+    "hp": 217,
+    "xp": 800.8799999999999,
+    "drops": [
+      "Ceinture de cuir 2.00%",
+      "Clé de fer 0.70%",
+      "Potion de guérison 2.00%",
+      "Os de squelette 0.08%"
+    ]
+  },
+  {
+    "id": 22719,
+    "name": "Gardien squelette",
+    "hp": 2086,
+    "xp": 23563.47,
+    "drops": [
+      "Cape d'Elemendil 2.00%"
+    ]
+  },
+  {
+    "id": 22571,
+    "name": "Sorcier squelette",
+    "hp": 1027,
+    "xp": 8579.5,
+    "drops": [
+      "Tesson brillant 2.00%",
+      "Potion de guérison légère 2.00%",
+      "Pierre de mana 2.00%",
+      "Potion de fureur 5.00%",
+      "Cape rouge 1.00%",
+      "Clef de pierre 1.00%",
+      "Os de squelette 0.20%",
+      "Costume des morts 0.10%"
+    ]
+  },
+  {
+    "id": 22534,
+    "name": "Guerrier squelette",
+    "hp": 254,
+    "xp": 1012.86,
+    "drops": [
+      "Épée longue rouillée 1.00%",
+      "Ceinture de cuir 5.00%",
+      "Potion de guérison 3.00%",
+      "Os de squelette 0.09%"
+    ]
+  },
+  {
+    "id": 22590,
+    "name": "Skrull",
+    "hp": 765,
+    "xp": 10604.04,
+    "drops": [
+      "Cotte d'anneaux 0.20%",
+      "Bottes d'anneaux 0.35%",
+      "Jambières d'anneaux 0.30%",
+      "Potion de mana 2.00%",
+      "Potion de guérison légère 2.00%",
+      "Os de squelette 1.00%"
+    ]
+  },
+  {
+    "id": 22585,
+    "name": "Crânefeu",
+    "hp": 1356,
+    "xp": 25266.06,
+    "drops": [
+      "Torche 2.00%",
+      "Potion de mana 5.00%",
+      "Élixir de mana 2.00%",
+      "Sachet d'hamamélis 0.80%",
+      "Os de squelette 0.70%"
+    ]
+  },
+  {
+    "id": 22622,
+    "name": "Chevalier spectral",
+    "hp": 1646,
+    "xp": 16785.559999999998,
+    "drops": [
+      "Pierre de mana 1.00%",
+      "Lame de mithril 1.00%",
+      "Grenat brut 0.10%",
+      "Rubis brut 0.40%",
+      "Opale brute 2.00%",
+      "Heaume Spectral 0.50%",
+      "Grand bouclier 0.25%"
+    ]
+  },
+  {
+    "id": 22586,
+    "name": "Brath le Fétide",
+    "hp": 1812,
+    "xp": 13993.320000000002,
+    "drops": [
+      "Potion de guérison 5.00%",
+      "Potion de guérison 5.00%",
+      "Potion de fureur 2.00%",
+      "Potion de fureur 5.00%",
+      "Bouclier orc 0.25%",
+      "Épée longue polie 0.10%"
+    ]
+  },
+  {
+    "id": 22715,
+    "name": "Chevalier du Soleil",
+    "hp": 533,
+    "xp": 3079.32,
+    "drops": [
+      "Epée de Lumière 5.00%",
+      "Pierre de mana 2.00%",
+      "Épée courte polie 1.00%",
+      "Bouclier rond 1.00%"
+    ]
+  },
+  {
+    "id": 22553,
+    "name": "Tarentule",
+    "hp": 606,
+    "xp": 3707.95,
+    "drops": [
+      "Yeux de tarentule 3.00%"
+    ]
+  },
+  {
+    "id": 22563,
+    "name": "Horreur railleuse",
+    "hp": 581,
+    "xp": 3460.79,
+    "drops": [
+      "Potion de guérison légère 2.00%",
+      "Torche 2.00%",
+      "Bracelet de saphir 1.00%",
+      "Potion de fureur 2.00%",
+      "Potion de mana 1.00%"
+    ]
+  },
+  {
+    "id": 22588,
+    "name": "T-Bone",
+    "hp": 1162,
+    "xp": 6921.58,
+    "drops": [
+      "Casque d'anneaux 0.20%",
+      "Cotte d'anneaux 0.10%",
+      "Bottes d'anneaux 0.20%",
+      "Jambières d'anneaux 0.20%",
+      "Glaive poli 0.10%",
+      "Élixir de mana 1.00%",
+      "Anneau de l'ours 1.00%",
+      "Os de squelette 1.00%"
+    ]
+  },
+  {
+    "id": 22712,
+    "name": "Templier",
+    "hp": 313,
+    "xp": 1360.99,
+    "drops": [
+      "Anneau du templier 1.00%",
+      "Épée courte polie 1.00%",
+      "Anneau de fer 2.00%"
+    ]
+  },
+  {
+    "id": 22611,
+    "name": "Thadoss le ronchonneur",
+    "hp": 1642,
+    "xp": 11874.720000000001,
+    "drops": [
+      "Pierre de mana 4.00%"
+    ]
+  },
+  {
+    "id": 22679,
+    "name": "Protecteur temporel",
+    "hp": 6334,
+    "xp": 104882.03,
+    "drops": [
+      "Bracelet de Feuilles 5.00%"
+    ]
+  },
+  {
+    "id": 22653,
+    "name": "Troll des ponts",
+    "hp": 2527,
+    "xp": 31912.059999999998,
+    "drops": [
+      "Amethyste brute 2.00%",
+      "Saphir Brut 0.40%",
+      "Aigue-marine brute 0.10%",
+      "Bouclier gothique 0.25%",
+      "Épée bâtarde de qualité 0.25%"
+    ]
+  },
+  {
+    "id": 22517,
+    "name": "Pilleur de tombe",
+    "hp": 264,
+    "xp": 816.04,
+    "drops": [
+      "Torche 10.00%",
+      "Jambières de cuir 3.00%",
+      "Dague perceuse d'armure 5.00%",
+      "Clé de fer 0.50%",
+      "Potion de guérison 10.00%",
+      "Robe blanche brillante 1.00%"
+    ]
+  },
+  {
+    "id": 22601,
+    "name": "Trish Jalnec",
+    "hp": 668,
+    "xp": 2984.38,
+    "drops": [
+      "Armure de cuir clouté 2.00%",
+      "Jambières de cuir clouté 3.00%",
+      "Bottes de cuir clouté 3.00%",
+      "Gantelets d'anneaux 4.00%",
+      "Bottes d'anneaux 4.00%",
+      "Lame de gobelin 3.00%",
+      "Anneau de l'ours 4.00%"
+    ]
+  },
+  {
+    "id": 22505,
+    "name": "Chauve-souris mort-vivante",
+    "hp": 55,
+    "xp": 101,
+    "drops": [
+      "Ailes de chauve-souris putrides 5.00%"
+    ]
+  },
+  {
+    "id": 22665,
+    "name": "Chauve-souris translucide",
+    "hp": 1153,
+    "xp": 10391.529999999999,
+    "drops": [
+      "Amethyste brute 2.00%",
+      "Aigue-marine brute 0.10%",
+      "Saphir Brut 0.40%"
+    ]
+  },
+  {
+    "id": 22574,
+    "name": "Chauve-souris vampire",
+    "hp": 792,
+    "xp": 5620.83,
+    "drops": [
+      "Ailes d'une chauve-souris vampire 4.00%"
+    ]
+  },
+  {
+    "id": 22515,
+    "name": "Orc errant",
+    "hp": 132,
+    "xp": 407.92,
+    "drops": [
+      "Armure de cuir clouté 1.00%",
+      "Jambières de cuir clouté 1.00%",
+      "Casque de cuir clouté 1.00%",
+      "Potion de guérison légère 2.00%",
+      "Fléau de stabilité 0.05%"
+    ]
+  },
+  {
+    "id": 22633,
+    "name": "Warg",
+    "hp": 1356,
+    "xp": 12633.03,
+    "drops": [
+      "Pierre de lune brute 0.10%",
+      "Diamant brut 0.40%",
+      "Agate brute 2.00%"
+    ]
+  },
+  {
+    "id": 22626,
+    "name": "Guêpe drone",
+    "hp": 847,
+    "xp": 6274.74,
+    "drops": [
+      "Cire de guêpe 0.50%",
+      "Malachite brute 2.00%",
+      "Morceau de calcaire brut 0.10%",
+      "Malachite finement taillée 1.00%",
+      "Emeraude finement taillée 0.20%",
+      "Morceau de calcaire finement taillé 0.05%",
+      "Emeraude brute 0.40%"
+    ]
+  },
+  {
+    "id": 22646,
+    "name": "Larve de Veuve Noire",
+    "hp": 1879,
+    "xp": 20323.59,
+    "drops": [
+      "Venin d'araignée 1.00%",
+      "Amethyste brute 2.00%",
+      "Saphir Brut 0.40%",
+      "Pierre de lune brute 0.10%",
+      "Fiole de soie d'araignée liquide 0.50%"
+    ]
+  },
+  {
+    "id": 22527,
+    "name": "Sorcier momifié",
+    "hp": 217,
+    "xp": 800.8799999999999,
+    "drops": [
+      "Torche 5.00%"
+    ]
+  },
+  {
+    "id": 22631,
+    "name": "Chien-loup",
+    "hp": 1090,
+    "xp": 9448.96,
+    "drops": [
+      "Morceau de calcaire brut 0.10%",
+      "Malachite brute 2.00%",
+      "Emeraude brute 0.40%"
+    ]
+  },
+  {
+    "id": 22731,
+    "name": "Arpenteur forestier",
+    "hp": 2086,
+    "xp": 23563.47,
+    "drops": [
+      "Plastron de Drachen 0.30%",
+      "Parchemin d'orientation I 5.00%",
+      "Arc à poulies en noyer blanc 1.00%",
+      "Flèches en os 2.00%"
+    ]
+  },
+  {
+    "id": 22634,
+    "name": "Chauve-souris spectrale",
+    "hp": 1684,
+    "xp": 17332.239999999998,
+    "drops": [
+      "Grenat brut 0.10%",
+      "Rubis brut 0.40%",
+      "Opale brute 2.00%"
+    ]
+  },
+  {
+    "id": 22652,
+    "name": "Yoggoth",
+    "hp": 1497,
+    "xp": 14600.17,
+    "drops": [
+      "Amethyste brute 2.00%",
+      "Saphir Brut 0.40%",
+      "Aigue-marine brute 0.10%",
+      "Amethyste finement taillée 1.00%",
+      "Saphir finement taillé 0.20%",
+      "Pierre de lune finement taillée 0.05%"
+    ]
+  }
+]

@@ -1,0 +1,1524 @@
+[
+  {
+    "id": 4501,
+    "name": "Goblin néfaste",
+    "hp": 170,
+    "xp": 1986,
+    "drops": [
+      "Plume de corbeau 1.50%",
+      "Plastron du débutant 1.50%",
+      "Cape du débutant 1.50%",
+      "Ceinture du débutant 1.50%",
+      "Bottes du débutant 1.50%",
+      "Gants du débutant 1.50%",
+      "Heaume du débutant 1.50%",
+      "Jambières du débutant 1.50%",
+      "Bouclier du débutant 1.50%"
+    ]
+  },
+  {
+    "id": 4503,
+    "name": "Zogzog",
+    "hp": 10000,
+    "xp": 5000,
+    "drops": [
+      "Potion de guérison légère 10.00%",
+      "Oeil de corbeau 100.00%",
+      "Anneau du débutant 1.00%"
+    ]
+  },
+  {
+    "id": 4504,
+    "name": "Tarentule infectée",
+    "hp": 606,
+    "xp": 4007.95,
+    "drops": [
+      "Yeux de tarentule 3.00%",
+      "Croc de tarentule infecté 5.00%",
+      "Potion de guérison des blessures graves 4.00%"
+    ]
+  },
+  {
+    "id": 4511,
+    "name": "Gobzit",
+    "hp": 1676,
+    "xp": 0,
+    "drops": [
+      "Anneau d'or 0.05%"
+    ]
+  },
+  {
+    "id": 4515,
+    "name": "Momie pestiférée",
+    "hp": 606,
+    "xp": 5007.95,
+    "drops": [
+      "Potion de guérison des blessures graves 4.00%",
+      "Robe des elfes en soie d'argent 1.00%",
+      "Élixir de mana 10.00%"
+    ]
+  },
+  {
+    "id": 4516,
+    "name": "Chef de meute",
+    "hp": 20000,
+    "xp": 1000000,
+    "drops": [
+      "Robe d'ArchMagi 6.00%",
+      "Costume des morts 6.00%",
+      "Diadème de pouvoir arcanique 6.00%",
+      "Bague-araignée 6.00%",
+      "Potion de guérison divine 10.00%",
+      "Anneau de sorcellerie en jade 8.00%",
+      "Rubis focus de pouvoir 6.00%",
+      "Saphir focus de pouvoir 6.00%",
+      "Robe des enfers 6.00%"
+    ]
+  },
+  {
+    "id": 4517,
+    "name": "Loup fantôme",
+    "hp": 1356,
+    "xp": 12633.03,
+    "drops": [
+      "Pierre de lune brute 0.10%",
+      "Diamant brut 0.40%",
+      "Agate brute 2.00%"
+    ]
+  },
+  {
+    "id": 4519,
+    "name": "Loup de la meute",
+    "hp": 847,
+    "xp": 6274.74,
+    "drops": [
+      "Cuisse de loup 3.00%",
+      "Lance du triton 1.00%",
+      "Marteau de jugement 1.00%",
+      "Fléau incandescent 1.00%",
+      "Cuisse de loup 5.00%"
+    ]
+  },
+  {
+    "id": 4520,
+    "name": "Skraugh grubingha",
+    "hp": 847,
+    "xp": 21440,
+    "drops": [
+      "Jambon de skraugh 5.00%",
+      "Lame incandescente  0.50%",
+      "Flèche du givre 0.50%",
+      "Scalp de Moon Tug 4.50%"
+    ]
+  },
+  {
+    "id": 4521,
+    "name": "Skraugh munchtor",
+    "hp": 847,
+    "xp": 21440,
+    "drops": [
+      "Jambon de skraugh 5.00%",
+      "Lame incandescente  0.50%",
+      "Flèche du givre 0.50%",
+      "Cristal brut 4.50%"
+    ]
+  },
+  {
+    "id": 4522,
+    "name": "Minos ",
+    "hp": 20000,
+    "xp": 1000000,
+    "drops": [
+      "Potion de guérison divine 10.00%",
+      "Bandeau mystique du vent 6.00%",
+      "Diamant focus de pouvoir 6.00%",
+      "Emeraude focus de pouvoir 6.00%",
+      "Tiare d'or incrustée d'émeraude 6.00%",
+      "Cuillère d'argent du Prophète 6.00%",
+      "Robe céleste 6.00%",
+      "Robe des âmes purifiées 6.00%"
+    ]
+  },
+  {
+    "id": 4523,
+    "name": "Maître des cristaux",
+    "hp": 20000,
+    "xp": 1000000,
+    "drops": [
+      "Potion de guérison divine 10.00%",
+      "Bandeau mystique du vent 6.00%",
+      "Diamant focus de pouvoir 6.00%",
+      "Emeraude focus de pouvoir 6.00%",
+      "Tiare d'or incrustée d'émeraude 6.00%",
+      "Cuillère d'argent du Prophète 6.00%",
+      "Robe céleste 6.00%",
+      "Robe des âmes purifiées 6.00%"
+    ]
+  },
+  {
+    "id": 4541,
+    "name": "Forgeron Ethéré",
+    "hp": 75000,
+    "xp": 70600000,
+    "drops": [
+      "Baton de puissance d'intelligence 5.00%",
+      "Baton de puissance de sagesse 5.00%",
+      "Fendoir du bourreau 5.00%",
+      "Vibrevent en oxandre 5.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin majeur 1.50%",
+      "Baton du shaman 5.00%"
+    ]
+  },
+  {
+    "id": 4542,
+    "name": "Goloum",
+    "hp": 75000,
+    "xp": 70600000,
+    "drops": [
+      "Anneau de brutus 5.00%",
+      "Anneau de larcin 5.00%",
+      "Anneau de pleine conscience 5.00%",
+      "Anneau des arcanes 5.00%",
+      "Breuvage de soin majeur 1.50%",
+      "Pierre de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4543,
+    "name": "Mister T",
+    "hp": 75000,
+    "xp": 70600000,
+    "drops": [
+      "Amulette du larcin 5.00%",
+      "Collier de sagesse 5.00%",
+      "Collier de torpeur 5.00%",
+      "Collier des arcanes 5.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin majeur 1.50%"
+    ]
+  },
+  {
+    "id": 4544,
+    "name": "Shang Chi",
+    "hp": 75000,
+    "xp": 70600000,
+    "drops": [
+      "Bracelet brutal 5.00%",
+      "Bracelet de lynchage 5.00%",
+      "Bracelet de sagesse 5.00%",
+      "Bracelet des arcanes 5.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%"
+    ]
+  },
+  {
+    "id": 4545,
+    "name": "Iktomi",
+    "hp": 35000,
+    "xp": 45280000,
+    "drops": [
+      "Corde de bateau 10.00%",
+      "Corde de bateau 10.00%",
+      "Corde de bateau 10.00%",
+      "Corde de bateau 10.00%",
+      "Corde de bateau 10.00%",
+      "Breuvage de soin 1.50%",
+      "Pierre de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4546,
+    "name": "Fils de Sylvebarbe",
+    "hp": 35000,
+    "xp": 45280000,
+    "drops": [
+      "Pile de bois de réparation 10.00%",
+      "Pile de bois de réparation 10.00%",
+      "Pile de bois de réparation 10.00%",
+      "Pile de bois de réparation 10.00%",
+      "Pile de bois de réparation 10.00%",
+      "Pile de bois de réparation 10.00%",
+      "Pile de bois de réparation 10.00%",
+      "Breuvage de soin 1.50%",
+      "Pierre de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4547,
+    "name": "Bigfoot corrompu",
+    "hp": 35000,
+    "xp": 45280000,
+    "drops": [
+      "Peau de yéti 10.00%",
+      "Peau de yéti 10.00%",
+      "Peau de yéti 10.00%",
+      "Peau de yéti 10.00%",
+      "Peau de yéti 10.00%",
+      "Peau de yéti 10.00%",
+      "Peau de yéti 10.00%",
+      "Breuvage de soin 1.50%",
+      "Pierre de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4549,
+    "name": "Iron ore monster",
+    "hp": 15000,
+    "xp": 0,
+    "drops": [
+      "Morceaux de fer 50.00%"
+    ]
+  },
+  {
+    "id": 4559,
+    "name": "Golem incendiaire",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Baton de puissance d'intelligence +2 1.00%",
+      "Baton de puissance de sagesse +2 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Fléau du balrog 1.00%"
+    ]
+  },
+  {
+    "id": 4568,
+    "name": "Railleuse d'eau",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Fendoir incandescant 1.00%",
+      "Fendoir sismique 1.00%",
+      "Flèche de conduction 1.00%",
+      "Flèche des noyés 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Lance de poseidon 1.00%"
+    ]
+  },
+  {
+    "id": 4569,
+    "name": "Railleuse d'air",
+    "hp": 15677,
+    "xp": 11031446.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Baton de puissance d'intelligence +2 1.00%",
+      "Baton de puissance de sagesse +2 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Fléau du balrog 1.00%",
+      "Gants du boxeur champion 1.00%"
+    ]
+  },
+  {
+    "id": 4570,
+    "name": "Amas de chair",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Baton de puissance de sagesse +2 1.00%",
+      "Baton de puissance d'intelligence +2 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Bras de justice 1.00%",
+      "Gants du boxeur champion 1.00%"
+    ]
+  },
+  {
+    "id": 4571,
+    "name": "Brute de grand chemin",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Fendoir incandescant 1.00%",
+      "Fendoir sismique 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Bras de justice 1.00%",
+      "Gants du boxeur champion 1.00%"
+    ]
+  },
+  {
+    "id": 4572,
+    "name": "Bandit de grand chemin",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Flèche des noyés 1.00%",
+      "Flèche de conduction 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Lance de poseidon 1.00%",
+      "Gants du boxeur champion 1.00%"
+    ]
+  },
+  {
+    "id": 4575,
+    "name": "Loup sinistre",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Flèche des noyés 1.00%",
+      "Flèche de conduction 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Bras de justice 1.00%",
+      "Gants du boxeur champion 1.00%"
+    ]
+  },
+  {
+    "id": 4577,
+    "name": "Taupe des profondeurs",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Fendoir incandescant 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Fendoir sismique 1.00%",
+      "Gants du boxeur champion 1.00%",
+      "Fléau du balrog 1.00%"
+    ]
+  },
+  {
+    "id": 4579,
+    "name": "Yéti subzero",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Baton de puissance d'intelligence +2 1.00%",
+      "Baton de puissance de sagesse +2 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Lance de poseidon 1.00%"
+    ]
+  },
+  {
+    "id": 4580,
+    "name": "Vers adipeux",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Flèche de conduction 1.00%",
+      "Flèche des noyés 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Lance de poseidon 1.00%"
+    ]
+  },
+  {
+    "id": 4583,
+    "name": "Squelette géant",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Baton de puissance d'intelligence +2 1.00%",
+      "Baton de puissance de sagesse +2 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Bras de justice 1.00%"
+    ]
+  },
+  {
+    "id": 4585,
+    "name": "Scorpion du désert",
+    "hp": 15677,
+    "xp": 6344023.74,
+    "drops": [
+      "Poussière d'étoile 5.00%",
+      "Baton de puissance d'intelligence +2 1.00%",
+      "Baton de puissance de sagesse +2 1.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%"
+    ]
+  },
+  {
+    "id": 4587,
+    "name": "Fragment de clef",
+    "hp": 35000,
+    "xp": 4780000,
+    "drops": [
+      "Fragment de clef bleu 100.00%",
+      "Breuvage de soin 1.50%",
+      "Pierre de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4588,
+    "name": "Fragment de clef",
+    "hp": 35000,
+    "xp": 4780000,
+    "drops": [
+      "Fragment de clef violet 100.00%",
+      "Breuvage de soin 1.50%",
+      "Pierre de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4589,
+    "name": "Fragment de clef",
+    "hp": 35000,
+    "xp": 4780000,
+    "drops": [
+      "Pierre de mana 5.00%",
+      "Fragment de clef rouge 100.00%",
+      "Breuvage de soin 1.50%"
+    ]
+  },
+  {
+    "id": 4590,
+    "name": "Dromadaire",
+    "hp": 25677,
+    "xp": 18032646.74,
+    "drops": [
+      "Eau de dromadaire 4.00%"
+    ]
+  },
+  {
+    "id": 4591,
+    "name": "Kraanian de la ruche",
+    "hp": 25677,
+    "xp": 18032646.74,
+    "drops": [
+      "Oeuf de kraanian de la ruche 4.00%"
+    ]
+  },
+  {
+    "id": 4592,
+    "name": "Railleuse du désert",
+    "hp": 25677,
+    "xp": 18058323.74,
+    "drops": [
+      "Os de railleuse 5.00%"
+    ]
+  },
+  {
+    "id": 4593,
+    "name": "Kéfir le larcineur",
+    "hp": 45677,
+    "xp": 41170446.74,
+    "drops": [
+      "Eau de dromadaire 15.00%",
+      "Cuillère de Mère Grott 50.00%",
+      "Breuvage de soin majeur 1.50%",
+      "Prisme de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4594,
+    "name": "Kalbax la pondeuse",
+    "hp": 45677,
+    "xp": 41170446.74,
+    "drops": [
+      "Oeuf de kraanian de la ruche 15.00%",
+      "Rouleau de Mère Grott 50.00%",
+      "Breuvage de soin majeur 1.50%",
+      "Prisme de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4595,
+    "name": "Krakott chef des railleuse",
+    "hp": 45677,
+    "xp": 41170446.74,
+    "drops": [
+      "Os de railleuse 15.00%",
+      "Bol de Mère Grott 50.00%",
+      "Breuvage de soin majeur 1.50%",
+      "Prisme de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4596,
+    "name": "Squelette animé",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Fragment d'os 5.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%"
+    ]
+  },
+  {
+    "id": 4597,
+    "name": "Squelette équidé",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Fragment d'os 5.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%"
+    ]
+  },
+  {
+    "id": 4598,
+    "name": "Squelette royal",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Fragment d'os 5.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%"
+    ]
+  },
+  {
+    "id": 4599,
+    "name": "Squelette fantômatique",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Fragment d'os 5.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%"
+    ]
+  },
+  {
+    "id": 4600,
+    "name": "Squelette géant",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Fragment d'os 5.00%",
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%"
+    ]
+  },
+  {
+    "id": 4601,
+    "name": "Adorf",
+    "hp": 275000,
+    "xp": 102200000,
+    "drops": [
+      "Couronne des frères Lich 2.00%"
+    ]
+  },
+  {
+    "id": 4602,
+    "name": "Bénito",
+    "hp": 275000,
+    "xp": 102200000,
+    "drops": [
+      "Couronne des frères Lich 2.00%"
+    ]
+  },
+  {
+    "id": 4604,
+    "name": "Mâitre du bifröst",
+    "hp": 475000,
+    "xp": 153800000,
+    "drops": [
+      "Clé du coffre glace 30.00%"
+    ]
+  },
+  {
+    "id": 4606,
+    "name": "Garde de la reine",
+    "hp": 20000,
+    "xp": 0,
+    "drops": [
+      "Potion de guérison critique 10.00%",
+      "Jeton de la reine déchue 5.00%"
+    ]
+  },
+  {
+    "id": 4611,
+    "name": "Bandit en embuscade",
+    "hp": 7677,
+    "xp": 824286.74,
+    "drops": [
+      "Clé du coffre des brigands 5.00%",
+      "Potion de guérison critique 1.50%",
+      "Pierre de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4612,
+    "name": "Brute en embuscade",
+    "hp": 7677,
+    "xp": 824286.74,
+    "drops": [
+      "Clé du coffre des brigands 5.00%",
+      "Potion de guérison critique 1.50%",
+      "Pierre de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4613,
+    "name": "Cerbère",
+    "hp": 55000,
+    "xp": 70440000,
+    "drops": [
+      "Breuvage de soin 1.50%",
+      "Pierre de mana 1.50%"
+    ]
+  },
+  {
+    "id": 4639,
+    "name": "Dragon du nid",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Morceau de griffe 4.00%"
+    ]
+  },
+  {
+    "id": 4640,
+    "name": "Dragon du nid",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Morceau de griffe 4.00%"
+    ]
+  },
+  {
+    "id": 4641,
+    "name": "Dragon du nid",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Morceau de griffe 4.00%"
+    ]
+  },
+  {
+    "id": 4642,
+    "name": "Dragon du nid",
+    "hp": 15677,
+    "xp": 6328346.74,
+    "drops": [
+      "Pierre de mana 1.50%",
+      "Breuvage de soin 1.50%",
+      "Morceau de griffe 4.00%"
+    ]
+  },
+  {
+    "id": 4643,
+    "name": "Grand pope",
+    "hp": 2750000,
+    "xp": 122000000,
+    "drops": [
+      "Clef de la tour des horreurs 10.00%",
+      "Marteau céleste 10.00%",
+      "Clef de la tour des horreurs 10.00%",
+      "Clef de la tour des horreurs 10.00%"
+    ]
+  },
+  {
+    "id": 4644,
+    "name": "Hydralys le Gardien des pendentifs",
+    "hp": 200000,
+    "xp": 42000000,
+    "drops": [
+      "Fragment d'amulette 0.50%",
+      "Fragment d'amulette 5.50%"
+    ]
+  },
+  {
+    "id": 4645,
+    "name": "Zéphyr Anneau de Vent",
+    "hp": 200000,
+    "xp": 42000000,
+    "drops": [
+      "Fragment d'anneau 0.50%",
+      "Fragment d'anneau 7.50%"
+    ]
+  },
+  {
+    "id": 4646,
+    "name": "Gaia Serre-Bracelet",
+    "hp": 200000,
+    "xp": 42000000,
+    "drops": [
+      "Fragment de bracelet 0.50%",
+      "Fragment de bracelet 5.50%"
+    ]
+  },
+  {
+    "id": 4647,
+    "name": "Pyraxis le Forge-Lames",
+    "hp": 200000,
+    "xp": 42000000,
+    "drops": [
+      "Fragment d'arme 0.50%",
+      "Fragment de bâton 0.50%",
+      "Fragment de bâton 5.50%",
+      "Fragment d'arme 5.50%"
+    ]
+  },
+  {
+    "id": 4648,
+    "name": "Umbral Flèche-Noire",
+    "hp": 200000,
+    "xp": 42000000,
+    "drops": [
+      "Fragment de carquois 0.50%",
+      "Fragment d'arc 0.50%",
+      "Fragment de carquois 5.50%",
+      "Fragment d'arc 5.50%"
+    ]
+  },
+  {
+    "id": 4653,
+    "name": "Arachnides insectoïdes",
+    "hp": 45677,
+    "xp": 82279746.74,
+    "drops": [
+      "Breuvage de soin majeur 1.50%",
+      "Prisme de mana 1.50%",
+      "Affutage de pouvoir élémentaire 0.20%",
+      "Affutage de résistance élémentaire 0.20%",
+      "Affutage de compétence 0.20%",
+      "Affutage de statistique 0.20%"
+    ]
+  },
+  {
+    "id": 4654,
+    "name": "Frelon néfaste",
+    "hp": 50677,
+    "xp": 182528946.73999998,
+    "drops": [
+      "Breuvage de soin majeur 1.50%",
+      "Prisme de mana 1.50%",
+      "Affutage de pouvoir élémentaire 0.40%",
+      "Affutage de résistance élémentaire 0.40%",
+      "Affutage de compétence 0.40%",
+      "Affutage de statistique 0.40%"
+    ]
+  },
+  {
+    "id": 4655,
+    "name": "Roc de glace",
+    "hp": 55677,
+    "xp": 278487346.74,
+    "drops": [
+      "Breuvage de soin majeur 1.50%",
+      "Prisme de mana 1.50%",
+      "Affutage de pouvoir élémentaire 0.60%",
+      "Affutage de résistance élémentaire 0.60%",
+      "Affutage de compétence 0.60%",
+      "Affutage de statistique 0.60%"
+    ]
+  },
+  {
+    "id": 4656,
+    "name": "Abeille de jupiter",
+    "hp": 60677,
+    "xp": 424841946.74,
+    "drops": [
+      "Breuvage de soin majeur 1.50%",
+      "Prisme de mana 1.50%",
+      "Affutage de pouvoir élémentaire 0.80%",
+      "Affutage de résistance élémentaire 0.80%",
+      "Affutage de compétence 0.80%",
+      "Affutage de statistique 0.80%"
+    ]
+  },
+  {
+    "id": 4657,
+    "name": "Exos squelette",
+    "hp": 65677,
+    "xp": 657173546.74,
+    "drops": [
+      "Breuvage de soin majeur 1.50%",
+      "Prisme de mana 1.50%",
+      "Affutage de pouvoir élémentaire 1.00%",
+      "Affutage de résistance élémentaire 1.00%",
+      "Affutage de compétence 1.00%",
+      "Affutage de statistique 1.00%"
+    ]
+  },
+  {
+    "id": 4658,
+    "name": "Gardien de la zone",
+    "hp": 200000,
+    "xp": 42000000,
+    "drops": [
+      "Affutage de pouvoir élémentaire 1.00%",
+      "Affutage de résistance élémentaire 1.00%",
+      "Affutage de compétence 1.00%",
+      "Affutage de statistique 1.00%",
+      "Parchemin de pluton 3.00%"
+    ]
+  },
+  {
+    "id": 4659,
+    "name": "Gardien de la zone",
+    "hp": 250000,
+    "xp": 52000000,
+    "drops": [
+      "Affutage de pouvoir élémentaire 1.20%",
+      "Affutage de résistance élémentaire 1.20%",
+      "Affutage de compétence 1.20%",
+      "Affutage de statistique 1.20%",
+      "Parchemin de mercure 3.00%"
+    ]
+  },
+  {
+    "id": 4660,
+    "name": "Gardien de la zone",
+    "hp": 280000,
+    "xp": 58000000,
+    "drops": [
+      "Affutage de pouvoir élémentaire 1.40%",
+      "Affutage de résistance élémentaire 1.40%",
+      "Affutage de compétence 1.40%",
+      "Affutage de statistique 1.40%",
+      "Parchemin d'uranus 3.00%"
+    ]
+  },
+  {
+    "id": 4661,
+    "name": "Gardien de la zone",
+    "hp": 300000,
+    "xp": 62000000,
+    "drops": [
+      "Affutage de pouvoir élémentaire 1.60%",
+      "Affutage de résistance élémentaire 1.60%",
+      "Affutage de compétence 1.60%",
+      "Affutage de statistique 1.60%",
+      "Parchemin de jupiter 3.00%"
+    ]
+  },
+  {
+    "id": 4662,
+    "name": "Gardien de la zone",
+    "hp": 320000,
+    "xp": 66000000,
+    "drops": [
+      "Affutage de pouvoir élémentaire 1.80%",
+      "Affutage de résistance élémentaire 1.80%",
+      "Affutage de compétence 1.80%",
+      "Affutage de statistique 1.80%",
+      "Parchemin de mars 3.00%"
+    ]
+  },
+  {
+    "id": 4683,
+    "name": "Séraphin néfast",
+    "hp": 15677,
+    "xp": 9463746.74,
+    "drops": [
+      "Breuvage de soin 1.50%",
+      "Plume de séraphin 4.00%",
+      "Ailes blanche enchantée 0.30%"
+    ]
+  },
+  {
+    "id": 4684,
+    "name": "Néphilim néfast",
+    "hp": 15677,
+    "xp": 9463746.74,
+    "drops": [
+      "Breuvage de soin 1.50%",
+      "Plume de néphilim 4.00%",
+      "Ailes noire enchantée 0.30%"
+    ]
+  },
+  {
+    "id": 4685,
+    "name": "Al Capone",
+    "hp": 2000000,
+    "xp": 0,
+    "drops": [
+      "Parchemin de renaissance X5 1.00%",
+      "Bon reskin arme 0.10%",
+      "Bon reskin bottes 0.10%",
+      "Bon reskin bouclier 0.10%",
+      "Bon reskin casque 0.10%",
+      "Bon reskin coiffure 0.10%",
+      "Bon reskin gants 0.10%",
+      "Bon reskin jambières 0.10%",
+      "Bon reskin torse 0.10%"
+    ]
+  },
+  {
+    "id": 4686,
+    "name": "Jacques Mesrine",
+    "hp": 2100000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.15%",
+      "Bon reskin bottes 0.15%",
+      "Bon reskin bouclier 0.15%",
+      "Bon reskin casque 0.15%",
+      "Bon reskin coiffure 0.15%",
+      "Bon reskin gants 0.15%",
+      "Bon reskin jambières 0.15%",
+      "Bon reskin torse 0.15%",
+      "Parchemin de renaissance X5 1.00%"
+    ]
+  },
+  {
+    "id": 4687,
+    "name": "Jack l'Éventreur",
+    "hp": 2100000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.20%",
+      "Bon reskin bottes 0.20%",
+      "Bon reskin bouclier 0.20%",
+      "Bon reskin casque 0.20%",
+      "Bon reskin coiffure 0.20%",
+      "Bon reskin gants 0.20%",
+      "Bon reskin jambières 0.20%",
+      "Bon reskin torse 0.20%",
+      "Parchemin de renaissance X5 1.00%"
+    ]
+  },
+  {
+    "id": 4688,
+    "name": "Xavier Dumont de Ligonnès",
+    "hp": 2100000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.22%",
+      "Bon reskin bouclier 0.22%",
+      "Bon reskin casque 0.22%",
+      "Bon reskin coiffure 0.22%",
+      "Bon reskin gants 0.22%",
+      "Bon reskin jambières 0.22%",
+      "Bon reskin torse 0.22%",
+      "Parchemin de renaissance X5 1.00%"
+    ]
+  },
+  {
+    "id": 4689,
+    "name": "Jeffrey Dahmer",
+    "hp": 3000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.25%",
+      "Bon reskin bottes 0.25%",
+      "Bon reskin bouclier 0.25%",
+      "Bon reskin casque 0.25%",
+      "Bon reskin coiffure 0.25%",
+      "Bon reskin gants 0.25%",
+      "Bon reskin jambières 0.25%",
+      "Bon reskin torse 0.25%",
+      "Parchemin de renaissance X5 1.00%"
+    ]
+  },
+  {
+    "id": 4690,
+    "name": "Bonnie Parker",
+    "hp": 3000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.30%",
+      "Bon reskin bottes 0.30%",
+      "Bon reskin bouclier 0.30%",
+      "Bon reskin casque 0.30%",
+      "Bon reskin coiffure 0.30%",
+      "Bon reskin gants 0.30%",
+      "Bon reskin jambières 0.30%",
+      "Bon reskin torse 0.30%",
+      "Parchemin de renaissance X5 1.00%"
+    ]
+  },
+  {
+    "id": 4691,
+    "name": "Clyde Barrow",
+    "hp": 3000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.30%",
+      "Bon reskin bottes 0.30%",
+      "Bon reskin bouclier 0.30%",
+      "Bon reskin casque 0.30%",
+      "Bon reskin coiffure 0.30%",
+      "Bon reskin gants 0.30%",
+      "Bon reskin jambières 0.30%",
+      "Bon reskin torse 0.30%",
+      "Parchemin de renaissance X5 1.00%"
+    ]
+  },
+  {
+    "id": 4694,
+    "name": "Charles Manson",
+    "hp": 6000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.35%",
+      "Bon reskin bottes 0.35%",
+      "Bon reskin bouclier 0.35%",
+      "Bon reskin casque 0.35%",
+      "Bon reskin coiffure 0.35%",
+      "Bon reskin gants 0.35%",
+      "Bon reskin jambières 0.35%",
+      "Bon reskin torse 0.35%"
+    ]
+  },
+  {
+    "id": 4695,
+    "name": "Pablo Escobar",
+    "hp": 7000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.37%",
+      "Bon reskin bottes 0.37%",
+      "Bon reskin bouclier 0.37%",
+      "Bon reskin casque 0.37%",
+      "Bon reskin coiffure 0.37%",
+      "Bon reskin gants 0.37%",
+      "Bon reskin jambières 0.37%",
+      "Bon reskin torse 0.37%",
+      "Sachet de poudre blanche 100.00%",
+      "Sachet de poudre blanche 100.00%",
+      "Sachet de poudre blanche 100.00%"
+    ]
+  },
+  {
+    "id": 4696,
+    "name": "hanouna",
+    "hp": 8000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.39%",
+      "Bon reskin bottes 0.39%",
+      "Bon reskin bouclier 0.39%",
+      "Bon reskin casque 0.39%",
+      "Bon reskin coiffure 0.39%",
+      "Bon reskin gants 0.39%",
+      "Bon reskin jambières 0.39%",
+      "Bon reskin torse 0.39%"
+    ]
+  },
+  {
+    "id": 4697,
+    "name": "Kim Jong Houn",
+    "hp": 7000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.41%",
+      "Bon reskin bottes 0.41%",
+      "Bon reskin bouclier 0.41%",
+      "Bon reskin casque 0.41%",
+      "Bon reskin coiffure 0.41%",
+      "Bon reskin gants 0.41%",
+      "Bon reskin jambières 0.41%",
+      "Bon reskin torse 0.41%"
+    ]
+  },
+  {
+    "id": 4698,
+    "name": "Général Mao",
+    "hp": 7000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin arme 0.41%",
+      "Bon reskin bottes 0.41%",
+      "Bon reskin bouclier 0.41%",
+      "Bon reskin casque 0.41%",
+      "Bon reskin coiffure 0.41%",
+      "Bon reskin gants 0.41%",
+      "Bon reskin jambières 0.41%",
+      "Bon reskin torse 0.41%"
+    ]
+  },
+  {
+    "id": 4699,
+    "name": "Olphen néfast",
+    "hp": 1500000,
+    "xp": 0,
+    "drops": [
+      "Oeuf d'olphen 0.01%",
+      "Infusion de chance 2.00%",
+      "Oeuf d'olphen 1.00%"
+    ]
+  },
+  {
+    "id": 4700,
+    "name": "Olphen master",
+    "hp": 3000000,
+    "xp": 0,
+    "drops": [
+      "Oeuf d'olphen 2.00%",
+      "Oeuf d'olphen 50.00%",
+      "Oeuf d'olphen 100.00%",
+      "Infusion de chance 10.00%"
+    ]
+  },
+  {
+    "id": 4701,
+    "name": "Garde olphen",
+    "hp": 1500000,
+    "xp": 0,
+    "drops": [
+      "Infusion de chance 4.00%",
+      "Oeuf d'olphen 5.00%",
+      "Oeuf d'olphen 0.50%"
+    ]
+  },
+  {
+    "id": 4702,
+    "name": "Chimère",
+    "hp": 1500000,
+    "xp": 0,
+    "drops": [
+      "Oeuf d'olphen 0.30%",
+      "Oeuf d'olphen 50.00%",
+      "Infusion de chance 6.00%",
+      "Oeuf d'olphen 10.00%"
+    ]
+  },
+  {
+    "id": 4705,
+    "name": "Ogre du champ de bataille",
+    "hp": 1900000,
+    "xp": 0,
+    "drops": [
+      "Masse d'ogre 0.10%",
+      "Infusion de chance majeure 1.50%",
+      "Masse d'ogre 2.00%"
+    ]
+  },
+  {
+    "id": 4706,
+    "name": "Machine de siège",
+    "hp": 1900000,
+    "xp": 0,
+    "drops": [
+      "Masse d'ogre 0.10%",
+      "Pièces de machine de siège 100.00%",
+      "Infusion de chance majeure 3.00%",
+      "Masse d'ogre 3.00%"
+    ]
+  },
+  {
+    "id": 4707,
+    "name": "Machine de siège",
+    "hp": 1900000,
+    "xp": 0,
+    "drops": [
+      "Masse d'ogre 0.10%",
+      "Pièces de machine de siège 100.00%",
+      "Infusion de chance majeure 3.00%",
+      "Masse d'ogre 3.00%"
+    ]
+  },
+  {
+    "id": 4708,
+    "name": "Machine de siège",
+    "hp": 1900000,
+    "xp": 0,
+    "drops": [
+      "Masse d'ogre 0.10%",
+      "Pièces de machine de siège 100.00%",
+      "Infusion de chance majeure 3.00%",
+      "Masse d'ogre 3.00%"
+    ]
+  },
+  {
+    "id": 4709,
+    "name": "Général ogre",
+    "hp": 3500000,
+    "xp": 0,
+    "drops": [
+      "Masse d'ogre 1.00%",
+      "Masse d'ogre 2.00%",
+      "Masse d'ogre 50.00%",
+      "Infusion de chance majeure 6.00%",
+      "Masse d'ogre 50.00%"
+    ]
+  },
+  {
+    "id": 4710,
+    "name": "Vlad l'ampaleur",
+    "hp": 5000000,
+    "xp": 0,
+    "drops": [
+      "Masse d'ogre 2.00%",
+      "Masse d'ogre 50.00%",
+      "Masse d'ogre 100.00%",
+      "Infusion de chance majeure 10.00%",
+      "Masse d'ogre 50.00%"
+    ]
+  },
+  {
+    "id": 4713,
+    "name": "Machine de siège allié",
+    "hp": 1900000,
+    "xp": 0,
+    "drops": [
+      "Masse d'ogre 0.10%",
+      "Pièces de machine de siège 100.00%"
+    ]
+  },
+  {
+    "id": 4714,
+    "name": "Machine de siège énemie",
+    "hp": 1900000,
+    "xp": 0,
+    "drops": [
+      "Masse d'ogre 0.10%",
+      "Pièces de machine de siège 100.00%"
+    ]
+  },
+  {
+    "id": 4716,
+    "name": "Grand mage du pope",
+    "hp": 2750000,
+    "xp": 122000000,
+    "drops": [
+      "Orbe des abysses 3.00%",
+      "Orbe de l'antépal abyssal 3.00%",
+      "Orbe de l'antépal infernal 3.00%",
+      "Orbe de l'archimage infernal 3.00%",
+      "Orbe du sacrifice ardent 3.00%",
+      "Orbe des ombres 3.00%"
+    ]
+  },
+  {
+    "id": 4717,
+    "name": "Grand prêtre du pope",
+    "hp": 2750000,
+    "xp": 122000000,
+    "drops": [
+      "Orbe de radiance 3.00%",
+      "Orbe du rédempteur 3.00%",
+      "Orbe tellurique 3.00%",
+      "Orbe des vents 3.00%"
+    ]
+  },
+  {
+    "id": 4718,
+    "name": "Grand combattant du pope",
+    "hp": 2750000,
+    "xp": 122000000,
+    "drops": [
+      "Orbe du titan de terre 3.00%",
+      "Orbe du titan de feu 3.00%",
+      "Orbe du titan 3.00%",
+      "Orbe primordial d'air 3.00%",
+      "Orbe primordial d'eau 3.00%",
+      "Orbe du rédempteur 3.00%",
+      "Orbe de l'antépal infernal 3.00%",
+      "Orbe de l'antépal abyssal 3.00%",
+      "Orbe de Moimed Ali 3.00%"
+    ]
+  },
+  {
+    "id": 4719,
+    "name": "Infirmière",
+    "hp": 150000,
+    "xp": 0,
+    "drops": [
+      "Hydroxychloroquine 6.00%",
+      "Clef de la chambre zéro 0.50%"
+    ]
+  },
+  {
+    "id": 4720,
+    "name": "Infirmière",
+    "hp": 150000,
+    "xp": 0,
+    "drops": [
+      "Hydroxychloroquine 6.00%",
+      "Clef de la chambre zéro 0.50%"
+    ]
+  },
+  {
+    "id": 4721,
+    "name": "Infirmière",
+    "hp": 150000,
+    "xp": 0,
+    "drops": [
+      "Hydroxychloroquine 6.00%",
+      "Clef de la chambre zéro 0.50%"
+    ]
+  },
+  {
+    "id": 4722,
+    "name": "Infirmière",
+    "hp": 150000,
+    "xp": 0,
+    "drops": [
+      "Hydroxychloroquine 6.00%",
+      "Clef de la chambre zéro 0.50%"
+    ]
+  },
+  {
+    "id": 4723,
+    "name": "Infirmière",
+    "hp": 150000,
+    "xp": 0,
+    "drops": [
+      "Hydroxychloroquine 6.00%",
+      "Clef de la chambre zéro 0.50%"
+    ]
+  },
+  {
+    "id": 4724,
+    "name": "Patient covidé",
+    "hp": 7000,
+    "xp": 0,
+    "drops": [
+      "Clef de la chambre zéro 0.50%",
+      "Parchemin d'immunité au covid 20.00%"
+    ]
+  },
+  {
+    "id": 4725,
+    "name": "Pangolin originel",
+    "hp": 500000,
+    "xp": 0,
+    "drops": [
+      "Oeuf d'olphen 20.00%",
+      "Hydroxychloroquine 50.00%",
+      "Masse d'ogre 10.00%"
+    ]
+  },
+  {
+    "id": 4727,
+    "name": "Anti-vaxx",
+    "hp": 50000,
+    "xp": 0,
+    "drops": [
+      "Parchemin d'accès IHU Méditéranée 2.00%"
+    ]
+  },
+  {
+    "id": 4733,
+    "name": "Olaf",
+    "hp": 6000000,
+    "xp": 0,
+    "drops": [
+      "Fragment d'anneau cassé 2.00%",
+      "Fragment d'anneau cassé 3.00%",
+      "Fragment d'anneau cassé 1.00%",
+      "Masse d'ogre 15.00%",
+      "Masse d'ogre 15.00%",
+      "Oeuf d'olphen 15.00%"
+    ]
+  },
+  {
+    "id": 4734,
+    "name": "evil santa",
+    "hp": 10000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin sortillège 1.00%",
+      "Parchemin de respé dext 50 3.00%",
+      "Parchemin de respé endu 50 3.00%",
+      "Parchemin de respé intel 50 3.00%",
+      "Parchemin de respé force 50 3.00%",
+      "Parchemin de respé sagesse 50 3.00%",
+      "Fragment d'anneau cassé 15.00%",
+      "Fragment d'anneau cassé 16.00%",
+      "Fragment d'anneau cassé 14.00%"
+    ]
+  },
+  {
+    "id": 4735,
+    "name": "Echo de l'Astraliste Suprême",
+    "hp": 20000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin sortillège 1.00%"
+    ]
+  },
+  {
+    "id": 4738,
+    "name": "Echo du Guerrier Primordial",
+    "hp": 20000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin sortillège 1.00%"
+    ]
+  },
+  {
+    "id": 4739,
+    "name": "Echo du Ritualiste Nocturne",
+    "hp": 20000000,
+    "xp": 0,
+    "drops": [
+      "Bon reskin sortillège 1.00%"
+    ]
+  },
+  {
+    "id": 4740,
+    "name": "Lutin farceur",
+    "hp": 100000,
+    "xp": 0,
+    "drops": [
+      "Fragment de givre impur 1.00%",
+      "Fourniture de noel 3.00%",
+      "Fourniture de noel 3.00%",
+      "Fourniture de noel 3.00%",
+      "Fourniture de noel 3.00%"
+    ]
+  },
+  {
+    "id": 4741,
+    "name": "Golem coeur gelé",
+    "hp": 150000,
+    "xp": 0,
+    "drops": [
+      "Chapeau de noel 5.00%",
+      "Cape de noel 5.00%",
+      "Bouclier de noel 5.00%",
+      "Bottes de noel 5.00%",
+      "Coeur du golem 30.00%"
+    ]
+  },
+  {
+    "id": 4775,
+    "name": "Enfant d'Yggdrasil",
+    "hp": 106770,
+    "xp": 55665.5,
+    "drops": [
+      "Morceaux d'Yggdrasil 1.00%",
+      "Morceaux d'Yggdrasil 5.00%"
+    ]
+  },
+  {
+    "id": 4776,
+    "name": "Goblin de la mine",
+    "hp": 106770,
+    "xp": 55665.5,
+    "drops": [
+      "Morceaux de mithril 1.00%",
+      "Morceaux de mithril 5.00%",
+      "Catalyseur 1.00%"
+    ]
+  },
+  {
+    "id": 4774,
+    "name": "Ombre de l'alchisyum",
+    "hp": 106770,
+    "xp": 55665.5,
+    "drops": [
+      "Morceaux d'alchisyum 1.00%",
+      "Morceaux d'alchisyum 5.00%"
+    ]
+  },
+  {
+    "id": 4773,
+    "name": "Tisserande Rangy",
+    "hp": 106770,
+    "xp": 55665.5,
+    "drops": [
+      "Fil de soie rangy 1.00%",
+      "Fil de soie rangy 5.00%",
+      "Rouleau a tisser 1.00%"
+    ]
+  }
+]

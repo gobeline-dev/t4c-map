@@ -1,0 +1,2392 @@
+[
+  {
+    "id": "auto-1",
+    "name": "Bûche de qualité",
+    "requiredItems": [
+      "4x Bûche simple"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 10
+  },
+  {
+    "id": "auto-2",
+    "name": "Bûche noble",
+    "requiredItems": [
+      "4x Bûche de qualité"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-3",
+    "name": "Zéphyr bleuté",
+    "requiredItems": [
+      "10x Bûche de qualité",
+      "10x Croc de tarentule infecté"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 20
+  },
+  {
+    "id": "auto-4",
+    "name": "Bûche simple",
+    "requiredItems": [
+      "2x Pile de bois d'un arbre démoniaque"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-5",
+    "name": "Anneau de lumière",
+    "requiredItems": [
+      "2x Anneau de fer"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-6",
+    "name": "Anneau de sorcellerie en jade",
+    "requiredItems": [
+      "1x Anneau de lumière",
+      "1x Pierre rouge",
+      "1x Pierre verte",
+      "1x Pierre bleue",
+      "1x Pierre jaune"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 10
+  },
+  {
+    "id": "auto-7",
+    "name": "Amulette primordiale d'air",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Amulette du larcin"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-8",
+    "name": "Amulette primordiale d'eau",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Amulette du larcin"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-9",
+    "name": "Collier du titan de feu",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier de torpeur"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-10",
+    "name": "Collier du titan de terre",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier de torpeur"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-11",
+    "name": "Collier des vents",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier de sagesse"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-12",
+    "name": "Collier tellurique",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier de sagesse"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-13",
+    "name": "Collier de radiance",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier de sagesse"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-14",
+    "name": "Collier de l'archimage infernal",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-15",
+    "name": "Collier des abysses",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-16",
+    "name": "Collier des ombres",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-17",
+    "name": "Anneau des ombres",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-18",
+    "name": "Anneau des abysses",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-19",
+    "name": "Anneau de l'archimage infernal",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-20",
+    "name": "Anneau de radiance",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau de pleine conscience"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-21",
+    "name": "Anneau des vents",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau de pleine conscience"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-22",
+    "name": "Anneau de tellurique",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau de pleine conscience"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-23",
+    "name": "Anneau du titan élémentaire",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau de brutus"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-24",
+    "name": "Anneau primordial élémentaire",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau de larcin"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-25",
+    "name": "Bracelet primordial d'air",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet de lynchage"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-26",
+    "name": "Bracelet primordial d'eau",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet de lynchage"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-27",
+    "name": "Bracelet du titan de feu",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet brutal"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-28",
+    "name": "Bracelet du titan de terre",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet brutal"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-29",
+    "name": "Bracelet de radiance",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet de sagesse"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-30",
+    "name": "Bracelet des vents",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet de sagesse"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-31",
+    "name": "Bracelet tellurique",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet de sagesse"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-32",
+    "name": "Bracelet de l'archimage infernal",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-33",
+    "name": "Bracelet des abysses",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-34",
+    "name": "Bracelet des ombres",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-35",
+    "name": "Vibrevent",
+    "requiredItems": [
+      "4x Bûche simple"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 10
+  },
+  {
+    "id": "auto-36",
+    "name": "Porteveuve",
+    "requiredItems": [
+      "5x Bûche de qualité",
+      "5x Croc de tarentule infecté"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 20
+  },
+  {
+    "id": "auto-37",
+    "name": "Morceaux de métal",
+    "requiredItems": [
+      "2x Dague rouillée"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-38",
+    "name": "Morceaux de métal de qualité",
+    "requiredItems": [
+      "4x Morceaux de métal"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 10
+  },
+  {
+    "id": "auto-39",
+    "name": "Couteau de cuisine Nain",
+    "requiredItems": [
+      "6x Morceaux de métal"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 6
+  },
+  {
+    "id": "auto-40",
+    "name": "Sabre à crosse de nacre",
+    "requiredItems": [
+      "8x Morceaux de métal"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 10
+  },
+  {
+    "id": "auto-41",
+    "name": "Masse à ailettes enchantée",
+    "requiredItems": [
+      "8x Morceaux de métal",
+      "2x Anneau de lumière"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 10
+  },
+  {
+    "id": "auto-42",
+    "name": "Dague de jade",
+    "requiredItems": [
+      "4x Morceaux de métal de qualité"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 10
+  },
+  {
+    "id": "auto-43",
+    "name": "Hache de guerre Baatorienne",
+    "requiredItems": [
+      "4x Morceaux de métal de qualité",
+      "2x Bûche de qualité"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 12
+  },
+  {
+    "id": "auto-44",
+    "name": "Lame vipérine",
+    "requiredItems": [
+      "6x Morceaux de métal de qualité",
+      "4x Bûche de qualité"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 12
+  },
+  {
+    "id": "auto-45",
+    "name": "Arc long des Etoiles",
+    "requiredItems": [
+      "5x Bûche noble"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 20
+  },
+  {
+    "id": "auto-46",
+    "name": "Arc composite des Hauts-Elfes",
+    "requiredItems": [
+      "4x Bûche noble",
+      "4x Os humain",
+      "4x Bandelettes de momie"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-47",
+    "name": "Lame du dragon emeraude",
+    "requiredItems": [
+      "4x Fragment d'arme",
+      "4x Morceaux de métal de qualité",
+      "1x Fendoir sismique"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-48",
+    "name": "Lame du dragon rubis",
+    "requiredItems": [
+      "4x Fragment d'arme",
+      "4x Morceaux de métal de qualité",
+      "1x Fendoir incandescant"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-49",
+    "name": "Tranchoir écarlate",
+    "requiredItems": [
+      "4x Fragment d'arme",
+      "4x Morceaux de métal de qualité",
+      "1x Fendoir du bourreau"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-50",
+    "name": "Tension Primordiale",
+    "requiredItems": [
+      "1x Vibrevent en oxandre",
+      "2x Fragment d'arc",
+      "2x Bûche noble"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-51",
+    "name": "Flèche des vagues silencieuses",
+    "requiredItems": [
+      "1x Bûche noble",
+      "1x Flèche des noyés",
+      "2x Fragment de carquois"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-52",
+    "name": "Flèche voltaïque",
+    "requiredItems": [
+      "1x Bûche noble",
+      "1x Flèche de conduction",
+      "2x Fragment de carquois"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-53",
+    "name": "Baton des abysses",
+    "requiredItems": [
+      "1x Bûche noble",
+      "1x Baton de puissance d'intelligence +2",
+      "2x Fragment de bâton"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-54",
+    "name": "Baton de l'archimage infernal",
+    "requiredItems": [
+      "1x Bûche noble",
+      "1x Baton de puissance d'intelligence +2",
+      "2x Fragment de bâton"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-55",
+    "name": "Baton des ombres",
+    "requiredItems": [
+      "1x Bûche noble",
+      "1x Baton de puissance d'intelligence +2",
+      "2x Fragment de bâton"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-56",
+    "name": "Baton de Radiance",
+    "requiredItems": [
+      "1x Bûche noble",
+      "2x Fragment de bâton",
+      "1x Baton de puissance de sagesse +2"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-57",
+    "name": "Baton des vents",
+    "requiredItems": [
+      "1x Bûche noble",
+      "2x Fragment de bâton",
+      "1x Baton de puissance de sagesse +2"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-58",
+    "name": "Baton tellurique",
+    "requiredItems": [
+      "1x Bûche noble",
+      "2x Fragment de bâton",
+      "1x Baton de puissance de sagesse +2"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-59",
+    "name": "Rédempteur du juste",
+    "requiredItems": [
+      "4x Fragment d'arme",
+      "4x Morceaux de métal de qualité",
+      "1x Bras de justice"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-60",
+    "name": "Fléau des abysses",
+    "requiredItems": [
+      "4x Fragment d'arme",
+      "4x Morceaux de métal de qualité",
+      "1x Lance de poseidon"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-61",
+    "name": "Fléau des enfers",
+    "requiredItems": [
+      "4x Fragment d'arme",
+      "4x Morceaux de métal de qualité",
+      "1x Fléau du balrog"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-62",
+    "name": "Anneau de toute puissance",
+    "requiredItems": [
+      "1x Anneau de l'archimage infernal",
+      "1x Anneau de radiance",
+      "1x Anneau des abysses",
+      "1x Anneau des vents",
+      "1x Anneau du titan élémentaire",
+      "1x Anneau primordial élémentaire",
+      "1x Anneau des ombres",
+      "1x Anneau de tellurique"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-63",
+    "name": "Plume de qualité",
+    "requiredItems": [
+      "2x Plume de séraphin",
+      "2x Plume de néphilim"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-64",
+    "name": "Manteau du shaman",
+    "requiredItems": [
+      "3x Token"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-65",
+    "name": "Cape du shaman",
+    "requiredItems": [
+      "3x Token"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-66",
+    "name": "Ceinture du shaman",
+    "requiredItems": [
+      "3x Token"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-67",
+    "name": "Bottes du shaman",
+    "requiredItems": [
+      "3x Token"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-68",
+    "name": "Gants du shaman",
+    "requiredItems": [
+      "3x Token"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-69",
+    "name": "Heaume du shaman",
+    "requiredItems": [
+      "3x Token"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-70",
+    "name": "Jambières du shaman",
+    "requiredItems": [
+      "3x Token"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-71",
+    "name": "Bouclier du shaman",
+    "requiredItems": [
+      "3x Token"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-72",
+    "name": "Bracelet du scrifice ardent",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-73",
+    "name": "Anneau du sacrifice ardent",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-74",
+    "name": "Collier du sacrifice ardent",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier des arcanes"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-75",
+    "name": "Collier de Moimed Ali",
+    "requiredItems": [
+      "4x Fragment d'amulette",
+      "1x Collier de torpeur"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-76",
+    "name": "Bracelet de Moimed Ali",
+    "requiredItems": [
+      "4x Fragment de bracelet",
+      "1x Bracelet brutal"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-77",
+    "name": "Anneau de Moimed Ali",
+    "requiredItems": [
+      "4x Fragment d'anneau",
+      "1x Anneau de brutus"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 15
+  },
+  {
+    "id": "auto-78",
+    "name": "Baton du sacrifice ardent",
+    "requiredItems": [
+      "1x Bûche noble",
+      "2x Fragment de bâton",
+      "1x Baton du shaman"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 25
+  },
+  {
+    "id": "auto-79",
+    "name": "Hydromel shamanique",
+    "requiredItems": [
+      "2x Prisme de mana",
+      "3x Potion de guérison critique"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-80",
+    "name": "Anneau du berserker",
+    "requiredItems": [
+      "1x Anneau de lumière",
+      "1x Pierre rouge",
+      "1x Fiole de liquide bleuté"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 10
+  },
+  {
+    "id": "auto-81",
+    "name": "Potion d'immunitée au gel",
+    "requiredItems": [
+      "5x Scalp de Moon Tug",
+      "1x Fiole de liquide bleuté",
+      "3x Yeux de tarentule"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-82",
+    "name": "Fragment d'anneau",
+    "requiredItems": [
+      "3x Fragment d'anneau cassé"
+    ],
+    "metier": "joaillier",
+    "requiredWorkLevel": 10
+  },
+  {
+    "id": "auto-83",
+    "name": "Breuvage du pere noel",
+    "requiredItems": [
+      "1x Choppe de chance",
+      "3x Fragment de givre purifié"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-84",
+    "name": "Plastron de l'archer primordial (tank)",
+    "requiredItems": [
+      "1x Plastron de l'archer primordial",
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-85",
+    "name": "Ceinture de l'archer primordial (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Ceinture de l'archer primordial",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-86",
+    "name": "Bottes de l'archer primordial (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Bottes de l'archer primordial",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-87",
+    "name": "Gants de l'archer primordial (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Gants de l'archer primordial",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-88",
+    "name": "Heaume de l'archer primordial (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Heaume de l'archer primordial",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-89",
+    "name": "Jambières de l'archer primordial (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Jambières de l'archer primordial",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-90",
+    "name": "Robe de l'archimage infernal (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Robe de l'archimage infernal",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-91",
+    "name": "Ceinture de l'archimage infernal (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Ceinture de l'archimage infernal",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-92",
+    "name": "Bottes de l'archimage infernal (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Bottes de l'archimage infernal",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-93",
+    "name": "Gants de l'archimage infernal (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Gants de l'archimage infernal",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-94",
+    "name": "Chapeau de l'archimage infernal (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Chapeau de l'archimage infernal",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-95",
+    "name": "Jambières de l'archimage infernal (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Jambières de l'archimage infernal",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-96",
+    "name": "Robe des abysses (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Robe des abysses",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-97",
+    "name": "Ceinture des abysses (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Ceinture des abysses",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-98",
+    "name": "Bottes des abysses (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Bottes des abysses",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-99",
+    "name": "Gants des abysses (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Gants des abysses",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-100",
+    "name": "Chapeau des abysses (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Chapeau des abysses",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-101",
+    "name": "Jambières des abysses (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Jambières des abysses",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-102",
+    "name": "Robe des ombres (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Robe des ombres",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-103",
+    "name": "Ceinture des ombres (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Ceinture des ombres",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-104",
+    "name": "Bottes des ombres (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Bottes des ombres",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-105",
+    "name": "Gants des ombres (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Gants des ombres",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-106",
+    "name": "Chapeau des ombres (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Chapeau des ombres",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-107",
+    "name": "Jambières des ombres (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Jambières des ombres",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-108",
+    "name": "Robe de radiance (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Robe de radiance",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-109",
+    "name": "Ceinture de radiance (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Ceinture de radiance",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-110",
+    "name": "Bottes de radiance (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Bottes de radiance",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-111",
+    "name": "Gants de radiance (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Gants de radiance",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-112",
+    "name": "Chapeau de radiance (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Chapeau de radiance",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-113",
+    "name": "Jambières de radiance (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Jambières de radiance",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-114",
+    "name": "Robe tellurique (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Robe tellurique",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-115",
+    "name": "Ceinture tellurique (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Ceinture tellurique",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-116",
+    "name": "Bottes tellurique (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Bottes tellurique",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-117",
+    "name": "Gants tellurique (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Gants tellurique",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-118",
+    "name": "Chapeau tellurique (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Chapeau tellurique",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-119",
+    "name": "Jambières tellurique (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "1x Jambières tellurique",
+      "4x Fragment d'os"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-120",
+    "name": "Plastron du rédempteur (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Plastron du rédempteur"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-121",
+    "name": "Ceinture du rédempteur (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Ceinture du rédempteur"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-122",
+    "name": "Bottes du rédempteur (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Bottes du rédempteur"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-123",
+    "name": "Gants du rédempteur (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Gants du rédempteur"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-124",
+    "name": "Heaume du rédempteur (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Heaume du rédempteur"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-125",
+    "name": "Jambières du rédempteur (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Jambières du rédempteur"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-126",
+    "name": "Robe des vents (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Robe des vents"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-127",
+    "name": "Ceinture des vents (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Ceinture des vents"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-128",
+    "name": "Bottes des vents (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Bottes des vents"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-129",
+    "name": "Gants des vents (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Gants des vents"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-130",
+    "name": "Chapeau des vents (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Chapeau des vents"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-131",
+    "name": "Jambières des vents (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Jambières des vents"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-132",
+    "name": "Tunique de Moimed Ali (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Tunique de Moimed Ali"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-133",
+    "name": "Ceinture de Moimed Ali (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Ceinture de Moimed Ali"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-134",
+    "name": "Bottes de Moimed Ali (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Bottes de Moimed Ali"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-135",
+    "name": "Sous-gants de Moimed Ali or (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Sous-gants de Moimed Ali or"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-136",
+    "name": "Sous-gants de Moimed Ali orange (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Sous-gants de Moimed Ali or"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-137",
+    "name": "Casque de Moimed Ali (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Casque de Moimed Ali"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-138",
+    "name": "Short de Moimed Ali (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Short de Moimed Ali"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-139",
+    "name": "Robe du sacrifice ardent (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Robe du sacrifice ardent"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-140",
+    "name": "Ceinture du sacrifice ardent (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Ceinture du sacrifice ardent"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-141",
+    "name": "Bottes du sacrifice ardent (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Bottes du sacrifice ardent"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-142",
+    "name": "Gants du sacrifice ardent (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Gants du sacrifice ardent"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-143",
+    "name": "Chapeau du sacrifice ardent (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Chapeau du sacrifice ardent"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-144",
+    "name": "Jambières du sacrifice ardent (tank)",
+    "requiredItems": [
+      "2x Morceau de griffe",
+      "2x Jeton de la reine déchue",
+      "4x Fragment d'os",
+      "1x Jambières du sacrifice ardent"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-145",
+    "name": "Echo d'alchisyum",
+    "requiredItems": [
+      "5x Morceaux d'alchisyum",
+      "1x Fiole vide"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-146",
+    "name": "Bobine de tissu rangy",
+    "requiredItems": [
+      "5x Fil de soie rangy",
+      "1x Rouleau a tisser"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-147",
+    "name": "Bûche d'Yggdrasil",
+    "requiredItems": [
+      "5x Morceaux d'Yggdrasil",
+      "1x Catalyseur"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-148",
+    "name": "Barre de mithril",
+    "requiredItems": [
+      "1x Catalyseur",
+      "5x Morceaux de mithril"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-149",
+    "name": "Catalyseur",
+    "requiredItems": [
+      "5x Morceau de griffe"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-150",
+    "name": "Fiole vide",
+    "requiredItems": [
+      "5x Poussière d'étoile"
+    ],
+    "metier": "apothicaire",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-151",
+    "name": "Rouleau a tisser",
+    "requiredItems": [
+      "1x Bûche simple"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-152",
+    "name": "Catalyseur",
+    "requiredItems": [
+      "5x Morceau de griffe"
+    ],
+    "metier": "ébéniste",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-153",
+    "name": "Robe de mage des échos",
+    "requiredItems": [
+      "4x Bobine de tissu rangy",
+      "4x Echo d'alchisyum",
+      "2x Bûche d'Yggdrasil",
+      "3x Fournitures d'armure / robe"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-154",
+    "name": "Robe de prêtre des échos",
+    "requiredItems": [
+      "4x Bobine de tissu rangy",
+      "4x Echo d'alchisyum",
+      "2x Bûche d'Yggdrasil",
+      "3x Fournitures d'armure / robe"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-155",
+    "name": "Habit du shaman des échos",
+    "requiredItems": [
+      "4x Bobine de tissu rangy",
+      "4x Echo d'alchisyum",
+      "2x Bûche d'Yggdrasil",
+      "3x Fournitures d'armure / robe"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-156",
+    "name": "Toge de l'antépal des échos",
+    "requiredItems": [
+      "3x Fournitures d'armure / robe",
+      "4x Bûche d'Yggdrasil",
+      "2x Echo d'alchisyum",
+      "4x Barre de mithril"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-157",
+    "name": "Torse du boxeur des échos",
+    "requiredItems": [
+      "3x Fournitures d'armure / robe",
+      "4x Bûche d'Yggdrasil",
+      "2x Echo d'alchisyum",
+      "4x Barre de mithril"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-158",
+    "name": "Toge du paladin des échos",
+    "requiredItems": [
+      "3x Fournitures d'armure / robe",
+      "4x Bûche d'Yggdrasil",
+      "2x Echo d'alchisyum",
+      "4x Barre de mithril"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-159",
+    "name": "Plastron de guerrier des échos",
+    "requiredItems": [
+      "3x Fournitures d'armure / robe",
+      "4x Bûche d'Yggdrasil",
+      "2x Echo d'alchisyum",
+      "4x Barre de mithril"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-160",
+    "name": "Plastron de l'archer des échos",
+    "requiredItems": [
+      "3x Fournitures d'armure / robe",
+      "2x Echo d'alchisyum",
+      "6x Bûche d'Yggdrasil",
+      "2x Barre de mithril"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-161",
+    "name": "Ailes du mage des échos",
+    "requiredItems": [
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum",
+      "3x Bobine de tissu rangy",
+      "3x Fournitures d'ailes/capes"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-162",
+    "name": "Ailes de l'antépal des échos",
+    "requiredItems": [
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum",
+      "3x Bobine de tissu rangy",
+      "3x Fournitures d'ailes/capes"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-163",
+    "name": "Ailes du boxeur des échos",
+    "requiredItems": [
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum",
+      "3x Bobine de tissu rangy",
+      "3x Fournitures d'ailes/capes"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-164",
+    "name": "Ailes du paladin des échos",
+    "requiredItems": [
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum",
+      "3x Bobine de tissu rangy",
+      "3x Fournitures d'ailes/capes"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-165",
+    "name": "Ailes de guerrier des échos",
+    "requiredItems": [
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum",
+      "3x Bobine de tissu rangy",
+      "3x Fournitures d'ailes/capes"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-166",
+    "name": "Ailes du prêtre des échos",
+    "requiredItems": [
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum",
+      "3x Bobine de tissu rangy",
+      "3x Fournitures d'ailes/capes"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-167",
+    "name": "Cape de l'archer des échos",
+    "requiredItems": [
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum",
+      "3x Bobine de tissu rangy",
+      "3x Fournitures d'ailes/capes"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-168",
+    "name": "Ailes du shaman des échos",
+    "requiredItems": [
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum",
+      "3x Bobine de tissu rangy",
+      "3x Fournitures d'ailes/capes"
+    ],
+    "metier": "couturier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-169",
+    "name": "Ceinture de l'antépal des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Fournitures de ceinture",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-170",
+    "name": "Ceinture du boxeur des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Fournitures de ceinture",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-171",
+    "name": "Ceinture de mage des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Fournitures de ceinture",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-172",
+    "name": "Ceinture du paladin des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Fournitures de ceinture",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-173",
+    "name": "Ceinture de guerrier des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Fournitures de ceinture",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-174",
+    "name": "Ceinture de prêtre des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Fournitures de ceinture",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-175",
+    "name": "Ceinture de l'archer des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Fournitures de ceinture",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-176",
+    "name": "Ceinture du shaman des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Fournitures de ceinture",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-177",
+    "name": "Bottes de l'antépal des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bottes"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-178",
+    "name": "Chausses du boxeur des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bottes"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-179",
+    "name": "Bottes de mage des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bottes"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-180",
+    "name": "Bottes du paladin des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bottes"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-181",
+    "name": "Bottes de guerrier des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bottes"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-182",
+    "name": "Bottes de prêtre des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bottes"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-183",
+    "name": "Bottes de l'archer des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bottes"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-184",
+    "name": "Chausses du shaman des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bottes"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-185",
+    "name": "Gants de l'antépal des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de gants"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-186",
+    "name": "Sous-gants du boxeur des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de gants"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-187",
+    "name": "Gants de mage des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de gants"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-188",
+    "name": "Gants du paladin des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de gants"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-189",
+    "name": "Gants de guerrier des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de gants"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-190",
+    "name": "Gants de prêtre des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de gants"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-191",
+    "name": "Gants de l'archer des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de gants"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-192",
+    "name": "Mitaines du shaman des échos",
+    "requiredItems": [
+      "2x Echo d'alchisyum",
+      "3x Barre de mithril",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de gants"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-193",
+    "name": "Couronne de l'antépal des échos",
+    "requiredItems": [
+      "3x Barre de mithril",
+      "3x Fournitures de casque",
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-194",
+    "name": "Casque du boxeur des échos",
+    "requiredItems": [
+      "3x Barre de mithril",
+      "3x Fournitures de casque",
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-195",
+    "name": "Chapeau de mage des échos",
+    "requiredItems": [
+      "3x Barre de mithril",
+      "3x Fournitures de casque",
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-196",
+    "name": "Couronne du paladin des échos",
+    "requiredItems": [
+      "3x Barre de mithril",
+      "3x Fournitures de casque",
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-197",
+    "name": "Haume de guerrier des échos",
+    "requiredItems": [
+      "3x Barre de mithril",
+      "3x Fournitures de casque",
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-198",
+    "name": "Chapeau de prêtre des échos",
+    "requiredItems": [
+      "3x Barre de mithril",
+      "3x Fournitures de casque",
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-199",
+    "name": "Haume de l'archer des échos",
+    "requiredItems": [
+      "3x Barre de mithril",
+      "3x Fournitures de casque",
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-200",
+    "name": "Haume du shaman des échos",
+    "requiredItems": [
+      "3x Barre de mithril",
+      "3x Fournitures de casque",
+      "2x Bûche d'Yggdrasil",
+      "3x Echo d'alchisyum"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-201",
+    "name": "Jambières de l'antépal des échos",
+    "requiredItems": [
+      "3x Echo d'alchisyum",
+      "4x Barre de mithril",
+      "1x Bûche d'Yggdrasil",
+      "3x Fournitures de jambières"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-202",
+    "name": "Cuissardes du boxeur des échos",
+    "requiredItems": [
+      "3x Echo d'alchisyum",
+      "4x Barre de mithril",
+      "1x Bûche d'Yggdrasil",
+      "3x Fournitures de jambières"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-203",
+    "name": "Jambières de mage des échos",
+    "requiredItems": [
+      "3x Echo d'alchisyum",
+      "4x Barre de mithril",
+      "1x Bûche d'Yggdrasil",
+      "3x Fournitures de jambières"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-204",
+    "name": "Jambières du paladin des échos",
+    "requiredItems": [
+      "3x Echo d'alchisyum",
+      "4x Barre de mithril",
+      "1x Bûche d'Yggdrasil",
+      "3x Fournitures de jambières"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-205",
+    "name": "Jambières de guerrier des échos",
+    "requiredItems": [
+      "3x Echo d'alchisyum",
+      "4x Barre de mithril",
+      "1x Bûche d'Yggdrasil",
+      "3x Fournitures de jambières"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-206",
+    "name": "Jambières de prêtre des échos",
+    "requiredItems": [
+      "3x Echo d'alchisyum",
+      "4x Barre de mithril",
+      "1x Bûche d'Yggdrasil",
+      "3x Fournitures de jambières"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-207",
+    "name": "Jambières de l'archer des échos",
+    "requiredItems": [
+      "3x Echo d'alchisyum",
+      "4x Barre de mithril",
+      "1x Bûche d'Yggdrasil",
+      "3x Fournitures de jambières"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-208",
+    "name": "Jambières du shaman des échos",
+    "requiredItems": [
+      "3x Echo d'alchisyum",
+      "4x Barre de mithril",
+      "1x Bûche d'Yggdrasil",
+      "3x Fournitures de jambières"
+    ],
+    "metier": "armurier",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-209",
+    "name": "Bouclier de l'antépal des échos",
+    "requiredItems": [
+      "4x Barre de mithril",
+      "1x Echo d'alchisyum",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bouclier"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-210",
+    "name": "Focus de mage des échos",
+    "requiredItems": [
+      "4x Barre de mithril",
+      "1x Echo d'alchisyum",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bouclier"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-211",
+    "name": "Bouclier du paladin des échos",
+    "requiredItems": [
+      "4x Barre de mithril",
+      "1x Echo d'alchisyum",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bouclier"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-212",
+    "name": "Bouclier de guerrier des échos",
+    "requiredItems": [
+      "4x Barre de mithril",
+      "1x Echo d'alchisyum",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bouclier"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-213",
+    "name": "Focus de prêtre des échos",
+    "requiredItems": [
+      "4x Barre de mithril",
+      "1x Echo d'alchisyum",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bouclier"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 0
+  },
+  {
+    "id": "auto-214",
+    "name": "Rempart du shaman des échos",
+    "requiredItems": [
+      "4x Barre de mithril",
+      "1x Echo d'alchisyum",
+      "3x Bûche d'Yggdrasil",
+      "3x Fournitures de bouclier"
+    ],
+    "metier": "forgeron",
+    "requiredWorkLevel": 0
+  }
+]

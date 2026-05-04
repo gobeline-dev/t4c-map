@@ -5,6 +5,7 @@ import { ThemeProvider } from './context/ThemeContext';
 
 const MapViewer = lazy(() => import('./components/MapViewer'));
 const Legal = lazy(() => import('./pages/Legal'));
+const Wiki = lazy(() => import('./pages/Wiki'));
 
 const LoadingSkeleton = () => (
   <div className="min-h-screen flex items-center justify-center" style={{ background: 'hsl(var(--background))' }}>
@@ -24,6 +25,8 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<Navigate to="/maps" replace />} />
               <Route path="/maps" element={<MapViewer />} />
+              <Route path="/wiki" element={<Navigate to="/wiki/quests" replace />} />
+              <Route path="/wiki/:section" element={<Wiki />} />
               <Route path="/legal" element={<Legal />} />
               <Route path="*" element={<Navigate to="/maps" replace />} />
             </Routes>
