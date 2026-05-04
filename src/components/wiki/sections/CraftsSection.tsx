@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useState } from 'react';
+import { useCallback, useEffect, useId, useMemo, useState } from 'react';
 import { Hammer, Package, Sparkles, ChevronDown, ChevronRight, Calculator } from 'lucide-react';
 import { WikiToolbar, FilterPills } from '../WikiToolbar';
 import { ExpandAllContext, useExpandAll } from '../TreeContext';
@@ -27,9 +27,17 @@ const parseIngredient = (raw: string): Ingredient => {
   return m ? { quantity: parseInt(m[1], 10), name: m[2].trim() } : { quantity: 1, name: raw.trim() };
 };
 
+/**
+ * Walk the tree and accumulate raw materials, but stop descending into a
+ * craftable subtree as soon as its path is NOT in `expandedPaths`. That way
+ * the totals reflect exactly what the user has unfolded — collapse a sub-craft
+ * and its components disappear; expand it and they show up.
+ */
 const computeRawMaterials = (
   craft: Craft,
   multiplier: number,
+  pathPrefix: string,
+  expandedPaths: Set<string>,
   index: Map<string, Craft>,
   totals: Record<string, number>,
   visited: Set<string>,
@@ -38,11 +46,15 @@ const computeRawMaterials = (
   for (const ing of craft.requiredItems.map(parseIngredient)) {
     const sub = index.get(norm(ing.name));
     const totalQty = ing.quantity * multiplier;
-    if (sub && depth < 12 && !visited.has(norm(sub.name))) {
+    const childPath = pathPrefix ? `${pathPrefix}>${norm(ing.name)}` : norm(ing.name);
+    const canDescend = !!sub && depth < 12 && !visited.has(norm(sub.name)) && expandedPaths.has(childPath);
+    if (canDescend) {
       const next = new Set(visited);
-      next.add(norm(sub.name));
-      computeRawMaterials(sub, totalQty, index, totals, next, depth + 1);
+      next.add(norm(sub!.name));
+      computeRawMaterials(sub!, totalQty, childPath, expandedPaths, index, totals, next, depth + 1);
     } else {
+      // Either a leaf, a collapsed craftable, a cycle, or too deep → counts as
+      // an indivisible unit at this level.
       totals[ing.name] = (totals[ing.name] ?? 0) + totalQty;
     }
   }
@@ -54,85 +66,13 @@ interface TreeNodeProps {
   index: Map<string, Craft>;
   visited: Set<string>;
   depth: number;
+  /** Path from the root to this node (joined normalized names). */
+  path: string;
+  expandedPaths: Set<string>;
+  setExpanded: (path: string, open: boolean) => void;
 }
 
 const INDENT_PX = (depth: number) => `${Math.min(depth, 6) * 14}px`;
-
-const TreeNode = ({ ingredient, multiplier, index, visited, depth }: TreeNodeProps) => {
-  const sub = index.get(norm(ingredient.name));
-  const isCraftable = !!sub;
-  const isCycle = !!sub && visited.has(norm(sub.name));
-  const totalQty = ingredient.quantity * multiplier;
-  const cascade = useExpandAll();
-  const [open, setOpen] = useState(cascade ?? false);
-  const childListId = useId();
-
-  // Sync with the global cascade when it changes (and only then — leaves
-  // user-driven local state alone in between cascades).
-  useEffect(() => {
-    if (cascade !== null) setOpen(cascade);
-  }, [cascade]);
-
-  const subIngredients = useMemo(
-    () => (sub && !isCycle ? sub.requiredItems.map(parseIngredient) : []),
-    [sub, isCycle],
-  );
-  const nextVisited = useMemo(() => {
-    if (!sub) return visited;
-    const next = new Set(visited);
-    next.add(norm(sub.name));
-    return next;
-  }, [sub, visited]);
-
-  const expandable = isCraftable && !isCycle;
-
-  const onKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
-    if (!expandable) return;
-    if (e.key === 'ArrowRight' && !open) { e.preventDefault(); setOpen(true); }
-    else if (e.key === 'ArrowLeft' && open) { e.preventDefault(); setOpen(false); }
-  };
-
-  return (
-    <li className="relative">
-      <div style={{ paddingLeft: INDENT_PX(depth) }}>
-        {expandable ? (
-          <button
-            type="button"
-            aria-expanded={open}
-            aria-controls={open ? childListId : undefined}
-            onClick={() => setOpen((v) => !v)}
-            onKeyDown={onKey}
-            className="w-full flex items-center gap-2 py-1.5 px-2 rounded-md hover:bg-muted/30 focus:outline-none focus:ring-1 focus:ring-primary/40 transition text-left"
-          >
-            <span aria-hidden="true" className="shrink-0 text-muted-foreground">
-              {open ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-            </span>
-            <NodeLabel ingredient={ingredient} totalQty={totalQty} sub={sub} isCycle={false} />
-          </button>
-        ) : (
-          <div className="w-full flex items-center gap-2 py-1.5 px-2 rounded-md">
-            <span aria-hidden="true" className="w-3.5 shrink-0" />
-            <NodeLabel ingredient={ingredient} totalQty={totalQty} sub={sub} isCycle={isCycle} />
-          </div>
-        )}
-      </div>
-      {expandable && open && subIngredients.length > 0 && (
-        <ul id={childListId} className="space-y-0.5">
-          {subIngredients.map((ing, i) => (
-            <TreeNode
-              key={`${ing.name}-${i}`}
-              ingredient={ing}
-              multiplier={totalQty}
-              index={index}
-              visited={nextVisited}
-              depth={depth + 1}
-            />
-          ))}
-        </ul>
-      )}
-    </li>
-  );
-};
 
 const NodeLabel = ({ ingredient, totalQty, sub, isCycle }: { ingredient: Ingredient; totalQty: number; sub?: Craft; isCycle: boolean }) => (
   <span className="min-w-0 flex-1 flex items-center flex-wrap gap-x-2 gap-y-0.5">
@@ -158,6 +98,87 @@ const NodeLabel = ({ ingredient, totalQty, sub, isCycle }: { ingredient: Ingredi
   </span>
 );
 
+const TreeNode = ({ ingredient, multiplier, index, visited, depth, path, expandedPaths, setExpanded }: TreeNodeProps) => {
+  const sub = index.get(norm(ingredient.name));
+  const isCraftable = !!sub;
+  const isCycle = !!sub && visited.has(norm(sub.name));
+  const totalQty = ingredient.quantity * multiplier;
+  const childListId = useId();
+
+  // Listen to the expand-all cascade. When it fires, push every reachable
+  // craftable path into the parent's expanded set. When it fires false, clear
+  // every path under this node.
+  const cascade = useExpandAll();
+  const expandable = isCraftable && !isCycle;
+  const open = expandable && expandedPaths.has(path);
+
+  useEffect(() => {
+    if (cascade === null || !expandable) return;
+    setExpanded(path, cascade);
+  }, [cascade, expandable, path, setExpanded]);
+
+  const subIngredients = useMemo(
+    () => (sub && !isCycle ? sub.requiredItems.map(parseIngredient) : []),
+    [sub, isCycle],
+  );
+  const nextVisited = useMemo(() => {
+    if (!sub) return visited;
+    const next = new Set(visited);
+    next.add(norm(sub.name));
+    return next;
+  }, [sub, visited]);
+
+  const onKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (!expandable) return;
+    if (e.key === 'ArrowRight' && !open) { e.preventDefault(); setExpanded(path, true); }
+    else if (e.key === 'ArrowLeft' && open) { e.preventDefault(); setExpanded(path, false); }
+  };
+
+  return (
+    <li className="relative">
+      <div style={{ paddingLeft: INDENT_PX(depth) }}>
+        {expandable ? (
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-controls={open ? childListId : undefined}
+            onClick={() => setExpanded(path, !open)}
+            onKeyDown={onKey}
+            className="w-full flex items-center gap-2 py-1.5 px-2 rounded-md hover:bg-muted/30 focus:outline-none focus:ring-1 focus:ring-primary/40 transition text-left"
+          >
+            <span aria-hidden="true" className="shrink-0 text-muted-foreground">
+              {open ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+            </span>
+            <NodeLabel ingredient={ingredient} totalQty={totalQty} sub={sub} isCycle={false} />
+          </button>
+        ) : (
+          <div className="w-full flex items-center gap-2 py-1.5 px-2 rounded-md">
+            <span aria-hidden="true" className="w-3.5 shrink-0" />
+            <NodeLabel ingredient={ingredient} totalQty={totalQty} sub={sub} isCycle={isCycle} />
+          </div>
+        )}
+      </div>
+      {expandable && open && subIngredients.length > 0 && (
+        <ul id={childListId} className="space-y-0.5">
+          {subIngredients.map((ing, i) => (
+            <TreeNode
+              key={`${ing.name}-${i}`}
+              ingredient={ing}
+              multiplier={totalQty}
+              index={index}
+              visited={nextVisited}
+              depth={depth + 1}
+              path={`${path}>${norm(ing.name)}`}
+              expandedPaths={expandedPaths}
+              setExpanded={setExpanded}
+            />
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+};
+
 interface RecipeCardProps {
   craft: Craft;
   index: Map<string, Craft>;
@@ -167,18 +188,37 @@ const RecipeCard = ({ craft, index }: RecipeCardProps) => {
   const cascade = useExpandAll();
   const [open, setOpen] = useState(cascade ?? false);
   const bodyId = useId();
+  // Tracks every PATH (root-relative, normalized) currently expanded in this
+  // card's tree. The same Set drives both rendering and totals computation,
+  // so totals stay in sync with whatever the user has unfolded.
+  const [expandedPaths, setExpandedPaths] = useState<Set<string>>(() => new Set());
+
   useEffect(() => {
     if (cascade !== null) setOpen(cascade);
+    if (cascade === false) setExpandedPaths(new Set());
   }, [cascade]);
 
+  const setExpanded = useCallback((path: string, isOpen: boolean) => {
+    setExpandedPaths((prev) => {
+      const next = new Set(prev);
+      if (isOpen) {
+        next.add(path);
+      } else {
+        // Collapse this node and every descendant so a re-expand starts cleanly.
+        for (const p of next) if (p === path || p.startsWith(`${path}>`)) next.delete(p);
+      }
+      return next;
+    });
+  }, []);
+
   const ingredients = useMemo(() => craft.requiredItems.map(parseIngredient), [craft]);
-  // Lazy: only compute totals when the card is actually open.
+
   const totals = useMemo(() => {
     if (!open) return [] as [string, number][];
     const t: Record<string, number> = {};
-    computeRawMaterials(craft, 1, index, t, new Set([norm(craft.name)]));
+    computeRawMaterials(craft, 1, '', expandedPaths, index, t, new Set([norm(craft.name)]));
     return Object.entries(t).sort((a, b) => a[0].localeCompare(b[0]));
-  }, [craft, index, open]);
+  }, [craft, index, open, expandedPaths]);
 
   return (
     <article className="surface-card overflow-hidden">
@@ -221,13 +261,17 @@ const RecipeCard = ({ craft, index }: RecipeCardProps) => {
                   index={index}
                   visited={new Set([norm(craft.name)])}
                   depth={0}
+                  path={norm(ing.name)}
+                  expandedPaths={expandedPaths}
+                  setExpanded={setExpanded}
                 />
               ))}
             </ul>
           </div>
           <aside className="lg:col-span-1 surface-card p-3 bg-muted/10">
             <h4 className="text-[10px] uppercase tracking-wider text-muted-foreground mb-2 inline-flex items-center gap-1">
-              <Calculator size={11} aria-hidden="true" /> Total ressources brutes
+              <Calculator size={11} aria-hidden="true" /> Total ressources
+              <span className="text-[9px] normal-case text-muted-foreground/70">(suit ce qui est déplié)</span>
             </h4>
             {totals.length > 0 ? (
               <ul className="space-y-1 max-h-72 overflow-y-auto pr-1">
@@ -282,12 +326,8 @@ export const CraftsSection = ({ crafts }: Props) => {
       .sort((a, b) => a.requiredWorkLevel - b.requiredWorkLevel || a.name.localeCompare(b.name));
   }, [crafts, search, metier, bucket]);
 
-  // Toggle cycles null → true → false → null. After a cascade fires, return to
-  // null so users can keep toggling individual nodes without the cascade
-  // re-applying on re-render.
   const onCascade = (next: boolean) => {
     setCascade(next);
-    // Reset on next tick so further individual toggles aren't fought by useEffect.
     setTimeout(() => setCascade(null), 0);
   };
 

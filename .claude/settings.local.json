@@ -93,7 +93,9 @@
       "PowerShell(winget install *)",
       "PowerShell($gs = Get-ChildItem -Path \"C:\\\\Program Files\\\\gs\" -Filter \"gswin64c.exe\" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1; if \\($gs\\) { Write-Output \\(\"Found: \" + $gs.FullName\\); & $gs.FullName --version } else { Write-Output \"Not found in Program Files\\\\gs\" })",
       "Bash(curl -sI \"http://localhost:5183/t4c-map/images/maps/zodaria-detail.jpg\")",
-      "Bash(curl -s \"http://localhost:5183/t4c-map/data/maps_extra.json\")"
+      "Bash(curl -s \"http://localhost:5183/t4c-map/data/maps_extra.json\")",
+      "PowerShell($c = Get-Content \"C:\\\\Users\\\\moura\\\\Desktop\\\\projet\\\\t4c-map\\\\scripts\\\\.cache\\\\wiki_page.js\" -Raw; $idx = $c.IndexOf\\(\"Mot de rappel\"\\); Write-Output \\(\"found at: \" + $idx\\); if \\($idx -ge 0\\) { $start=[Math]::Max\\(0,$idx-100\\); $c.Substring\\($start, 600\\) })",
+      "PowerShell($c = Get-Content \"C:\\\\Users\\\\moura\\\\Desktop\\\\projet\\\\t4c-map\\\\scripts\\\\.cache\\\\wiki_page.js\" -Raw; foreach \\($p in 'description','desc:','effet','effect','lore'\\) { $cnt = \\([regex]::Matches\\($c, $p\\)\\).Count; Write-Output \"$p -> $cnt\" }; $idx = $c.IndexOf\\('description'\\); if \\($idx -ge 0\\) { Write-Output \\(\"first 'description' at \" + $idx\\); $c.Substring\\([Math]::Max\\(0,$idx-50\\), 200\\) })"
     ],
     "defaultMode": "acceptEdits"
   }

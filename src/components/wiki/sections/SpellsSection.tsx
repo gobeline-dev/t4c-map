@@ -19,6 +19,32 @@ const ELEMENT_COLORS: Record<string, string> = {
 const norm = (s: string) => s.toLowerCase().trim();
 const INDENT_PX = (depth: number) => `${Math.min(depth, 6) * 14}px`;
 
+const STAT_LABELS: Record<string, string> = { for: 'Force', end: 'Endurance', dext: 'Dextérité', int: 'Intelligence', sag: 'Sagesse' };
+
+/**
+ * Build a human-readable summary from the few fields the upstream wiki actually
+ * publishes for spells (element, level, stat costs, optional bonus tag).
+ * The wiki source has no rich descriptions — this is the best we can do.
+ */
+const describeSpell = (s: Spell): string => {
+  const parts: string[] = [];
+  const isShaman = s.name.startsWith('[S]');
+  const isAura = s.name.startsWith('[A]');
+  const cls = isShaman ? 'Sort shaman' : isAura ? 'Aura' : 'Sort';
+  const el = s.element && s.element !== 'Neutre' ? ` de ${s.element}` : '';
+  parts.push(`${cls}${el} de niveau ${s.level}.`);
+
+  const costs: [string, number][] = [
+    ['for', s.for], ['end', s.end], ['dext', s.dext], ['int', s.int], ['sag', s.sag],
+  ].filter(([, v]) => Number(v) > 0) as [string, number][];
+  if (costs.length > 0) {
+    const top = costs.sort((a, b) => b[1] - a[1]).slice(0, 2).map(([k, v]) => `${v} ${STAT_LABELS[k]}`).join(', ');
+    parts.push(`Stats principales requises : ${top}.`);
+  }
+  if (s.bonus) parts.push(`Effet : ${s.bonus}.`);
+  return parts.join(' ');
+};
+
 const Stat = ({ label, value }: { label: string; value: number }) => {
   if (!value) return null;
   return (
@@ -225,9 +251,19 @@ const SpellCard = ({ spell, index, forwardIndex }: SpellCardProps) => {
 
       {open && (
         <div id={bodyId} className="px-3 md:px-5 pb-4 pt-1 space-y-3">
-          {spell.bonus && (
-            <p className="text-sm text-muted-foreground italic">{spell.bonus}</p>
-          )}
+          <section aria-label="Description" className="rounded-lg bg-muted/15 border border-border-soft/60 p-3 space-y-1.5">
+            <p className="text-sm text-foreground/90 leading-relaxed">{describeSpell(spell)}</p>
+            {spell.bonus ? (
+              <p className="text-xs text-primary-strong inline-flex items-center gap-1.5">
+                <span className="font-bold uppercase tracking-wider text-[10px]">Effet</span>
+                <span className="font-medium text-foreground/85">{spell.bonus}</span>
+              </p>
+            ) : (
+              <p className="text-[11px] text-muted-foreground/80 italic">
+                Le wiki source ne fournit pas d'effet détaillé pour ce sort.
+              </p>
+            )}
+          </section>
           {hasGraph ? (
             <>
               <div role="tablist" aria-label="Vue des relations" className="inline-flex gap-1 bg-card/40 border border-border-soft rounded-lg p-1">
