@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { WikiData, MapEntry, MapImage } from '../types/wiki';
+import { buildObtainIndex } from '../utils/wikiObtain';
 
 const BASE = `${import.meta.env.BASE_URL}data/`;
 
@@ -65,7 +66,16 @@ async function loadAll(): Promise<WikiData> {
     const extras = (data.mapsExtra as Partial<MapEntry>[]) ?? [];
     delete data.mapsExtra;
     data.maps = mergeMapsExtras(maps, extras);
-    cache = data as unknown as WikiData;
+    const partial = data as unknown as Omit<WikiData, 'obtain'>;
+    const obtain = buildObtainIndex({
+      items:           partial.items,
+      spells:          partial.spells,
+      quests:          partial.quests,
+      crafts:          partial.crafts,
+      monstersClassic: partial.monstersClassic,
+      monstersExtra:   partial.monstersExtra,
+    });
+    cache = { ...partial, obtain };
     return cache;
   })();
   return inflight;

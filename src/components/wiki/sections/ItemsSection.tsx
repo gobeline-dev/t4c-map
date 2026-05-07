@@ -1,9 +1,11 @@
 import { useMemo, useState } from 'react';
 import { Shield, Sword, MapPin } from 'lucide-react';
 import { WikiToolbar, FilterPills } from '../WikiToolbar';
+import { ObtainList } from '../ObtainList';
+import { getItemSources, type ObtainIndex } from '../../../utils/wikiObtain';
 import type { Item } from '../../../types/wiki';
 
-interface Props { items: Item[]; }
+interface Props { items: Item[]; obtain: ObtainIndex; }
 
 const RARITY_COLORS: Record<string, string> = {
   Commun:    'bg-slate-500/15 text-slate-300 border-slate-500/30',
@@ -33,7 +35,7 @@ const countBy = <K extends string>(items: Item[], key: (i: Item) => K | undefine
   return map;
 };
 
-export const ItemsSection = ({ items }: Props) => {
+export const ItemsSection = ({ items, obtain }: Props) => {
   const [search, setSearch] = useState('');
   const [type, setType] = useState<string | null>(null);
   const [rarity, setRarity] = useState<string | null>(null);
@@ -153,6 +155,8 @@ export const ItemsSection = ({ items }: Props) => {
                   {bonuses.map((b, i) => <li key={i} className="leading-snug">• {b}</li>)}
                 </ul>
               )}
+
+              <ObtainList sources={getItemSources(obtain, it.name)} />
             </article>
           );
         })}

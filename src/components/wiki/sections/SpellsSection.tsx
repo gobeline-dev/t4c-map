@@ -2,9 +2,11 @@ import { useEffect, useId, useMemo, useState } from 'react';
 import { ChevronDown, ChevronRight, GitBranch, Lock, Unlock } from 'lucide-react';
 import { WikiToolbar, FilterPills } from '../WikiToolbar';
 import { ExpandAllContext, useExpandAll } from '../TreeContext';
+import { ObtainList } from '../ObtainList';
+import { getSpellSources, type ObtainIndex } from '../../../utils/wikiObtain';
 import type { Spell } from '../../../types/wiki';
 
-interface Props { spells: Spell[]; }
+interface Props { spells: Spell[]; obtain: ObtainIndex; }
 
 const ELEMENT_COLORS: Record<string, string> = {
   Feu:     'bg-rose-500/15 text-rose-300 border-rose-500/30',
@@ -195,9 +197,10 @@ interface SpellCardProps {
   spell: Spell;
   index: Map<string, Spell>;
   forwardIndex: Map<string, Spell[]>;
+  obtain: ObtainIndex;
 }
 
-const SpellCard = ({ spell, index, forwardIndex }: SpellCardProps) => {
+const SpellCard = ({ spell, index, forwardIndex, obtain }: SpellCardProps) => {
   const cascade = useExpandAll();
   const [open, setOpen] = useState(cascade ?? false);
   const bodyId = useId();
@@ -263,6 +266,11 @@ const SpellCard = ({ spell, index, forwardIndex }: SpellCardProps) => {
                 Le wiki source ne fournit pas d'effet détaillé pour ce sort.
               </p>
             )}
+            <ObtainList
+              sources={getSpellSources(obtain, spell.name)}
+              title="Comment l'apprendre"
+              emptyMessage="Source non répertoriée — la plupart des sorts s'apprennent auprès d'un maître en ville."
+            />
           </section>
           {hasGraph ? (
             <>
@@ -322,7 +330,7 @@ const SpellCard = ({ spell, index, forwardIndex }: SpellCardProps) => {
   );
 };
 
-export const SpellsSection = ({ spells }: Props) => {
+export const SpellsSection = ({ spells, obtain }: Props) => {
   const [search, setSearch] = useState('');
   const [element, setElement] = useState<string | null>(null);
   const [shamanOnly, setShamanOnly] = useState<string | null>(null);
@@ -420,7 +428,7 @@ export const SpellsSection = ({ spells }: Props) => {
 
         <div className="space-y-2">
           {filtered.map((s) => (
-            <SpellCard key={s.id} spell={s} index={index} forwardIndex={forwardIndex} />
+            <SpellCard key={s.id} spell={s} index={index} forwardIndex={forwardIndex} obtain={obtain} />
           ))}
           {filtered.length === 0 && (
             <p role="status" aria-live="polite" className="text-center text-muted-foreground py-12">Aucun sort trouvé.</p>

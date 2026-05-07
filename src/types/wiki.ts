@@ -85,6 +85,7 @@ export interface WikiData {
   items: Item[];
   crafts: Craft[];
   maps: MapEntry[];
+  obtain: import('../utils/wikiObtain').ObtainIndex;
 }
 
 export type WikiSectionId = 'quests' | 'spells' | 'monsters' | 'items' | 'crafts' | 'cartes';

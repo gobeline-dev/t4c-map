@@ -85,9 +85,9 @@ const Wiki = () => {
       {data && (
         <section>
           {current === 'quests'   && <QuestsSection   quests={data.quests} />}
-          {current === 'spells'   && <SpellsSection   spells={data.spells} />}
+          {current === 'spells'   && <SpellsSection   spells={data.spells} obtain={data.obtain} />}
           {current === 'monsters' && <MonstersSection classic={data.monstersClassic} extra={data.monstersExtra} />}
-          {current === 'items'    && <ItemsSection    items={data.items} />}
+          {current === 'items'    && <ItemsSection    items={data.items} obtain={data.obtain} />}
           {current === 'crafts'   && <CraftsSection   crafts={data.crafts} />}
           {current === 'cartes'   && <MapsSection     maps={data.maps} />}
         </section>
