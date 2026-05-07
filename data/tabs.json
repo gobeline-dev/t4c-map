@@ -1,0 +1,26 @@
+[
+  {
+    "id": "quests",
+    "label": "Quêtes"
+  },
+  {
+    "id": "spells",
+    "label": "Sorts"
+  },
+  {
+    "id": "monsters",
+    "label": "Monstres"
+  },
+  {
+    "id": "items",
+    "label": "Items"
+  },
+  {
+    "id": "crafts",
+    "label": "Crafts"
+  },
+  {
+    "id": "cartes",
+    "label": "Cartes"
+  }
+]

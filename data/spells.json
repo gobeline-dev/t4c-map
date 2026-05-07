@@ -1,0 +1,1724 @@
+[
+  {
+    "id": "auto-1",
+    "name": "Mot de rappel amélioré",
+    "level": 1,
+    "for": 21,
+    "end": 21,
+    "dext": 21,
+    "int": 21,
+    "sag": 21,
+    "prereqs": [],
+    "element": "Air"
+  },
+  {
+    "id": "auto-2",
+    "name": "Dard de feu",
+    "level": 2,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 21,
+    "sag": 15,
+    "prereqs": [],
+    "element": "Feu",
+    "bonus": "dégat monocible"
+  },
+  {
+    "id": "auto-3",
+    "name": "Lumière",
+    "level": 2,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 18,
+    "sag": 15,
+    "prereqs": [],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-4",
+    "name": "Guérison légère",
+    "level": 3,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 15,
+    "sag": 19,
+    "prereqs": [],
+    "element": "Lumière",
+    "bonus": "soin monocible"
+  },
+  {
+    "id": "auto-5",
+    "name": "Radiance",
+    "level": 2,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 18,
+    "sag": 15,
+    "prereqs": [],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-6",
+    "name": "Éclat de pierre",
+    "level": 4,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 17,
+    "sag": 20,
+    "prereqs": [],
+    "element": "Terre",
+    "bonus": "dégat monocible"
+  },
+  {
+    "id": "auto-7",
+    "name": "Antidote pour poison",
+    "level": 5,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 26,
+    "sag": 17,
+    "prereqs": [],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-8",
+    "name": "[S] Appel au combat",
+    "level": 5,
+    "for": 0,
+    "end": 0,
+    "dext": 30,
+    "int": 30,
+    "sag": 0,
+    "prereqs": [],
+    "element": "Neutre",
+    "bonus": "permet au shaman d'agro les cibles alentours"
+  },
+  {
+    "id": "auto-9",
+    "name": "[S] Bouclier du brasier mineur",
+    "level": 5,
+    "for": 0,
+    "end": 0,
+    "dext": 30,
+    "int": 30,
+    "sag": 0,
+    "prereqs": [],
+    "element": "Feu",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-10",
+    "name": "Tourbillon",
+    "level": 6,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 21,
+    "sag": 21,
+    "prereqs": [],
+    "element": "Air"
+  },
+  {
+    "id": "auto-11",
+    "name": "Poison",
+    "level": 7,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 30,
+    "sag": 18,
+    "prereqs": [],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-12",
+    "name": "Protection",
+    "level": 8,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 20,
+    "sag": 25,
+    "prereqs": [],
+    "element": "Terre"
+  },
+  {
+    "id": "auto-13",
+    "name": "[S] Bouclier d’enrochement mineur",
+    "level": 8,
+    "for": 0,
+    "end": 35,
+    "dext": 0,
+    "int": 40,
+    "sag": 0,
+    "prereqs": [],
+    "element": "Terre",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-14",
+    "name": "Éclat de glace",
+    "level": 9,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 34,
+    "sag": 19,
+    "prereqs": [],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-15",
+    "name": "[S] Régénération shamanique mineure",
+    "level": 9,
+    "for": 0,
+    "end": 0,
+    "dext": 40,
+    "int": 40,
+    "sag": 0,
+    "prereqs": [],
+    "element": "Neutre",
+    "bonus": "soigne le shaman sur un court temps"
+  },
+  {
+    "id": "auto-16",
+    "name": "Flèche enflammée",
+    "level": 10,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 44,
+    "sag": 15,
+    "prereqs": [
+      "Dard de feu"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-17",
+    "name": "Absorption de vie mineure",
+    "level": 12,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 50,
+    "sag": 15,
+    "prereqs": [],
+    "element": "Ténèbres"
+  },
+  {
+    "id": "auto-18",
+    "name": "Guérison importante",
+    "level": 13,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 16,
+    "sag": 34,
+    "prereqs": [
+      "Guérison légère"
+    ],
+    "element": "Lumière"
+  },
+  {
+    "id": "auto-19",
+    "name": "Éclair",
+    "level": 15,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 30,
+    "sag": 30,
+    "prereqs": [
+      "Tourbillon"
+    ],
+    "element": "Air"
+  },
+  {
+    "id": "auto-20",
+    "name": "Flèche empoisonnée",
+    "level": 17,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 51,
+    "sag": 23,
+    "prereqs": [
+      "Poison"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-21",
+    "name": "Fracassement",
+    "level": 18,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 26,
+    "sag": 37,
+    "prereqs": [
+      "Éclat de pierre"
+    ],
+    "element": "Terre"
+  },
+  {
+    "id": "auto-22",
+    "name": "Gel",
+    "level": 20,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 57,
+    "sag": 24,
+    "prereqs": [
+      "Éclat de glace"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-23",
+    "name": "Malédiction",
+    "level": 20,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 74,
+    "sag": 16,
+    "prereqs": [],
+    "element": "Ténèbres"
+  },
+  {
+    "id": "auto-24",
+    "name": "[S] Régénération shamanique",
+    "level": 20,
+    "for": 0,
+    "end": 0,
+    "dext": 60,
+    "int": 60,
+    "sag": 0,
+    "prereqs": [
+      "Régénération shamanique mineure"
+    ],
+    "element": "Neutre",
+    "bonus": "soigne le shaman sur un court temps"
+  },
+  {
+    "id": "auto-25",
+    "name": "Éclat de feu",
+    "level": 22,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 30,
+    "sag": 16,
+    "prereqs": [
+      "Flèche enflammée"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-26",
+    "name": "Absorption de vie",
+    "level": 25,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 83,
+    "sag": 16,
+    "prereqs": [
+      "Absorption de vie mineure"
+    ],
+    "element": "Ténèbres"
+  },
+  {
+    "id": "auto-27",
+    "name": "Barrière de protection",
+    "level": 25,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 59,
+    "sag": 24,
+    "prereqs": [
+      "Protection"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-28",
+    "name": "Éclair de glace",
+    "level": 25,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 68,
+    "sag": 26,
+    "prereqs": [
+      "Éclat de glace"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-29",
+    "name": "Force de la terre",
+    "level": 25,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 29,
+    "sag": 43,
+    "prereqs": [],
+    "element": "Terre"
+  },
+  {
+    "id": "auto-30",
+    "name": "Instinct de combat mineur",
+    "level": 25,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 55,
+    "sag": 31,
+    "prereqs": [],
+    "element": "Neutre"
+  },
+  {
+    "id": "auto-31",
+    "name": "Repousser les morts-vivants",
+    "level": 25,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 16,
+    "sag": 43,
+    "prereqs": [],
+    "element": "Lumière"
+  },
+  {
+    "id": "auto-32",
+    "name": "[S] Bouclier du brasier",
+    "level": 25,
+    "for": 0,
+    "end": 0,
+    "dext": 75,
+    "int": 75,
+    "sag": 0,
+    "prereqs": [
+      "Bouclier du brasier mineur"
+    ],
+    "element": "Feu",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-33",
+    "name": "[S] Protection totémique",
+    "level": 25,
+    "for": 0,
+    "end": 0,
+    "dext": 75,
+    "int": 75,
+    "sag": 0,
+    "prereqs": [],
+    "element": "Neutre",
+    "bonus": "permet au shaman d'augmenter sa CA et ses résistances"
+  },
+  {
+    "id": "auto-34",
+    "name": "Invocation de la foudre",
+    "level": 26,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 42,
+    "sag": 41,
+    "prereqs": [
+      "Éclair"
+    ],
+    "element": "Air"
+  },
+  {
+    "id": "auto-35",
+    "name": "Boule de feu",
+    "level": 27,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 94,
+    "sag": 16,
+    "prereqs": [
+      "Éclair de feu"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-36",
+    "name": "Guérison critique",
+    "level": 27,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 17,
+    "sag": 55,
+    "prereqs": [
+      "Guérison importante"
+    ],
+    "element": "Lumière"
+  },
+  {
+    "id": "auto-37",
+    "name": "Esprit clair",
+    "level": 28,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 74,
+    "sag": 28,
+    "prereqs": [],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-38",
+    "name": "Bouclier de mana",
+    "level": 29,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 76,
+    "sag": 28,
+    "prereqs": [
+      "Barrière de protection"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-39",
+    "name": "Chaîne d’éclairs",
+    "level": 30,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 80,
+    "sag": 46,
+    "prereqs": [
+      "Invocation de la foudre"
+    ],
+    "element": "Air"
+  },
+  {
+    "id": "auto-40",
+    "name": "Empoisonnement de masse",
+    "level": 30,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 65,
+    "sag": 20,
+    "prereqs": [
+      "Absorption de vie mineure"
+    ],
+    "element": "Ténèbres",
+    "bonus": "empoisonne les cibles alentours"
+  },
+  {
+    "id": "auto-41",
+    "name": "Vague de boue",
+    "level": 30,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 40,
+    "sag": 50,
+    "prereqs": [
+      "Fracassement"
+    ],
+    "element": "Terre",
+    "bonus": "éclat de pierre de zone"
+  },
+  {
+    "id": "auto-42",
+    "name": "Explosion de mana",
+    "level": 32,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 63,
+    "sag": 39,
+    "prereqs": [],
+    "element": "Neutre"
+  },
+  {
+    "id": "auto-43",
+    "name": "Peste",
+    "level": 33,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 112,
+    "sag": 16,
+    "prereqs": [],
+    "element": "Ténèbres"
+  },
+  {
+    "id": "auto-44",
+    "name": "Détection de la dissimulation",
+    "level": 35,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 118,
+    "sag": 15,
+    "prereqs": [],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-45",
+    "name": "[S] Bouclier d’enrochement",
+    "level": 37,
+    "for": 0,
+    "end": 95,
+    "dext": 0,
+    "int": 95,
+    "sag": 95,
+    "prereqs": [
+      "Bouclier d’enrochement mineur"
+    ],
+    "element": "Terre",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-46",
+    "name": "Peau de pierre",
+    "level": 37,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 37,
+    "sag": 59,
+    "prereqs": [
+      "Protection"
+    ],
+    "element": "Terre"
+  },
+  {
+    "id": "auto-47",
+    "name": "Tranquillité",
+    "level": 38,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 17,
+    "sag": 71,
+    "prereqs": [
+      "Guérison critique"
+    ],
+    "element": "Lumière"
+  },
+  {
+    "id": "auto-48",
+    "name": "Vague de flammes",
+    "level": 40,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 133,
+    "sag": 16,
+    "prereqs": [
+      "Boule de feu"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-49",
+    "name": "Vortex d’air",
+    "level": 40,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 109,
+    "sag": 56,
+    "prereqs": [
+      "Chaîne d’éclairs"
+    ],
+    "element": "Air"
+  },
+  {
+    "id": "auto-50",
+    "name": "Absorption de vie majeure",
+    "level": 41,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 136,
+    "sag": 16,
+    "prereqs": [
+      "Absorption de vie"
+    ],
+    "element": "Ténèbres"
+  },
+  {
+    "id": "auto-51",
+    "name": "Résistance au feu",
+    "level": 43,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 105,
+    "sag": 34,
+    "prereqs": [],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-52",
+    "name": "Résistance à l’air",
+    "level": 43,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 70,
+    "sag": 70,
+    "prereqs": [],
+    "element": "Air"
+  },
+  {
+    "id": "auto-53",
+    "name": "Dextérité",
+    "level": 44,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 60,
+    "sag": 59,
+    "prereqs": [],
+    "element": "Air"
+  },
+  {
+    "id": "auto-54",
+    "name": "Résistance à la glace",
+    "level": 46,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 150,
+    "sag": 15,
+    "prereqs": [
+      "Bouclier de mana"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-55",
+    "name": "Séisme",
+    "level": 47,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 43,
+    "sag": 71,
+    "prereqs": [
+      "Fracassement"
+    ],
+    "element": "Terre"
+  },
+  {
+    "id": "auto-56",
+    "name": "Repousse de masse",
+    "level": 47,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 43,
+    "sag": 71,
+    "prereqs": [
+      "Repousser les morts-vivants"
+    ],
+    "element": "Lumière",
+    "bonus": "repousse-les-morts-vivants de zone"
+  },
+  {
+    "id": "auto-57",
+    "name": "Bouclier de feu",
+    "level": 48,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 156,
+    "sag": 16,
+    "prereqs": [
+      "Vague de flammes"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-58",
+    "name": "Bouclier d’électricité",
+    "level": 49,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 65,
+    "sag": 64,
+    "prereqs": [
+      "Chaîne d’éclairs"
+    ],
+    "element": "Air"
+  },
+  {
+    "id": "auto-59",
+    "name": "Détection de l’invisible",
+    "level": 50,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 162,
+    "sag": 36,
+    "prereqs": [],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-60",
+    "name": "Enchevêtrement",
+    "level": 50,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 34,
+    "sag": 52,
+    "prereqs": [],
+    "element": "Terre"
+  },
+  {
+    "id": "auto-61",
+    "name": "[S] Régénération shamanique majeure",
+    "level": 50,
+    "for": 0,
+    "end": 0,
+    "dext": 125,
+    "int": 125,
+    "sag": 0,
+    "prereqs": [
+      "Régénération shamanique"
+    ],
+    "element": "Neutre",
+    "bonus": "soigne le shaman sur un court temps"
+  },
+  {
+    "id": "auto-62",
+    "name": "Sanctuaire",
+    "level": 52,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 18,
+    "sag": 91,
+    "prereqs": [
+      "Bouclier de mana"
+    ],
+    "element": "Lumière"
+  },
+  {
+    "id": "auto-63",
+    "name": "Pluie d’étincelles",
+    "level": 53,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 125,
+    "sag": 17,
+    "prereqs": [
+      "Vague de flammes"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-64",
+    "name": "Afflux de mana",
+    "level": 54,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 174,
+    "sag": 17,
+    "prereqs": [
+      "Boule de glace"
+    ],
+    "element": "Neutre"
+  },
+  {
+    "id": "auto-65",
+    "name": "Glacier",
+    "level": 55,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 130,
+    "sag": 40,
+    "prereqs": [
+      "Bouclier du brasier"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-66",
+    "name": "Guérison",
+    "level": 55,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 18,
+    "sag": 96,
+    "prereqs": [],
+    "element": "Lumière"
+  },
+  {
+    "id": "auto-67",
+    "name": "[S] Bouclier du brasier majeur",
+    "level": 55,
+    "for": 0,
+    "end": 0,
+    "dext": 145,
+    "int": 145,
+    "sag": 0,
+    "prereqs": [
+      "Bouclier du brasier"
+    ],
+    "element": "Feu",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-68",
+    "name": "Dissipation de la magie",
+    "level": 56,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 99,
+    "sag": 57,
+    "prereqs": [],
+    "element": "Neutre"
+  },
+  {
+    "id": "auto-69",
+    "name": "Dissipation de l’archer",
+    "level": 56,
+    "for": 0,
+    "end": 150,
+    "dext": 0,
+    "int": 36,
+    "sag": 36,
+    "prereqs": [],
+    "element": "Neutre",
+    "bonus": "dispel self pour personnage à base de dextérité"
+  },
+  {
+    "id": "auto-70",
+    "name": "Dissipation du guerrier",
+    "level": 56,
+    "for": 150,
+    "end": 0,
+    "dext": 0,
+    "int": 36,
+    "sag": 36,
+    "prereqs": [],
+    "element": "Neutre",
+    "bonus": "dispel self pour personnage à base de force"
+  },
+  {
+    "id": "auto-71",
+    "name": "Invisibilité",
+    "level": 58,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 74,
+    "sag": 72,
+    "prereqs": [],
+    "element": "Air"
+  },
+  {
+    "id": "auto-72",
+    "name": "Bénédiction",
+    "level": 59,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 19,
+    "sag": 102,
+    "prereqs": [],
+    "element": "Lumière"
+  },
+  {
+    "id": "auto-73",
+    "name": "Flamme",
+    "level": 60,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 191,
+    "sag": 17,
+    "prereqs": [
+      "Pluie d’étincelles"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-74",
+    "name": "[S] Bouclier du magma mineur",
+    "level": 60,
+    "for": 0,
+    "end": 0,
+    "dext": 235,
+    "int": 235,
+    "sag": 0,
+    "prereqs": [
+      "Bouclier du brasier majeur"
+    ],
+    "element": "Feu",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-75",
+    "name": "Guérison de groupe",
+    "level": 63,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 19,
+    "sag": 108,
+    "prereqs": [
+      "Guérison"
+    ],
+    "element": "Lumière"
+  },
+  {
+    "id": "auto-76",
+    "name": "Tempête de glace",
+    "level": 65,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 152,
+    "sag": 44,
+    "prereqs": [
+      "Glacier",
+      "Gel"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-77",
+    "name": "[S] Bouclier d’enrochement majeur",
+    "level": 71,
+    "for": 0,
+    "end": 160,
+    "dext": 0,
+    "int": 160,
+    "sag": 160,
+    "prereqs": [
+      "Bouclier d’enrochement"
+    ],
+    "element": "Terre",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-78",
+    "name": "Instinct de combat supérieur",
+    "level": 66,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 114,
+    "sag": 64,
+    "prereqs": [
+      "Instinct de combat mineur"
+    ],
+    "element": "Neutre"
+  },
+  {
+    "id": "auto-79",
+    "name": "Éboulement",
+    "level": 67,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 55,
+    "sag": 95,
+    "prereqs": [
+      "Séisme"
+    ],
+    "element": "Terre"
+  },
+  {
+    "id": "auto-80",
+    "name": "Vol d'âme",
+    "level": 68,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 215,
+    "sag": 17,
+    "prereqs": [
+      "Absorption majeure de vie"
+    ],
+    "element": "Ténèbres"
+  },
+  {
+    "id": "auto-81",
+    "name": "Révélation",
+    "level": 69,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 56,
+    "sag": 98,
+    "prereqs": [],
+    "element": "Terre"
+  },
+  {
+    "id": "auto-82",
+    "name": "Blizzard",
+    "level": 74,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 170,
+    "sag": 48,
+    "prereqs": [
+      "Tempête de glace"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-83",
+    "name": "Aura de guérison",
+    "level": 75,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 20,
+    "sag": 125,
+    "prereqs": [
+      "Guérison de groupe"
+    ],
+    "element": "Lumière"
+  },
+  {
+    "id": "auto-84",
+    "name": "Tempête de feu",
+    "level": 76,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 238,
+    "sag": 17,
+    "prereqs": [
+      "Flamme"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-85",
+    "name": "Tornade",
+    "level": 79,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 96,
+    "sag": 93,
+    "prereqs": [
+      "Vortex d’air"
+    ],
+    "element": "Air"
+  },
+  {
+    "id": "auto-86",
+    "name": "Avalanche",
+    "level": 82,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 187,
+    "sag": 52,
+    "prereqs": [
+      "Blizzard"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-87",
+    "name": "Inferno",
+    "level": 83,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 259,
+    "sag": 17,
+    "prereqs": [
+      "Flamme"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-88",
+    "name": "Bouclier de glace",
+    "level": 84,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 191,
+    "sag": 53,
+    "prereqs": [
+      "Tornade"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-89",
+    "name": "Cyclone",
+    "level": 88,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 105,
+    "sag": 102,
+    "prereqs": [
+      "Tornade"
+    ],
+    "element": "Air"
+  },
+  {
+    "id": "auto-90",
+    "name": "Brume putride",
+    "level": 90,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 300,
+    "sag": 17,
+    "prereqs": [
+      "Vol d'âme"
+    ],
+    "element": "Ténèbres",
+    "bonus": "dégats de zone via nuages de poison"
+  },
+  {
+    "id": "auto-91",
+    "name": "Conjuration",
+    "level": 90,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 17,
+    "sag": 300,
+    "prereqs": [
+      "Repousse de masse"
+    ],
+    "element": "Lumière",
+    "bonus": "dégats monocible"
+  },
+  {
+    "id": "auto-92",
+    "name": "Fracture sismique",
+    "level": 90,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 55,
+    "sag": 155,
+    "prereqs": [
+      "Éboulement"
+    ],
+    "element": "Terre",
+    "bonus": "dégats de zone"
+  },
+  {
+    "id": "auto-93",
+    "name": "[S] Restauration totémique",
+    "level": 90,
+    "for": 0,
+    "end": 0,
+    "dext": 230,
+    "int": 230,
+    "sag": 0,
+    "prereqs": [
+      "Régénération shamanique"
+    ],
+    "element": "Neutre",
+    "bonus": "soigne le shaman et ses alliés sur un court temps"
+  },
+  {
+    "id": "auto-94",
+    "name": "Tsunami",
+    "level": 96,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 217,
+    "sag": 58,
+    "prereqs": [
+      "Avalanche"
+    ],
+    "element": "Eau"
+  },
+  {
+    "id": "auto-95",
+    "name": "Météorite",
+    "level": 100,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 309,
+    "sag": 18,
+    "prereqs": [
+      "Tempête de feu"
+    ],
+    "element": "Feu"
+  },
+  {
+    "id": "auto-96",
+    "name": "[S] Bouclier d’obsidienne mineur",
+    "level": 100,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 255,
+    "sag": 217,
+    "prereqs": [
+      "Bouclier d’enrochement majeur"
+    ],
+    "element": "Terre",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-97",
+    "name": "Cercle incandescent",
+    "level": 115,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 300,
+    "sag": 17,
+    "prereqs": [
+      "Météorite"
+    ],
+    "element": "Feu",
+    "bonus": "dégats de zone via cercles de flammes"
+  },
+  {
+    "id": "auto-98",
+    "name": "Torrent glacial",
+    "level": 115,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 250,
+    "sag": 40,
+    "prereqs": [
+      "Avalanche"
+    ],
+    "element": "Eau",
+    "bonus": "dégats de zone"
+  },
+  {
+    "id": "auto-99",
+    "name": "Électrocution",
+    "level": 115,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 90,
+    "sag": 250,
+    "prereqs": [
+      "Cyclone"
+    ],
+    "element": "Air",
+    "bonus": "dégats monocible"
+  },
+  {
+    "id": "auto-100",
+    "name": "Cure",
+    "level": 130,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 18,
+    "sag": 250,
+    "prereqs": [
+      "Guérison"
+    ],
+    "element": "Lumière",
+    "bonus": "soigne la cible"
+  },
+  {
+    "id": "auto-101",
+    "name": "[S] Bouclier du magma",
+    "level": 130,
+    "for": 0,
+    "end": 0,
+    "dext": 355,
+    "int": 355,
+    "sag": 0,
+    "prereqs": [
+      "Bouclier du magma mineur"
+    ],
+    "element": "Feu",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-102",
+    "name": "Conjuration de masse",
+    "level": 140,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 17,
+    "sag": 400,
+    "prereqs": [
+      "Conjuration"
+    ],
+    "element": "Lumière",
+    "bonus": "dégats de zone"
+  },
+  {
+    "id": "auto-103",
+    "name": "Déluge destructeur",
+    "level": 140,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 400,
+    "sag": 17,
+    "prereqs": [
+      "Torrent glacial"
+    ],
+    "element": "Eau",
+    "bonus": "dégats de zone"
+  },
+  {
+    "id": "auto-104",
+    "name": "Foudroiement des arcanes",
+    "level": 140,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 400,
+    "sag": 17,
+    "prereqs": [
+      "Brume putride"
+    ],
+    "element": "Ténèbres",
+    "bonus": "dégats de zone"
+  },
+  {
+    "id": "auto-105",
+    "name": "Tempête de foudre",
+    "level": 140,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 90,
+    "sag": 300,
+    "prereqs": [
+      "Électrocution"
+    ],
+    "element": "Air",
+    "bonus": "dégats de zone"
+  },
+  {
+    "id": "auto-106",
+    "name": "Tempête tellurique",
+    "level": 140,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 90,
+    "sag": 300,
+    "prereqs": [
+      "Fracture sismique"
+    ],
+    "element": "Terre",
+    "bonus": "dégats de zone"
+  },
+  {
+    "id": "auto-107",
+    "name": "[S] Bouclier d’obsidienne",
+    "level": 150,
+    "for": 0,
+    "end": 355,
+    "dext": 0,
+    "int": 355,
+    "sag": 355,
+    "prereqs": [
+      "Bouclier d’obsidienne mineur"
+    ],
+    "element": "Terre",
+    "bonus": "bouclier défensif qui renvoie des dégâts sur l'attaquant"
+  },
+  {
+    "id": "auto-108",
+    "name": "Aspiration d'âme",
+    "level": 150,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 350,
+    "sag": 17,
+    "prereqs": [
+      "Vol d'âme"
+    ],
+    "element": "Ténèbres",
+    "bonus": "dégats monocible qui restaure des pv du lanceur"
+  },
+  {
+    "id": "auto-109",
+    "name": "Tempête de météores",
+    "level": 155,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 400,
+    "sag": 17,
+    "prereqs": [
+      "Cercle incandescent"
+    ],
+    "element": "Feu",
+    "bonus": "dégats de zone via météores"
+  },
+  {
+    "id": "auto-110",
+    "name": "Cure de masse",
+    "level": 160,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 20,
+    "sag": 450,
+    "prereqs": [
+      "Cure"
+    ],
+    "element": "Lumière",
+    "bonus": "soin de groupe"
+  },
+  {
+    "id": "auto-111",
+    "name": "Cyclone destructeur",
+    "level": 180,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 174,
+    "sag": 512,
+    "prereqs": [
+      "Cyclone"
+    ],
+    "element": "Air",
+    "bonus": "dégats de zone"
+  },
+  {
+    "id": "auto-112",
+    "name": "Etreinte du linceul",
+    "level": 180,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 400,
+    "sag": 17,
+    "prereqs": [
+      "Brume putride"
+    ],
+    "element": "Ténèbres",
+    "bonus": "dégats monocible et de zone"
+  },
+  {
+    "id": "auto-113",
+    "name": "Lance solaire",
+    "level": 180,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 450,
+    "sag": 17,
+    "prereqs": [
+      "Tempête de météores"
+    ],
+    "element": "Feu",
+    "bonus": "dégats monocible et de zone"
+  },
+  {
+    "id": "auto-114",
+    "name": "Poing de granite",
+    "level": 180,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 174,
+    "sag": 512,
+    "prereqs": [
+      "Tempête tellurique"
+    ],
+    "element": "Terre",
+    "bonus": "dégats monocible et de zone"
+  },
+  {
+    "id": "auto-115",
+    "name": "Purification",
+    "level": 180,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 17,
+    "sag": 450,
+    "prereqs": [
+      "Conjuration de masse"
+    ],
+    "element": "Lumière",
+    "bonus": "dégats monocible et de zone"
+  },
+  {
+    "id": "auto-116",
+    "name": "Subzero",
+    "level": 180,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 450,
+    "sag": 17,
+    "prereqs": [
+      "Déluge destructeur"
+    ],
+    "element": "Eau",
+    "bonus": "dégats monocible et de zone"
+  },
+  {
+    "id": "auto-117",
+    "name": "[A] Barrière des arcanes",
+    "level": 0,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 0,
+    "sag": 0,
+    "prereqs": [
+      "Bouclier de mana",
+      "Barrière de protection"
+    ],
+    "element": "Eau",
+    "bonus": "cumule les sorts de barrière et bouclier de mana"
+  },
+  {
+    "id": "auto-118",
+    "name": "[A] Immunité élémentaire",
+    "level": 0,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 0,
+    "sag": 0,
+    "prereqs": [
+      "Résistance à l’air/feu/glace"
+    ],
+    "element": "Neutre",
+    "bonus": "cumule les sorts de résistance à l'élément"
+  },
+  {
+    "id": "auto-119",
+    "name": "[A] Instinct du combattant",
+    "level": 0,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 0,
+    "sag": 0,
+    "prereqs": [
+      "Instinct de combat mineur/supérieur"
+    ],
+    "element": "Neutre",
+    "bonus": " cumule les sorts d'instinct de combat"
+  },
+  {
+    "id": "auto-120",
+    "name": "[A] Renforcement des arcanes",
+    "level": 0,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 0,
+    "sag": 0,
+    "prereqs": [
+      "Peau de pierre",
+      "Protection"
+    ],
+    "element": "Terre",
+    "bonus": "cumule les sorts de peau de pierre et protection"
+  },
+  {
+    "id": "auto-121",
+    "name": "[A] Acuité arcanique",
+    "level": 0,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 0,
+    "sag": 0,
+    "prereqs": [
+      "Esprit clair",
+      "Tranquillité",
+      "Afflux de mana"
+    ],
+    "element": "Neutre",
+    "bonus": "cumule les sorts d'esprit clair, tranquillité et afflux de mana"
+  },
+  {
+    "id": "auto-122",
+    "name": "[A] Agilité de Gaïa",
+    "level": 0,
+    "for": 0,
+    "end": 0,
+    "dext": 0,
+    "int": 0,
+    "sag": 0,
+    "prereqs": [
+      "Force de la terre",
+      "Dextérité"
+    ],
+    "element": "Neutre",
+    "bonus": "cumule les sorts de force de la terre et dextérité"
+  },
+  {
+    "id": "auto-123",
+    "name": "[S] Jouvence",
+    "level": 80,
+    "for": 0,
+    "end": 220,
+    "dext": 0,
+    "int": 220,
+    "sag": 0,
+    "prereqs": [
+      "Régénération shamanique majeure"
+    ],
+    "element": "Feu/Terre",
+    "bonus": "soigne le shaman uniquement"
+  },
+  {
+    "id": "auto-124",
+    "name": "[S] Berserk shamanique",
+    "level": 120,
+    "for": 0,
+    "end": 255,
+    "dext": 0,
+    "int": 255,
+    "sag": 0,
+    "prereqs": [
+      "Protection totémique",
+      "Restauration totémique"
+    ],
+    "element": "Neutre",
+    "bonus": "bonus PV/MP, bonus power random 1~20, bonus for/agi random 1~150, bonus attaque/archerie"
+  }
+]
