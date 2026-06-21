@@ -1,4 +1,4 @@
-import type { Craft, Item, Monster, Quest, Spell } from '../types/wiki';
+import type { Craft, Item, Monster, Npc, Quest, Spell } from '../types/wiki';
 
 // Source describing how a given item or spell can be obtained, derived by
 // cross-referencing the wiki data we already have. The upstream chunk has no
@@ -7,7 +7,7 @@ import type { Craft, Item, Monster, Quest, Spell } from '../types/wiki';
 export type ObtainSource =
   | { kind: 'quest';  questId: string;          questTitle: string; location?: string; pnj?: string[]; level?: number }
   | { kind: 'craft';  craftId: string;          metier: string;     level: number;     ingredients: string[] }
-  | { kind: 'drop';   monsterId: number | string; monsterName: string; hp: number;     chance?: number; source: 'classic' | 'extra' }
+  | { kind: 'drop';   monsterId: number | string; monsterName: string; hp: number;     chance?: number }
   | { kind: 'shop';   location: string };
 
 export interface ObtainIndex {
@@ -52,8 +52,8 @@ interface BuildArgs {
   spells: Spell[];
   quests: Quest[];
   crafts: Craft[];
-  monstersClassic: Monster[];
-  monstersExtra: Monster[];
+  monsters: Monster[];
+  npcs?: Npc[];
 }
 
 export function buildObtainIndex(args: BuildArgs): ObtainIndex {
@@ -73,12 +73,9 @@ export function buildObtainIndex(args: BuildArgs): ObtainIndex {
     return { ref: sp, key: norm(sp.name), cleanKey: norm(cleaned) };
   });
 
-  // 1. Monster drops
-  const taggedMonsters = [
-    ...args.monstersClassic.map((m) => ({ m, source: 'classic' as const })),
-    ...args.monstersExtra  .map((m) => ({ m, source: 'extra'   as const })),
-  ];
-  for (const { m, source } of taggedMonsters) {
+  // 1. Monster and NPC drops
+  const droppers: (Monster | Npc)[] = [...args.monsters, ...(args.npcs ?? [])];
+  for (const m of droppers) {
     for (const raw of m.drops ?? []) {
       const { name, chance } = parseDrop(raw);
       const k = norm(name);
@@ -92,7 +89,6 @@ export function buildObtainIndex(args: BuildArgs): ObtainIndex {
         monsterName: m.name,
         hp: m.hp,
         chance,
-        source,
       });
     }
   }

@@ -1,5 +1,26 @@
-// Types matching the JSON files in public/data/, themselves extracted from
-// the upstream T4C wiki bundle.
+// Types matching the curated TypeScript modules in public/data/
+// (equipment.ts, monster.ts, npcs.ts, quetes.ts, sorts.ts, crafts.ts),
+// themselves extracted from the T4C game data (WDA).
+
+// Shared geo helpers used by several entities (monster spawns, NPC positions,
+// teacher locations, item drop spots).
+export interface CoordPoint {
+  x: number;
+  y: number;
+  world: number;
+}
+
+export interface CoordGroup {
+  type: string;
+  name: string;
+  coords: CoordPoint[];
+}
+
+export interface LocationRef {
+  type: string;
+  name: string;
+  dropRate?: string;
+}
 
 export interface Quest {
   id: string;
@@ -25,21 +46,24 @@ export interface Spell {
   prereqs?: string[];
   element?: string;
   bonus?: string;
+  location?: string;
+  locations?: LocationRef[];
+  coordinates?: CoordGroup[];
 }
 
-export interface Monster {
+// Monsters and NPCs share the same shape; NPCs just use string ids.
+export interface Creature {
   id: number | string;
   name: string;
   hp: number;
   xp: number;
   drops?: string[];
+  coordinates?: CoordGroup[];
 }
 
-export type MonsterCategory = 'classic' | 'extra';
-
-export interface MonsterGroup {
-  source: MonsterCategory;
-  monsters: Monster[];
+export type Monster = Creature;
+export interface Npc extends Creature {
+  id: string;
 }
 
 export interface Item {
@@ -56,6 +80,8 @@ export interface Item {
   bonus?: string[];
   rarity?: string;
   location?: string;
+  locations?: LocationRef[];
+  coordinates?: CoordGroup[];
 }
 
 export interface Craft {
@@ -64,28 +90,25 @@ export interface Craft {
   requiredItems: string[];
   metier: string;
   requiredWorkLevel: number;
-}
-
-export interface MapImage {
-  src: string;
-  legend?: string;
-}
-
-export interface MapEntry {
-  id: string;
-  name: string;
-  images: MapImage[];
+  locations?: LocationRef[];
+  coordinates?: CoordGroup[];
 }
 
 export interface WikiData {
   quests: Quest[];
   spells: Spell[];
-  monstersClassic: Monster[];
-  monstersExtra: Monster[];
+  monsters: Monster[];
+  npcs: Npc[];
   items: Item[];
   crafts: Craft[];
-  maps: MapEntry[];
   obtain: import('../utils/wikiObtain').ObtainIndex;
 }
 
-export type WikiSectionId = 'quests' | 'spells' | 'monsters' | 'items' | 'crafts' | 'cartes';
+export type WikiSectionId =
+  | 'quests'
+  | 'spells'
+  | 'monsters'
+  | 'npcs'
+  | 'items'
+  | 'crafts'
+  | 'carte';

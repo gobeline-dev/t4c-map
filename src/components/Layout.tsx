@@ -18,7 +18,9 @@ const Layout = ({ children }: LayoutProps) => {
     }
   }, [location.pathname]);
 
-  const isMaps = location.pathname === '/maps' || location.pathname === '/';
+  // The interactive map lives at /wiki/carte and needs a full-height, padding-free
+  // container (and no footer) so the MapViewer can fill the viewport.
+  const isFullBleed = location.pathname === '/wiki/carte';
 
   return (
     <div className="min-h-screen flex flex-col text-foreground" style={{ background: 'hsl(var(--background))' }}>
@@ -32,14 +34,14 @@ const Layout = ({ children }: LayoutProps) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className={isMaps ? 'h-[calc(100vh-64px)]' : 'mx-auto max-w-7xl px-6 lg:px-8 py-10'}
+            className={isFullBleed ? 'h-[calc(100vh-64px)]' : 'mx-auto max-w-7xl px-6 lg:px-8 py-10'}
           >
             {children}
           </motion.div>
         </AnimatePresence>
       </main>
 
-      {!isMaps && <Footer />}
+      {!isFullBleed && <Footer />}
     </div>
   );
 };

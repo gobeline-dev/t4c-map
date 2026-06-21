@@ -1,42 +1,11 @@
 import { useEffect, useState } from 'react';
-import type { WikiData, MapEntry, MapImage } from '../types/wiki';
+import type { WikiData, Quest, Spell, Monster, Npc, Item, Craft } from '../types/wiki';
 import { buildObtainIndex } from '../utils/wikiObtain';
 
-const BASE = `${import.meta.env.BASE_URL}data/`;
-
-const FILES = [
-  { key: 'quests',          file: 'quests.json' },
-  { key: 'spells',          file: 'spells.json' },
-  { key: 'monstersClassic', file: 'monsters_classic.json' },
-  { key: 'monstersExtra',   file: 'monsters_extra.json' },
-  { key: 'items',           file: 'items.json' },
-  { key: 'crafts',          file: 'crafts.json' },
-  { key: 'maps',            file: 'maps.json' },
-] as const;
-
-// Locally curated additions that aren't in the upstream wiki bundle.
-// Same shape as `maps.json` but only id + images are merged (id new = append entry).
-const EXTRA_FILES = [
-  { key: 'mapsExtra', file: 'maps_extra.json' },
-] as const;
-
-function mergeMapsExtras(maps: MapEntry[], extras: Partial<MapEntry>[]): MapEntry[] {
-  const byId = new Map(maps.map((m) => [m.id, { ...m, images: [...m.images] }]));
-  for (const ex of extras) {
-    if (!ex.id) continue;
-    const existing = byId.get(ex.id);
-    if (existing) {
-      const have = new Set(existing.images.map((i) => i.src));
-      for (const img of (ex.images ?? []) as MapImage[]) {
-        if (!have.has(img.src)) existing.images.push(img);
-      }
-    } else if (ex.name && ex.images) {
-      byId.set(ex.id, { id: ex.id, name: ex.name, images: ex.images });
-    }
-  }
-  return Array.from(byId.values());
-}
-
+// The wiki data now lives as curated TypeScript modules under public/data/.
+// We import them dynamically so each large module (equipment.ts is ~2 MB) is
+// code-split and only fetched when the wiki is first opened, instead of being
+// bundled into the initial chunk.
 let cache: WikiData | null = null;
 let inflight: Promise<WikiData> | null = null;
 
@@ -44,38 +13,32 @@ async function loadAll(): Promise<WikiData> {
   if (cache) return cache;
   if (inflight) return inflight;
   inflight = (async () => {
-    const allFiles = [...FILES, ...EXTRA_FILES] as const;
-    const results = await Promise.allSettled(
-      allFiles.map(({ file }) => fetch(`${BASE}${file}`).then((r) => {
-        if (!r.ok) throw new Error(`${file}: HTTP ${r.status}`);
-        return r.json();
-      })),
-    );
-    const data = {} as Record<string, unknown[]>;
-    results.forEach((res, i) => {
-      const key = allFiles[i].key;
-      if (res.status === 'fulfilled') {
-        data[key] = Array.isArray(res.value) ? res.value : [];
-      } else {
-        // Extras are optional: only warn loudly for the upstream-required files.
-        if (i < FILES.length) console.warn(`[wiki] failed to load ${allFiles[i].file}:`, res.reason);
-        data[key] = [];
-      }
-    });
-    const maps = data.maps as MapEntry[];
-    const extras = (data.mapsExtra as Partial<MapEntry>[]) ?? [];
-    delete data.mapsExtra;
-    data.maps = mergeMapsExtras(maps, extras);
-    const partial = data as unknown as Omit<WikiData, 'obtain'>;
+    const [equipment, monster, npcs, quetes, sorts, crafts] = await Promise.all([
+      import('../../public/data/equipment'),
+      import('../../public/data/monster'),
+      import('../../public/data/npcs'),
+      import('../../public/data/quetes'),
+      import('../../public/data/sorts'),
+      import('../../public/data/crafts'),
+    ]);
+
+    const items: Item[] = equipment.equipment;
+    const monsters: Monster[] = monster.legacyMonsters;
+    const npcList: Npc[] = npcs.npcs;
+    const quests: Quest[] = quetes.quests;
+    const spells: Spell[] = sorts.spellList;
+    const craftList: Craft[] = crafts.crafts;
+
     const obtain = buildObtainIndex({
-      items:           partial.items,
-      spells:          partial.spells,
-      quests:          partial.quests,
-      crafts:          partial.crafts,
-      monstersClassic: partial.monstersClassic,
-      monstersExtra:   partial.monstersExtra,
+      items,
+      spells,
+      quests,
+      crafts: craftList,
+      monsters,
+      npcs: npcList,
     });
-    cache = { ...partial, obtain };
+
+    cache = { quests, spells, monsters, npcs: npcList, items, crafts: craftList, obtain };
     return cache;
   })();
   return inflight;

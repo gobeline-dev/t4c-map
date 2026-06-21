@@ -29,7 +29,6 @@ const HeaderNav = () => {
   }, []);
 
   const navItems = [
-    { name: 'Cartographie', icon: Map, path: '/maps' },
     { name: 'Wiki', icon: BookOpen, path: '/wiki' },
     { name: 'Mentions Légales', icon: ShieldCheck, path: '/legal' },
   ];
@@ -37,7 +36,7 @@ const HeaderNav = () => {
   const isActive = (path: string) =>
     location.pathname === path
     || location.pathname.startsWith(`${path}/`)
-    || (path === '/maps' && location.pathname === '/');
+    || (path === '/wiki' && location.pathname === '/');
 
   if (isFullscreen) return null;
 
@@ -46,7 +45,7 @@ const HeaderNav = () => {
       <nav className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/maps" className="flex items-center gap-2.5 group">
+          <Link to="/wiki" className="flex items-center gap-2.5 group">
             <div className="w-8 h-8 rounded-md flex items-center justify-center" style={{ background: 'hsl(var(--primary) / 0.12)', border: '1px solid hsl(var(--primary) / 0.3)' }}>
               <Map size={16} className="text-primary-strong" />
             </div>
