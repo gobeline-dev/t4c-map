@@ -4,9 +4,8 @@ import { TransformWrapper, TransformComponent, type ReactZoomPanPinchRef, type R
 import ScrollContainer from '../components/shared/ScrollContainer';
 import { MAPS } from '../config/maps';
 import type { MapInfo } from '../config/maps';
-import { useWikiData } from '../hooks/useWikiData';
 import { MapMarkers } from './MapMarkers';
-import { MARKER_CATEGORIES, CATEGORY_COLOR, type MarkerCategory } from '../utils/mapMarkers';
+import { MapMarkerPanel } from './MapMarkerPanel';
 
 interface Coords { x: number; y: number; gx: number; gy: number; }
 interface TransformLike { scale: number; positionX: number; positionY: number; }
@@ -92,17 +91,19 @@ const MapViewer: React.FC = () => {
   const [imgDims, setImgDims] = useState({ w: 0, h: 0 });
   const [viewportDims, setViewportDims] = useState({ w: 0, h: 0 });
 
-  // Entity markers (monsters / NPCs / items) overlaid on the map via their
-  // game coordinates. Categories start hidden; the user toggles what to show.
-  const { data: wikiData } = useWikiData();
-  const [activeCats, setActiveCats] = useState<Set<MarkerCategory>>(() => new Set());
-  const toggleCat = useCallback((cat: MarkerCategory) => {
-    setActiveCats((prev) => {
+  // Entity markers: the user opens a search panel, checks specific monsters /
+  // NPCs / items, and only those are plotted. Data is loaded lazily per
+  // category from inside the panel/overlay — nothing loads on plain map open.
+  const [markersOpen, setMarkersOpen] = useState(false);
+  const [selectedKeys, setSelectedKeys] = useState<Set<string>>(() => new Set());
+  const toggleKey = useCallback((key: string) => {
+    setSelectedKeys((prev) => {
       const next = new Set(prev);
-      if (next.has(cat)) next.delete(cat); else next.add(cat);
+      if (next.has(key)) next.delete(key); else next.add(key);
       return next;
     });
   }, []);
+  const clearKeys = useCallback(() => setSelectedKeys(new Set()), []);
 
   const imgRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -349,27 +350,26 @@ const MapViewer: React.FC = () => {
             </div>
           )}
 
-          {/* Layer toggles: show/hide entity markers by category */}
-          <div className={`absolute z-20 flex flex-col gap-1.5 ${isFullscreen ? 'top-8 left-6' : 'top-3 left-3'}`}>
-            {MARKER_CATEGORIES.map((cat) => {
-              const on = activeCats.has(cat);
-              return (
-                <button
-                  key={cat}
-                  onClick={() => toggleCat(cat)}
-                  aria-pressed={on}
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors"
-                  style={on
-                    ? { background: 'hsl(var(--primary) / 0.15)', border: '1px solid hsl(var(--primary) / 0.4)', color: 'hsl(var(--foreground))' }
-                    : { background: 'hsl(var(--card))', border: '1px solid hsl(var(--border) / 0.6)', color: 'hsl(var(--muted-foreground))' }}
-                  title={`${on ? 'Masquer' : 'Afficher'} les ${cat.toLowerCase()} sur la carte`}
-                >
-                  <MapPin size={13} className={on ? CATEGORY_COLOR[cat] : ''} />
-                  {cat}
-                </button>
-              );
-            })}
-          </div>
+          {/* Marker search: open a panel to pick specific entities to plot */}
+          {markersOpen ? (
+            <MapMarkerPanel
+              worldId={selectedMap.worldId}
+              selectedKeys={selectedKeys}
+              onToggleKey={toggleKey}
+              onClear={clearKeys}
+              onClose={() => setMarkersOpen(false)}
+            />
+          ) : (
+            <button
+              onClick={() => setMarkersOpen(true)}
+              className={`absolute z-20 inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-[11px] font-medium transition-colors ${isFullscreen ? 'top-8 left-6' : 'top-3 left-3'}`}
+              style={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border) / 0.6)', color: 'hsl(var(--foreground))' }}
+              title="Afficher des marqueurs sur la carte"
+            >
+              <MapPin size={13} className="text-primary-strong" />
+              Marqueurs{selectedKeys.size > 0 ? ` (${selectedKeys.size})` : ''}
+            </button>
+          )}
           <TransformWrapper
             key={`${isFullscreen}-${selectedMap.id}-${coverScale}`}
             initialScale={coverScale}
@@ -408,7 +408,7 @@ const MapViewer: React.FC = () => {
                       }}
                       draggable={false}
                     />
-                    {wikiData && <MapMarkers data={wikiData} worldId={selectedMap.worldId} active={activeCats} />}
+                    {selectedKeys.size > 0 && <MapMarkers worldId={selectedMap.worldId} selectedKeys={selectedKeys} />}
                   </div>
                 </TransformComponent>
               </>

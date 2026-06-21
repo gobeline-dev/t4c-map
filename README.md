@@ -4,7 +4,7 @@ Visualiseur de cartes HD pour **The 4th Coming (T4C)**. Application web minimali
 
 ## Fonctionnalités
 
-- **Cartes HD des 8 mondes** : Arakas, Leoworld, Underworld, Drake Island, Île de Lune / Nieve, Extension 4/5/6.
+- **Cartes HD des 8 mondes** : Arakas, Leoworld, Underworld, Drake Island, Île de Lune, Extension 4/5/6.
 - **Zoom & Pan** : molette, boutons à l'écran, raccourcis clavier (`+` / `-` / `0` / flèches).
 - **Mini-carte** : aperçu de la zone visible, clic pour se téléporter sur la carte principale.
 - **Lecture de coordonnées** : suivi en temps réel de la position du curseur sous la forme `gx.gy.worldId`. Double-clic pour copier les coordonnées dans le presse-papier.

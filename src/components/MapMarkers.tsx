@@ -1,12 +1,14 @@
-import { memo, useMemo } from 'react';
+import { memo, useEffect, useMemo, useState } from 'react';
 import { MapPin } from 'lucide-react';
-import type { WikiData } from '../types/wiki';
 import {
-  buildWorldMarkers,
+  buildMarkersFromSelection,
+  loadCategoryEntities,
+  parseKey,
   CATEGORY_COLOR,
   CATEGORY_DOT,
   type MarkerCategory,
   type MarkerGroup,
+  type NamedEntity,
 } from '../utils/mapMarkers';
 
 const TOOLTIP_CAP = 8;
@@ -34,13 +36,40 @@ const MapMarker = memo(({ group }: { group: MarkerGroup }) => {
 });
 
 interface Props {
-  data: WikiData;
   worldId: number;
-  active: Set<MarkerCategory>;
+  selectedKeys: Set<string>;
 }
 
-export const MapMarkers = ({ data, worldId, active }: Props) => {
-  const groups = useMemo(() => buildWorldMarkers(data, worldId, active), [data, worldId, active]);
+export const MapMarkers = ({ worldId, selectedKeys }: Props) => {
+  const [loaded, setLoaded] = useState<Partial<Record<MarkerCategory, NamedEntity[]>>>({});
+
+  const neededCats = useMemo(() => {
+    const s = new Set<MarkerCategory>();
+    for (const key of selectedKeys) s.add(parseKey(key).category);
+    return s;
+  }, [selectedKeys]);
+
+  // Load the entity modules for whatever categories are currently selected.
+  useEffect(() => {
+    let alive = true;
+    const missing = Array.from(neededCats).filter((c) => !loaded[c]);
+    if (missing.length === 0) return;
+    Promise.all(missing.map(async (c) => [c, await loadCategoryEntities(c)] as const)).then((pairs) => {
+      if (!alive) return;
+      setLoaded((prev) => {
+        const next = { ...prev };
+        for (const [c, arr] of pairs) next[c] = arr;
+        return next;
+      });
+    });
+    return () => { alive = false; };
+  }, [neededCats, loaded]);
+
+  const groups = useMemo(
+    () => buildMarkersFromSelection(selectedKeys, loaded, worldId),
+    [selectedKeys, loaded, worldId],
+  );
+
   return (
     <>
       {groups.map((g, i) => <MapMarker key={`${g.x},${g.y}-${i}`} group={g} />)}

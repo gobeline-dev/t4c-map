@@ -1,9 +1,7 @@
-import type { CoordGroup, WikiData } from '../types/wiki';
+import type { CoordGroup } from '../types/wiki';
 
 // Same convention as the live coordinate readout in MapViewer:
 //   gx = pixelX / 2 ; gy = pixelY  →  pixelX = gx * 2 ; pixelY = gy
-// The map images render at natural size inside the zoom/pan transform, so a
-// marker placed at these pixel offsets tracks the map on pan/zoom.
 export type MarkerCategory = 'Monstres' | 'PNJ' | 'Items';
 
 export const MARKER_CATEGORIES: MarkerCategory[] = ['Monstres', 'PNJ', 'Items'];
@@ -20,36 +18,88 @@ export const CATEGORY_DOT: Record<MarkerCategory, string> = {
   Items:    'bg-violet-400',
 };
 
+export interface NamedEntity { name: string; coordinates?: CoordGroup[]; }
+
+// Accent-insensitive normaliser for the search box.
+const DIACRITICS = new RegExp('[\\u0300-\\u036f]', 'g');
+export const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(DIACRITICS, '').trim();
+
+// Lazy, cached per-category module loading. The map stays light until the user
+// opens the marker search and picks a category — only that module is fetched
+// (e.g. the 1.4 MB equipment chunk loads only if the user browses "Items").
+const cache: Partial<Record<MarkerCategory, NamedEntity[]>> = {};
+export async function loadCategoryEntities(cat: MarkerCategory): Promise<NamedEntity[]> {
+  const cached = cache[cat];
+  if (cached) return cached;
+  let arr: NamedEntity[];
+  if (cat === 'Monstres')   arr = (await import('../../public/data/monster')).legacyMonsters;
+  else if (cat === 'PNJ')   arr = (await import('../../public/data/npcs')).npcs;
+  else                      arr = (await import('../../public/data/equipment')).equipment;
+  cache[cat] = arr;
+  return arr;
+}
+
+export const entityKey = (cat: MarkerCategory, name: string) => `${cat}::${name}`;
+export const parseKey = (key: string): { category: MarkerCategory; name: string } => {
+  const i = key.indexOf('::');
+  return { category: key.slice(0, i) as MarkerCategory, name: key.slice(i + 2) };
+};
+
+export interface EntityListItem { key: string; name: string; category: MarkerCategory; count: number; }
+
+// Entities of a category that have at least one usable coordinate on the world,
+// de-duplicated by name (spawn counts summed). Sorted by name for the picker.
+export function listWorldEntities(entities: NamedEntity[], cat: MarkerCategory, worldId: number): EntityListItem[] {
+  const byKey = new Map<string, EntityListItem>();
+  for (const e of entities) {
+    let count = 0;
+    for (const g of e.coordinates ?? [])
+      for (const c of g.coords)
+        if (c.world === worldId && !(c.x === 0 && c.y === 0)) count++;
+    if (count === 0) continue;
+    const key = entityKey(cat, e.name);
+    const prev = byKey.get(key);
+    if (prev) prev.count += count;
+    else byKey.set(key, { key, name: e.name, category: cat, count });
+  }
+  return Array.from(byKey.values()).sort((a, b) => a.name.localeCompare(b.name));
+}
+
 export interface MarkerItem { label: string; category: MarkerCategory; }
 export interface MarkerGroup { x: number; y: number; items: MarkerItem[]; }
 
-interface NamedEntity { name: string; coordinates?: CoordGroup[]; }
-
-function collect(out: { x: number; y: number; item: MarkerItem }[], entities: NamedEntity[], category: MarkerCategory, worldId: number) {
-  for (const e of entities) {
-    for (const group of e.coordinates ?? []) {
-      for (const c of group.coords) {
-        if (c.world !== worldId) continue;
-        if (c.x === 0 && c.y === 0) continue;
-        out.push({ x: c.x, y: c.y, item: { label: e.name, category } });
-      }
-    }
+// Build grouped markers for the currently selected entities on a world.
+// Only the selected names are scanned, so the marker count stays small.
+export function buildMarkersFromSelection(
+  selectedKeys: Set<string>,
+  loaded: Partial<Record<MarkerCategory, NamedEntity[]>>,
+  worldId: number,
+): MarkerGroup[] {
+  const namesByCat = new Map<MarkerCategory, Set<string>>();
+  for (const key of selectedKeys) {
+    const { category, name } = parseKey(key);
+    let set = namesByCat.get(category);
+    if (!set) { set = new Set(); namesByCat.set(category, set); }
+    set.add(name);
   }
-}
-
-export function buildWorldMarkers(data: WikiData, worldId: number, active: Set<MarkerCategory>): MarkerGroup[] {
-  const raw: { x: number; y: number; item: MarkerItem }[] = [];
-  if (active.has('Monstres')) collect(raw, data.monsters, 'Monstres', worldId);
-  if (active.has('PNJ'))      collect(raw, data.npcs,     'PNJ',      worldId);
-  if (active.has('Items'))    collect(raw, data.items,    'Items',    worldId);
 
   const groups = new Map<string, MarkerGroup>();
-  for (const m of raw) {
-    const key = `${m.x},${m.y}`;
-    let g = groups.get(key);
-    if (!g) { g = { x: m.x, y: m.y, items: [] }; groups.set(key, g); }
-    if (!g.items.some((it) => it.label === m.item.label && it.category === m.item.category)) {
-      g.items.push(m.item);
+  for (const [cat, names] of namesByCat) {
+    const entities = loaded[cat];
+    if (!entities) continue;
+    for (const e of entities) {
+      if (!names.has(e.name)) continue;
+      for (const g of e.coordinates ?? []) {
+        for (const c of g.coords) {
+          if (c.world !== worldId || (c.x === 0 && c.y === 0)) continue;
+          const k = `${c.x},${c.y}`;
+          let grp = groups.get(k);
+          if (!grp) { grp = { x: c.x, y: c.y, items: [] }; groups.set(k, grp); }
+          if (!grp.items.some((it) => it.label === e.name && it.category === cat)) {
+            grp.items.push({ label: e.name, category: cat });
+          }
+        }
+      }
     }
   }
   return Array.from(groups.values());
