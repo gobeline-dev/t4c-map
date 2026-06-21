@@ -1,5 +1,5 @@
 import React, { useState, useRef, memo, useEffect, useCallback } from 'react';
-import { Maximize, ZoomIn, ZoomOut, MousePointer2, Loader2, Fullscreen, Minimize, RotateCw, MapPin } from 'lucide-react';
+import { Maximize, ZoomIn, ZoomOut, MousePointer2, Loader2, Fullscreen, Minimize, MapPin } from 'lucide-react';
 import { TransformWrapper, TransformComponent, type ReactZoomPanPinchRef, type ReactZoomPanPinchContentRef } from 'react-zoom-pan-pinch';
 import ScrollContainer from '../components/shared/ScrollContainer';
 import { MAPS } from '../config/maps';
@@ -87,7 +87,6 @@ const MapViewer: React.FC = () => {
   const [selectedMap, setSelectedMap] = useState<MapInfo>(MAPS[0]);
   const [isLoading, setIsLoading] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>(window.innerHeight > window.innerWidth ? 'portrait' : 'landscape');
   const [copyFlash, setCopyFlash] = useState<string | null>(null);
   const [coverScale, setCoverScale] = useState(0.5);
   const [imgDims, setImgDims] = useState({ w: 0, h: 0 });
@@ -179,28 +178,6 @@ const MapViewer: React.FC = () => {
       clearTimeout(timer);
     };
   }, [isFullscreen]);
-
-  useEffect(() => {
-    const checkOrientation = () => {
-      const isPortrait = window.matchMedia('(orientation: portrait)').matches;
-      setOrientation(isPortrait ? 'portrait' : 'landscape');
-    };
-    checkOrientation();
-    const mql = window.matchMedia('(orientation: portrait)');
-    const handleOrientationChange = (e: MediaQueryListEvent) => setOrientation(e.matches ? 'portrait' : 'landscape');
-    mql.addEventListener('change', handleOrientationChange);
-    window.addEventListener('resize', checkOrientation);
-    const handleLegacyOrientationChange = () => {
-      setTimeout(checkOrientation, 100);
-      setTimeout(checkOrientation, 500);
-    };
-    window.addEventListener('orientationchange', handleLegacyOrientationChange);
-    return () => {
-      mql.removeEventListener('change', handleOrientationChange);
-      window.removeEventListener('resize', checkOrientation);
-      window.removeEventListener('orientationchange', handleLegacyOrientationChange);
-    };
-  }, []);
 
   // Keyboard navigation
   useEffect(() => {
@@ -305,14 +282,6 @@ const MapViewer: React.FC = () => {
       className={`relative flex flex-col gap-3 md:gap-4 overflow-hidden ${isFullscreen ? 'fixed !inset-0 !z-[9999] !w-screen !h-[100dvh] !max-w-none !m-0 p-safe touch-none' : 'h-full p-4 md:p-6'}`}
       style={isFullscreen ? { touchAction: 'none', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'hsl(var(--background))' } : { background: 'hsl(var(--background))' }}
     >
-      {orientation === 'portrait' && (
-        <div className="fixed inset-0 z-[10000] bg-slate-950 flex flex-col items-center justify-center p-8 text-center sm:hidden p-safe">
-          <div className="w-20 h-20 bg-amber-500/10 rounded-full flex items-center justify-center mb-6 animate-pulse"><RotateCw size={40} className="text-amber-500" /></div>
-          <h2 className="text-xl font-black text-white uppercase italic mb-2">Mode Paysage Requis</h2>
-          <p className="text-slate-500 text-sm leading-relaxed">Faites pivoter votre téléphone pour utiliser la cartographie HD.</p>
-        </div>
-      )}
-
       <div className={`flex gap-3 md:gap-4 items-center surface-card px-3 md:px-4 py-2 md:py-2.5 shrink-0 ${isFullscreen ? '!rounded-none !border-0 !border-b px-safe-top' : ''}`}>
         <div className="flex items-center gap-2 shrink-0">
           <div className={`${isFullscreen ? 'hidden' : 'hidden lg:flex items-center gap-2'}`}>
@@ -355,16 +324,14 @@ const MapViewer: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          {(orientation === 'landscape' || !window.matchMedia('(max-width: 768px)').matches) && (
-            <button
-              onClick={toggleFullscreen}
-              className="inline-flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground transition-colors"
-              style={{ background: 'hsl(var(--muted) / 0.4)', border: '1px solid hsl(var(--border) / 0.5)' }}
-              title={isFullscreen ? 'Quitter le plein écran' : 'Plein écran'}
-            >
-              {isFullscreen ? <Minimize size={16} /> : <Fullscreen size={16} />}
-            </button>
-          )}
+          <button
+            onClick={toggleFullscreen}
+            className="inline-flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground transition-colors"
+            style={{ background: 'hsl(var(--muted) / 0.4)', border: '1px solid hsl(var(--border) / 0.5)' }}
+            title={isFullscreen ? 'Quitter le plein écran' : 'Plein écran'}
+          >
+            {isFullscreen ? <Minimize size={16} /> : <Fullscreen size={16} />}
+          </button>
         </div>
       </div>
 
