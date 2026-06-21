@@ -1,22 +1,5 @@
-import { createContext, useContext, useState, useEffect, useCallback } from 'react';
-
-export type ThemeName = 'classic' | 'parchment';
-
-interface ThemeContextType {
-  theme: ThemeName;
-  toggleTheme: () => void;
-  setTheme: (t: ThemeName) => void;
-  isParchment: boolean;
-}
-
-const ThemeContext = createContext<ThemeContextType>({
-  theme: 'classic',
-  toggleTheme: () => {},
-  setTheme: () => {},
-  isParchment: false,
-});
-
-const STORAGE_KEY = 't4c-theme';
+import { useState, useEffect, useCallback } from 'react';
+import { ThemeContext, STORAGE_KEY, type ThemeName } from './theme';
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setThemeState] = useState<ThemeName>(() => {
@@ -44,5 +27,3 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     </ThemeContext.Provider>
   );
 };
-
-export const useTheme = () => useContext(ThemeContext);

@@ -1,9 +1,12 @@
 import React, { useState, useRef, memo, useEffect, useCallback } from 'react';
-import { Maximize, ZoomIn, ZoomOut, MousePointer2, Loader2, Fullscreen, Minimize, RotateCw } from 'lucide-react';
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+import { Maximize, ZoomIn, ZoomOut, MousePointer2, Loader2, Fullscreen, Minimize, RotateCw, MapPin } from 'lucide-react';
+import { TransformWrapper, TransformComponent, type ReactZoomPanPinchRef, type ReactZoomPanPinchContentRef } from 'react-zoom-pan-pinch';
 import ScrollContainer from '../components/shared/ScrollContainer';
 import { MAPS } from '../config/maps';
 import type { MapInfo } from '../config/maps';
+import { useWikiData } from '../hooks/useWikiData';
+import { MapMarkers } from './MapMarkers';
+import { MARKER_CATEGORIES, CATEGORY_COLOR, type MarkerCategory } from '../utils/mapMarkers';
 
 interface Coords { x: number; y: number; gx: number; gy: number; }
 interface TransformLike { scale: number; positionX: number; positionY: number; }
@@ -90,10 +93,22 @@ const MapViewer: React.FC = () => {
   const [imgDims, setImgDims] = useState({ w: 0, h: 0 });
   const [viewportDims, setViewportDims] = useState({ w: 0, h: 0 });
 
+  // Entity markers (monsters / NPCs / items) overlaid on the map via their
+  // game coordinates. Categories start hidden; the user toggles what to show.
+  const { data: wikiData } = useWikiData();
+  const [activeCats, setActiveCats] = useState<Set<MarkerCategory>>(() => new Set());
+  const toggleCat = useCallback((cat: MarkerCategory) => {
+    setActiveCats((prev) => {
+      const next = new Set(prev);
+      if (next.has(cat)) next.delete(cat); else next.add(cat);
+      return next;
+    });
+  }, []);
+
   const imgRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const mapViewportRef = useRef<HTMLDivElement>(null);
-  const transformWrapperRef = useRef<any>(null);
+  const transformWrapperRef = useRef<ReactZoomPanPinchRef | null>(null);
   const transformStateRef = useRef<TransformLike>({ scale: 1, positionX: 0, positionY: 0 });
   const coordsRef = useRef<Coords>({ x: 0, y: 0, gx: 0, gy: 0 });
 
@@ -135,7 +150,7 @@ const MapViewer: React.FC = () => {
     return () => ro.disconnect();
   }, [updateDims]);
 
-  const fitToView = (instance: any) => {
+  const fitToView = (instance: ReactZoomPanPinchContentRef) => {
     if (imgRef.current && mapViewportRef.current) {
       const vw = mapViewportRef.current.offsetWidth;
       const vh = mapViewportRef.current.offsetHeight;
@@ -275,7 +290,7 @@ const MapViewer: React.FC = () => {
 
   // rAF-throttled transform updates → notify listeners only
   const transformRafRef = useRef(0);
-  const handleTransformed = useCallback((_ref: any, state: TransformLike) => {
+  const handleTransformed = useCallback((_ref: ReactZoomPanPinchRef, state: TransformLike) => {
     transformStateRef.current = state;
     if (transformRafRef.current) return;
     transformRafRef.current = requestAnimationFrame(() => {
@@ -366,6 +381,28 @@ const MapViewer: React.FC = () => {
               Copié : {copyFlash}
             </div>
           )}
+
+          {/* Layer toggles: show/hide entity markers by category */}
+          <div className={`absolute z-20 flex flex-col gap-1.5 ${isFullscreen ? 'top-8 left-6' : 'top-3 left-3'}`}>
+            {MARKER_CATEGORIES.map((cat) => {
+              const on = activeCats.has(cat);
+              return (
+                <button
+                  key={cat}
+                  onClick={() => toggleCat(cat)}
+                  aria-pressed={on}
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors"
+                  style={on
+                    ? { background: 'hsl(var(--primary) / 0.15)', border: '1px solid hsl(var(--primary) / 0.4)', color: 'hsl(var(--foreground))' }
+                    : { background: 'hsl(var(--card))', border: '1px solid hsl(var(--border) / 0.6)', color: 'hsl(var(--muted-foreground))' }}
+                  title={`${on ? 'Masquer' : 'Afficher'} les ${cat.toLowerCase()} sur la carte`}
+                >
+                  <MapPin size={13} className={on ? CATEGORY_COLOR[cat] : ''} />
+                  {cat}
+                </button>
+              );
+            })}
+          </div>
           <TransformWrapper
             key={`${isFullscreen}-${selectedMap.id}-${coverScale}`}
             initialScale={coverScale}
@@ -404,6 +441,7 @@ const MapViewer: React.FC = () => {
                       }}
                       draggable={false}
                     />
+                    {wikiData && <MapMarkers data={wikiData} worldId={selectedMap.worldId} active={activeCats} />}
                   </div>
                 </TransformComponent>
               </>

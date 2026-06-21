@@ -118,7 +118,6 @@ function evalArray(literal) {
     if (/^(true|false|null|undefined|NaN|Infinity)$/.test(match)) return match;
     return 'null';
   });
-  // eslint-disable-next-line no-new-func
   return Function(`"use strict"; return (${finalSrc});`)();
 }
 

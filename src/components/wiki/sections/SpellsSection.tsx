@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useState } from 'react';
+import { useId, useMemo, useState } from 'react';
 import { ChevronDown, ChevronRight, GitBranch, Lock, Unlock } from 'lucide-react';
 import { WikiToolbar, FilterPills } from '../WikiToolbar';
 import { ExpandAllContext, useExpandAll } from '../TreeContext';
@@ -96,9 +96,13 @@ const PrereqNode = ({ spellName, index, visited, depth }: PrereqNodeProps) => {
   const [open, setOpen] = useState(cascade ?? depth < 1);
   const childListId = useId();
 
-  useEffect(() => {
+  // Sync to the expand-all cascade without an effect: adjust state during render
+  // when the cascade signal changes (React's recommended pattern).
+  const [prevCascade, setPrevCascade] = useState(cascade);
+  if (cascade !== prevCascade) {
+    setPrevCascade(cascade);
     if (cascade !== null) setOpen(cascade);
-  }, [cascade]);
+  }
 
   const isCycle = spell ? visited.has(norm(spell.name)) : false;
   const children = useMemo(() => (spell && !isCycle ? (spell.prereqs ?? []) : []), [spell, isCycle]);
@@ -204,9 +208,11 @@ const SpellCard = ({ spell, index, forwardIndex, obtain }: SpellCardProps) => {
   const cascade = useExpandAll();
   const [open, setOpen] = useState(cascade ?? false);
   const bodyId = useId();
-  useEffect(() => {
+  const [prevCascade, setPrevCascade] = useState(cascade);
+  if (cascade !== prevCascade) {
+    setPrevCascade(cascade);
     if (cascade !== null) setOpen(cascade);
-  }, [cascade]);
+  }
 
   const prereqs = spell.prereqs ?? [];
   const unlocks = forwardIndex.get(norm(spell.name)) ?? [];

@@ -193,10 +193,13 @@ const RecipeCard = ({ craft, index }: RecipeCardProps) => {
   // so totals stay in sync with whatever the user has unfolded.
   const [expandedPaths, setExpandedPaths] = useState<Set<string>>(() => new Set());
 
-  useEffect(() => {
+  // Sync to the expand-all cascade during render (no effect) when it changes.
+  const [prevCascade, setPrevCascade] = useState(cascade);
+  if (cascade !== prevCascade) {
+    setPrevCascade(cascade);
     if (cascade !== null) setOpen(cascade);
     if (cascade === false) setExpandedPaths(new Set());
-  }, [cascade]);
+  }
 
   const setExpanded = useCallback((path: string, isOpen: boolean) => {
     setExpandedPaths((prev) => {

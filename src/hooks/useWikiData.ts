@@ -54,10 +54,9 @@ export function useWikiData(): State {
   const [state, setState] = useState<State>({ data: cache, loading: !cache, error: null });
 
   useEffect(() => {
-    if (cache) {
-      setState({ data: cache, loading: false, error: null });
-      return;
-    }
+    // When the cache is already populated, the initial state above already
+    // reflects it — no synchronous setState needed (and none allowed in effects).
+    if (cache) return;
     let alive = true;
     loadAll()
       .then((d) => alive && setState({ data: d, loading: false, error: null }))

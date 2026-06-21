@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Map, ShieldCheck, Sun, Moon, Menu, X, BookOpen } from 'lucide-react';
-import { useTheme, type ThemeName } from '../context/ThemeContext';
+import { useTheme, type ThemeName } from '../context/theme';
 
 const HeaderNav = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -17,7 +17,7 @@ const HeaderNav = () => {
 
   useEffect(() => {
     const handleNativeFSChange = () => setIsFullscreen(!!document.fullscreenElement);
-    const handleCustomFSChange = (e: any) => setIsFullscreen(e.detail);
+    const handleCustomFSChange = (e: Event) => setIsFullscreen((e as CustomEvent<boolean>).detail);
 
     document.addEventListener('fullscreenchange', handleNativeFSChange);
     window.addEventListener('t4c-fullscreen-change', handleCustomFSChange);
