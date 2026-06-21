@@ -45,7 +45,13 @@ export const parseKey = (key: string): { category: MarkerCategory; name: string 
   return { category: key.slice(0, i) as MarkerCategory, name: key.slice(i + 2) };
 };
 
-export interface EntityListItem { key: string; name: string; category: MarkerCategory; count: number; }
+export interface EntityListItem {
+  key: string;
+  name: string;
+  category: MarkerCategory;
+  count: number;
+  first: { x: number; y: number }; // first spawn on the world — used to center the camera
+}
 
 // Entities of a category that have at least one usable coordinate on the world,
 // de-duplicated by name (spawn counts summed). Sorted by name for the picker.
@@ -53,14 +59,18 @@ export function listWorldEntities(entities: NamedEntity[], cat: MarkerCategory, 
   const byKey = new Map<string, EntityListItem>();
   for (const e of entities) {
     let count = 0;
+    let first: { x: number; y: number } | null = null;
     for (const g of e.coordinates ?? [])
       for (const c of g.coords)
-        if (c.world === worldId && !(c.x === 0 && c.y === 0)) count++;
-    if (count === 0) continue;
+        if (c.world === worldId && !(c.x === 0 && c.y === 0)) {
+          count++;
+          if (!first) first = { x: c.x, y: c.y };
+        }
+    if (count === 0 || !first) continue;
     const key = entityKey(cat, e.name);
     const prev = byKey.get(key);
     if (prev) prev.count += count;
-    else byKey.set(key, { key, name: e.name, category: cat, count });
+    else byKey.set(key, { key, name: e.name, category: cat, count, first });
   }
   return Array.from(byKey.values()).sort((a, b) => a.name.localeCompare(b.name));
 }

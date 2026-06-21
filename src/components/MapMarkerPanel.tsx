@@ -20,11 +20,12 @@ interface Props {
   worldId: number;
   selectedKeys: Set<string>;
   onToggleKey: (key: string) => void;
+  onFocus: (gx: number, gy: number) => void;
   onClear: () => void;
   onClose: () => void;
 }
 
-export const MapMarkerPanel = ({ worldId, selectedKeys, onToggleKey, onClear, onClose }: Props) => {
+export const MapMarkerPanel = ({ worldId, selectedKeys, onToggleKey, onFocus, onClear, onClose }: Props) => {
   const [category, setCategory] = useState<MarkerCategory>('Monstres');
   const [entities, setEntities] = useState<NamedEntity[]>([]);
   const [loadedFor, setLoadedFor] = useState<MarkerCategory | null>(null);
@@ -122,7 +123,16 @@ export const MapMarkerPanel = ({ worldId, selectedKeys, onToggleKey, onClear, on
                 return (
                   <li key={item.key}>
                     <label className="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-muted/40 cursor-pointer transition-colors">
-                      <input type="checkbox" checked={checked} onChange={() => onToggleKey(item.key)} className="shrink-0 accent-current" style={{ color: 'hsl(var(--primary))' }} />
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => {
+                          onToggleKey(item.key);
+                          if (!checked) onFocus(item.first.x, item.first.y); // center camera on the marker just placed
+                        }}
+                        className="shrink-0 accent-current"
+                        style={{ color: 'hsl(var(--primary))' }}
+                      />
                       <span className="flex-1 min-w-0 truncate text-sm text-foreground">{item.name}</span>
                       <span className={`shrink-0 text-[10px] tabular-nums px-1.5 py-0.5 rounded-full ${CATEGORY_COLOR[item.category]}`} style={{ background: 'hsl(var(--muted) / 0.5)' }}>{item.count}</span>
                     </label>

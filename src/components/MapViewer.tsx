@@ -161,6 +161,20 @@ const MapViewer: React.FC = () => {
     }
   };
 
+  // Center & zoom the camera onto a game coordinate (when a marker is placed).
+  const centerOnPoint = useCallback((gx: number, gy: number) => {
+    const instance = transformWrapperRef.current;
+    const vp = mapViewportRef.current;
+    if (!instance || !vp || (gx === 0 && gy === 0)) return;
+    const px = gx * 2;
+    const py = gy;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const scale = Math.max(isMobile ? 2 : 1.2, coverScale);
+    const x = (vp.offsetWidth / 2) - (px * scale);
+    const y = (vp.offsetHeight / 2) - (py * scale);
+    instance.setTransform(x, y, scale, 600, 'easeOut');
+  }, [coverScale]);
+
   useEffect(() => {
     window.dispatchEvent(new CustomEvent('t4c-fullscreen-change', { detail: isFullscreen }));
     if (isFullscreen) {
@@ -356,6 +370,7 @@ const MapViewer: React.FC = () => {
               worldId={selectedMap.worldId}
               selectedKeys={selectedKeys}
               onToggleKey={toggleKey}
+              onFocus={centerOnPoint}
               onClear={clearKeys}
               onClose={() => setMarkersOpen(false)}
             />
