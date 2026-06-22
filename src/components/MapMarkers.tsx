@@ -10,17 +10,17 @@ import {
   type MarkerGroup,
   type NamedEntity,
 } from '../utils/mapMarkers';
-import { PX_PER_GX, PX_PER_GY } from '../config/maps';
+import { gxToPx, gyToPx } from '../config/maps';
 
 const TOOLTIP_CAP = 8;
 
-const MapMarker = memo(({ group }: { group: MarkerGroup }) => {
+const MapMarker = memo(({ group, imgW, imgH }: { group: MarkerGroup; imgW: number; imgH: number }) => {
   const color = CATEGORY_COLOR[group.items[0].category];
   const extra = group.items.length - TOOLTIP_CAP;
   return (
     <div
       className="group/marker absolute z-30 pointer-events-auto cursor-help"
-      style={{ left: group.x * PX_PER_GX, top: group.y * PX_PER_GY, transform: 'translate(-50%, -100%)' }}
+      style={{ left: gxToPx(group.x, imgW), top: gyToPx(group.y, imgH), transform: 'translate(-50%, -100%)' }}
     >
       <MapPin size={26} className={`${color} drop-shadow-[0_0_6px_rgba(0,0,0,0.9)]`} aria-hidden="true" />
       <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover/marker:block z-50 min-w-max max-w-[240px] px-2.5 py-1.5 rounded-lg shadow-xl text-[11px] font-medium text-white" style={{ background: 'hsl(222 22% 8% / 0.96)', border: '1px solid hsl(0 0% 100% / 0.15)' }}>
@@ -39,9 +39,11 @@ const MapMarker = memo(({ group }: { group: MarkerGroup }) => {
 interface Props {
   worldId: number;
   selectedKeys: Set<string>;
+  imgW: number;
+  imgH: number;
 }
 
-export const MapMarkers = ({ worldId, selectedKeys }: Props) => {
+export const MapMarkers = ({ worldId, selectedKeys, imgW, imgH }: Props) => {
   const [loaded, setLoaded] = useState<Partial<Record<MarkerCategory, NamedEntity[]>>>({});
 
   const neededCats = useMemo(() => {
@@ -73,7 +75,7 @@ export const MapMarkers = ({ worldId, selectedKeys }: Props) => {
 
   return (
     <>
-      {groups.map((g, i) => <MapMarker key={`${g.x},${g.y}-${i}`} group={g} />)}
+      {groups.map((g, i) => <MapMarker key={`${g.x},${g.y}-${i}`} group={g} imgW={imgW} imgH={imgH} />)}
     </>
   );
 };

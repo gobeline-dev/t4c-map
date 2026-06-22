@@ -1,7 +1,7 @@
 import type { CoordGroup } from '../types/wiki';
 
-// Conversion coordonnée de jeu ↔ pixel : voir PX_PER_GX / PX_PER_GY dans
-// src/config/maps.ts (cartes HD : pixelX = gx * 8 ; pixelY = gy * 4).
+// Conversion coordonnée de jeu ↔ pixel : voir gxToPx / pxToGx dans
+// src/config/maps.ts (dérivée de la taille réelle de l'image, GAME_WORLD=3072).
 export type MarkerCategory = 'Monstres' | 'PNJ' | 'Items';
 
 export const MARKER_CATEGORIES: MarkerCategory[] = ['Monstres', 'PNJ', 'Items'];
