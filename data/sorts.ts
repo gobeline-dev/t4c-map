@@ -59,7 +59,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Mot de rappel amélioré',
+    name: '[S] Mot de rappel amélioré',
     level: 1,
     for: 21,
     end: 21,
@@ -738,7 +738,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Régénération shamanique',
+    name: '[S] Régénération shamanique',
     level: 20,
     for: 0,
     end: 60,
@@ -759,7 +759,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier d\'enrochement mineur',
+    name: '[S] Bouclier d\'enrochement mineur',
     level: 8,
     for: 0,
     end: 35,
@@ -778,7 +778,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier d\'enrochement majeur',
+    name: '[S] Bouclier d\'enrochement majeur',
     level: 65,
     for: 0,
     end: 160,
@@ -799,7 +799,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier d\'enrochement',
+    name: '[S] Bouclier d\'enrochement',
     level: 35,
     for: 0,
     end: 95,
@@ -820,7 +820,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier du brasier mineur',
+    name: '[S] Bouclier du brasier mineur',
     level: 5,
     for: 0,
     end: 30,
@@ -839,7 +839,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier du brasier',
+    name: '[S] Bouclier du brasier',
     level: 25,
     for: 0,
     end: 75,
@@ -860,7 +860,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier du brasier majeur',
+    name: '[S] Bouclier du brasier majeur',
     level: 55,
     for: 0,
     end: 145,
@@ -881,7 +881,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Appel au combat',
+    name: '[S] Appel au combat',
     level: 5,
     for: 0,
     end: 0,
@@ -900,7 +900,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Régénération shamanique mineure',
+    name: '[S] Régénération shamanique mineure',
     level: 9,
     for: 0,
     end: 40,
@@ -919,7 +919,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Régénération shamanique majeure',
+    name: '[S] Régénération shamanique majeure',
     level: 50,
     for: 0,
     end: 125,
@@ -940,7 +940,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Restauration totémique',
+    name: '[S] Restauration totémique',
     level: 90,
     for: 0,
     end: 230,
@@ -961,7 +961,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Protection totémique',
+    name: '[S] Protection totémique',
     level: 25,
     for: 0,
     end: 75,
@@ -980,7 +980,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier du magma mineur',
+    name: '[S] Bouclier du magma mineur',
     level: 90,
     for: 0,
     end: 235,
@@ -1001,7 +1001,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier du magma',
+    name: '[S] Bouclier du magma',
     level: 130,
     for: 0,
     end: 335,
@@ -1024,7 +1024,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier du magma majeur',
+    name: '[S] Bouclier du magma majeur',
     level: 170,
     for: 0,
     end: 435,
@@ -1045,7 +1045,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier d\'obsidienne mineur',
+    name: '[S] Bouclier d\'obsidienne mineur',
     level: 100,
     for: 0,
     end: 255,
@@ -1066,7 +1066,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier d\'obsidienne majeur',
+    name: '[S] Bouclier d\'obsidienne majeur',
     level: 180,
     for: 0,
     end: 455,
@@ -1087,7 +1087,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bouclier d\'obsidienne',
+    name: '[S] Bouclier d\'obsidienne',
     level: 140,
     for: 0,
     end: 355,
@@ -1155,7 +1155,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Dissipation de groupe',
+    name: '[S] Dissipation de groupe',
     level: 56,
     for: 0,
     end: 75,
@@ -1174,7 +1174,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Jouvence',
+    name: '[S] Jouvence',
     level: 80,
     for: 0,
     end: 220,
@@ -1195,7 +1195,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Renforcement musculaire',
+    name: '[S] Renforcement musculaire',
     level: 25,
     for: 0,
     end: 55,
@@ -1214,7 +1214,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Bombardement élémentaire',
+    name: '[S] Bombardement élémentaire',
     level: 180,
     for: 0,
     end: 400,
@@ -1236,7 +1236,7 @@ export const spellList: SpellType[] = [
   },
   {
     id: uuidv4(),
-    name: 'Berserk shamanique',
+    name: '[S] Berserk shamanique',
     level: 120,
     for: 0,
     end: 255,
