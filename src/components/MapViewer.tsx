@@ -34,6 +34,12 @@ const CoordsOverlay = memo(({ subscribe, worldId, isFullscreen }: {
 
 const MINIMAP_W = 160;
 
+// Durées d'animation caméra (ms). Plus courtes = déplacement plus vif/fluide.
+const ANIM_FOCUS = 320; // recentrage sur un marqueur
+const ANIM_FIT = 260;   // recadrage plein écran
+const ANIM_PAN = 90;    // pan au clavier
+const ANIM_MINIMAP = 220;
+
 const Minimap = memo(({
   mapPath, subscribe, viewportW, viewportH, imageW, imageH, onNavigate, isFullscreen,
 }: {
@@ -157,7 +163,7 @@ const MapViewer: React.FC = () => {
       const scale = Math.max(vw / imgRef.current.naturalWidth, vh / imgRef.current.naturalHeight);
       const x = (vw - imgRef.current.naturalWidth * scale) / 2;
       const y = (vh - imgRef.current.naturalHeight * scale) / 2;
-      instance.setTransform(x, y, scale, 400, 'easeOut');
+      instance.setTransform(x, y, scale, ANIM_FIT, 'easeOut');
     }
   };
 
@@ -172,7 +178,7 @@ const MapViewer: React.FC = () => {
     const scale = Math.max(isMobile ? 2 : 1.2, coverScale);
     const x = (vp.offsetWidth / 2) - (px * scale);
     const y = (vp.offsetHeight / 2) - (py * scale);
-    instance.setTransform(x, y, scale, 600, 'easeOut');
+    instance.setTransform(x, y, scale, ANIM_FOCUS, 'easeOut');
   }, [coverScale]);
 
   useEffect(() => {
@@ -200,25 +206,25 @@ const MapViewer: React.FC = () => {
       if (!transformWrapperRef.current) return;
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 
-      const PAN_STEP = 120;
+      const PAN_STEP = 220;
       const { positionX, positionY, scale } = transformStateRef.current;
 
       switch (e.key) {
         case 'ArrowUp':
           e.preventDefault();
-          transformWrapperRef.current.setTransform(positionX, positionY + PAN_STEP, scale, 150, 'easeOut');
+          transformWrapperRef.current.setTransform(positionX, positionY + PAN_STEP, scale, ANIM_PAN, 'easeOut');
           break;
         case 'ArrowDown':
           e.preventDefault();
-          transformWrapperRef.current.setTransform(positionX, positionY - PAN_STEP, scale, 150, 'easeOut');
+          transformWrapperRef.current.setTransform(positionX, positionY - PAN_STEP, scale, ANIM_PAN, 'easeOut');
           break;
         case 'ArrowLeft':
           e.preventDefault();
-          transformWrapperRef.current.setTransform(positionX + PAN_STEP, positionY, scale, 150, 'easeOut');
+          transformWrapperRef.current.setTransform(positionX + PAN_STEP, positionY, scale, ANIM_PAN, 'easeOut');
           break;
         case 'ArrowRight':
           e.preventDefault();
-          transformWrapperRef.current.setTransform(positionX - PAN_STEP, positionY, scale, 150, 'easeOut');
+          transformWrapperRef.current.setTransform(positionX - PAN_STEP, positionY, scale, ANIM_PAN, 'easeOut');
           break;
         case '+':
         case '=':
@@ -245,28 +251,32 @@ const MapViewer: React.FC = () => {
     const { scale } = transformStateRef.current;
     const x = mapViewportRef.current.offsetWidth / 2 - imgX * scale;
     const y = mapViewportRef.current.offsetHeight / 2 - imgY * scale;
-    transformWrapperRef.current.setTransform(x, y, scale, 300, 'easeOut');
+    transformWrapperRef.current.setTransform(x, y, scale, ANIM_MINIMAP, 'easeOut');
   }, []);
 
   const toggleFullscreen = () => setIsFullscreen(v => !v);
 
-  // Mouse move: rAF-throttled, never triggers MapViewer re-render
+  // Mouse move: rAF-throttled, never triggers MapViewer re-render.
+  // Everything (incl. getBoundingClientRect, which forces a layout) runs inside
+  // the rAF so panning a huge map isn't slowed by a sync reflow per mousemove.
   const moveRafRef = useRef(0);
+  const lastPointerRef = useRef({ clientX: 0, clientY: 0 });
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    const img = imgRef.current;
-    if (!img) return;
-    const rect = img.getBoundingClientRect();
-    if (rect.width === 0 || rect.height === 0) return;
-    const scaleX = img.naturalWidth / rect.width;
-    const scaleY = img.naturalHeight / rect.height;
-    const localX = (e.clientX - rect.left) * scaleX;
-    const localY = (e.clientY - rect.top) * scaleY;
-    if (localX < 0 || localY < 0 || localX > img.naturalWidth || localY > img.naturalHeight) return;
-    const next: Coords = { x: Math.floor(localX), y: Math.floor(localY), gx: Math.floor(localX / PX_PER_GX), gy: Math.floor(localY / PX_PER_GY) };
-    coordsRef.current = next;
+    lastPointerRef.current = { clientX: e.clientX, clientY: e.clientY };
     if (moveRafRef.current) return;
     moveRafRef.current = requestAnimationFrame(() => {
       moveRafRef.current = 0;
+      const img = imgRef.current;
+      if (!img) return;
+      const rect = img.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return;
+      const scaleX = img.naturalWidth / rect.width;
+      const scaleY = img.naturalHeight / rect.height;
+      const { clientX, clientY } = lastPointerRef.current;
+      const localX = (clientX - rect.left) * scaleX;
+      const localY = (clientY - rect.top) * scaleY;
+      if (localX < 0 || localY < 0 || localX > img.naturalWidth || localY > img.naturalHeight) return;
+      coordsRef.current = { x: Math.floor(localX), y: Math.floor(localY), gx: Math.floor(localX / PX_PER_GX), gy: Math.floor(localY / PX_PER_GY) };
       coordsListenersRef.current.forEach(cb => cb(coordsRef.current));
     });
   }, []);
@@ -393,8 +403,8 @@ const MapViewer: React.FC = () => {
             doubleClick={{ disabled: true }}
             limitToBounds={true}
             centerZoomedOut={false}
-            wheel={{ step: 0.08 }}
-            velocityAnimation={{ sensitivity: 1, animationTime: 300, animationType: 'easeOut' }}
+            wheel={{ step: 0.2, smoothStep: 0.008 }}
+            velocityAnimation={{ sensitivity: 1, animationTime: 180, animationType: 'easeOut' }}
             onTransformed={handleTransformed}
             ref={transformWrapperRef}>
             {(instance) => (
