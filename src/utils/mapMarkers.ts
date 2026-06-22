@@ -1,7 +1,7 @@
 import type { CoordGroup } from '../types/wiki';
 
-// Same convention as the live coordinate readout in MapViewer:
-//   gx = pixelX / 2 ; gy = pixelY  →  pixelX = gx * 2 ; pixelY = gy
+// Conversion coordonnée de jeu ↔ pixel : voir PX_PER_GX / PX_PER_GY dans
+// src/config/maps.ts (cartes HD : pixelX = gx * 8 ; pixelY = gy * 4).
 export type MarkerCategory = 'Monstres' | 'PNJ' | 'Items';
 
 export const MARKER_CATEGORIES: MarkerCategory[] = ['Monstres', 'PNJ', 'Items'];

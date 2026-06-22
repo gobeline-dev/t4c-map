@@ -7,6 +7,15 @@ export interface MapInfo {
 
 const BASE = import.meta.env.BASE_URL;
 
+// Conversion coordonnée de jeu → pixel sur l'image HD.
+// Le monde de jeu fait 3072×3072 unités ; les cartes HD font 24576×12288 px,
+// soit 8 px par unité en X et 4 px par unité en Y (les anciennes cartes
+// 6144×3072 utilisaient 2 et 1 — les cartes HD sont 4× plus grandes).
+//   pixelX = gx * PX_PER_GX ; pixelY = gy * PX_PER_GY
+//   gx = pixelX / PX_PER_GX ; gy = pixelY / PX_PER_GY
+export const PX_PER_GX = 8;
+export const PX_PER_GY = 4;
+
 export const MAPS: MapInfo[] = [
   { id: 'arakas',     worldId: 0, name: "Arakas - Stoneheim - Raven's Dust", path: `${BASE}assets/maps/map_HD_0_Arakas.png` },
   { id: 'leoworld',   worldId: 1, name: 'Leoworld',                          path: `${BASE}assets/maps/map_HD_1_Leoworld.png` },

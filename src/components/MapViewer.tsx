@@ -2,7 +2,7 @@ import React, { useState, useRef, memo, useEffect, useCallback } from 'react';
 import { Maximize, ZoomIn, ZoomOut, MousePointer2, Loader2, Fullscreen, Minimize, MapPin } from 'lucide-react';
 import { TransformWrapper, TransformComponent, type ReactZoomPanPinchRef, type ReactZoomPanPinchContentRef } from 'react-zoom-pan-pinch';
 import ScrollContainer from '../components/shared/ScrollContainer';
-import { MAPS } from '../config/maps';
+import { MAPS, PX_PER_GX, PX_PER_GY } from '../config/maps';
 import type { MapInfo } from '../config/maps';
 import { MapMarkers } from './MapMarkers';
 import { MapMarkerPanel } from './MapMarkerPanel';
@@ -166,8 +166,8 @@ const MapViewer: React.FC = () => {
     const instance = transformWrapperRef.current;
     const vp = mapViewportRef.current;
     if (!instance || !vp || (gx === 0 && gy === 0)) return;
-    const px = gx * 2;
-    const py = gy;
+    const px = gx * PX_PER_GX;
+    const py = gy * PX_PER_GY;
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
     const scale = Math.max(isMobile ? 2 : 1.2, coverScale);
     const x = (vp.offsetWidth / 2) - (px * scale);
@@ -262,7 +262,7 @@ const MapViewer: React.FC = () => {
     const localX = (e.clientX - rect.left) * scaleX;
     const localY = (e.clientY - rect.top) * scaleY;
     if (localX < 0 || localY < 0 || localX > img.naturalWidth || localY > img.naturalHeight) return;
-    const next: Coords = { x: Math.floor(localX), y: Math.floor(localY), gx: Math.floor(localX / 2), gy: Math.floor(localY) };
+    const next: Coords = { x: Math.floor(localX), y: Math.floor(localY), gx: Math.floor(localX / PX_PER_GX), gy: Math.floor(localY / PX_PER_GY) };
     coordsRef.current = next;
     if (moveRafRef.current) return;
     moveRafRef.current = requestAnimationFrame(() => {
