@@ -17,12 +17,18 @@ const TOOLTIP_CAP = 8;
 const MapMarker = memo(({ group, imgW, imgH }: { group: MarkerGroup; imgW: number; imgH: number }) => {
   const color = CATEGORY_COLOR[group.items[0].category];
   const extra = group.items.length - TOOLTIP_CAP;
+  const primary = group.items[0].label;
+  const more = group.items.length - 1; // additional entities sharing this spot
   return (
     <div
       className="group/marker absolute z-30 pointer-events-auto cursor-help"
       style={{ left: gxToPx(group.x, imgW), top: gyToPx(group.y, imgH), transform: 'translate(-50%, -100%)' }}
     >
       <MapPin size={26} className={`${color} drop-shadow-[0_0_6px_rgba(0,0,0,0.9)]`} aria-hidden="true" />
+      {/* Nom affiché en permanence sous l'épingle (le détail complet reste au survol). */}
+      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0.5 max-w-[150px] px-1.5 py-0.5 rounded text-[10px] font-semibold leading-none text-white whitespace-nowrap truncate pointer-events-none shadow-md" style={{ background: 'hsl(222 22% 8% / 0.85)', border: '1px solid hsl(0 0% 100% / 0.12)' }}>
+        {primary}{more > 0 && <span className="text-white/60"> +{more}</span>}
+      </div>
       <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover/marker:block z-50 min-w-max max-w-[240px] px-2.5 py-1.5 rounded-lg shadow-xl text-[11px] font-medium text-white" style={{ background: 'hsl(222 22% 8% / 0.96)', border: '1px solid hsl(0 0% 100% / 0.15)' }}>
         {group.items.slice(0, TOOLTIP_CAP).map((it, i) => (
           <div key={i} className="flex items-center gap-1.5 leading-snug">

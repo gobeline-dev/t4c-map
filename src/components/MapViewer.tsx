@@ -389,12 +389,15 @@ const MapViewer: React.FC = () => {
           ) : (
             <button
               onClick={() => setMarkersOpen(true)}
-              className={`absolute z-20 inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-[11px] font-medium transition-colors ${isFullscreen ? 'top-8 left-6' : 'top-3 left-3'}`}
-              style={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border) / 0.6)', color: 'hsl(var(--foreground))' }}
+              className={`absolute z-20 inline-flex items-center gap-1.5 px-3 py-2 rounded-md text-xs font-semibold shadow-lg transition-colors ${isFullscreen ? 'top-8 left-6' : 'top-3 left-3'}`}
+              style={{ background: 'hsl(var(--primary))', border: '1px solid hsl(var(--primary) / 0.6)', color: 'hsl(var(--primary-foreground))' }}
               title="Afficher des marqueurs sur la carte"
             >
-              <MapPin size={13} className="text-primary-strong" />
-              Marqueurs{selectedKeys.size > 0 ? ` (${selectedKeys.size})` : ''}
+              <MapPin size={14} />
+              Marqueurs
+              {selectedKeys.size > 0 && (
+                <span className="inline-flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full text-[10px] font-bold tabular-nums" style={{ background: 'hsl(var(--primary-foreground) / 0.25)' }}>{selectedKeys.size}</span>
+              )}
             </button>
           )}
           <TransformWrapper
